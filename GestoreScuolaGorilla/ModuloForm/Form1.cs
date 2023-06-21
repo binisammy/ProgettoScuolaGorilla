@@ -8,7 +8,7 @@ namespace ModuloForm
 {
     public partial class Form1 : Form
     {
-        private const string BaseUrl = "http://localhost:5212/values";
+        private const string BaseUrl = "http://192.168.11.66:10212/values";
         private readonly HttpClient client;
         Scuola s = new Scuola();
 
@@ -16,22 +16,6 @@ namespace ModuloForm
         {
             InitializeComponent();
             client = new HttpClient();
-            initializeClassi();
-        }
-
-        private async void initializeClassi()
-        {
-            List<string> classi = new List<string>();
-            classi = await getClassi();
-
-            foreach (string classe in classi)
-            {
-                s.addClasse(new Classe(classe));
-            }
-
-            label1.Text = s.getClasse(0).IdClasse;
-            label2.Text = s.getClasse(1).IdClasse;
-            label3.Text = s.getClasse(2).IdClasse;
         }
 
         private async Task<List<string>> getMaterie(string id_classe)
@@ -41,9 +25,9 @@ namespace ModuloForm
             return responseStudente;
         }
 
-        private async Task<List<Studente>> getStudenti()
+        private async Task<List<Studente>> getStudenti(string id_classe)
         {
-            string getstudentiUrl = BaseUrl + "/studenti";
+            string getstudentiUrl = BaseUrl + $"/studenti?id_classe={id_classe}";
             var responseStudente = await client.GetFromJsonAsync<List<Studente>>(getstudentiUrl);
             return responseStudente;
         }
@@ -64,29 +48,23 @@ namespace ModuloForm
             var responseStudente = await client.PostAsJsonAsync(postmaterieUrl, values);
         }
 
-
-
-        private async void btnPostStudente_Click(object sender, EventArgs e)
+        private async void postStudente(string nome, string cognome, string id_studente, string id_classe)
         {
-            /*
-            List<string> materie = new List<string>();
-            materie.Add("aaa");
-            materie.Add("bbb");
-            materie.Add("ccc");
+            List<string> values = new List<string>();
+            values.Add(nome);
+            values.Add(cognome);
+            values.Add(id_studente);
+            values.Add(id_classe);
+            string poststudenteUrl = BaseUrl + "/studenti";
+            var responseStudente = await client.PostAsJsonAsync(poststudenteUrl, values);
+        }
 
-            string postmaterieUrl = BaseUrl + "/materie";
-            var responseStudente = await client.PostAsJsonAsync(postmaterieUrl, materie);
-            MessageBox.Show(responseStudente.ToString());
-            
-            if (responseStudente.IsSuccessStatusCode)
-            {
-                Console.WriteLine("Richiesta per creare studente inviata con successo.");
-            }
-            else
-            {
-                Console.WriteLine("Errore durante l'invio della richiesta per creare studente.");
-            }
-            */
+        private async void postClasse(string id_classe)
+        {
+            List<string> values = new List<string>();
+            values.Add(id_classe);
+            string postclasseUrl = BaseUrl + "/classi";
+            var responseStudente = await client.PostAsJsonAsync(postclasseUrl, values);
         }
     }
 }
