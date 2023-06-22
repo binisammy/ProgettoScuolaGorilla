@@ -30,6 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Client));
             panelSidemenu = new Panel();
+            btnCerca = new Button();
+            panelVisuaizza = new Panel();
+            button5 = new Button();
+            Buttn6 = new Button();
+            btnVisualizza = new Button();
             button1 = new Button();
             panelAggiungiMenu = new Panel();
             btnStudente = new Button();
@@ -44,6 +49,7 @@
             panelChildForm = new Panel();
             pictureBox1 = new PictureBox();
             panelSidemenu.SuspendLayout();
+            panelVisuaizza.SuspendLayout();
             panelAggiungiMenu.SuspendLayout();
             panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -55,6 +61,9 @@
             // 
             panelSidemenu.AutoScroll = true;
             panelSidemenu.BackColor = Color.FromArgb(11, 7, 17);
+            panelSidemenu.Controls.Add(btnCerca);
+            panelSidemenu.Controls.Add(panelVisuaizza);
+            panelSidemenu.Controls.Add(btnVisualizza);
             panelSidemenu.Controls.Add(button1);
             panelSidemenu.Controls.Add(panelAggiungiMenu);
             panelSidemenu.Controls.Add(btnAggiungi);
@@ -66,6 +75,90 @@
             panelSidemenu.Name = "panelSidemenu";
             panelSidemenu.Size = new Size(250, 608);
             panelSidemenu.TabIndex = 0;
+            // 
+            // btnCerca
+            // 
+            btnCerca.Dock = DockStyle.Top;
+            btnCerca.FlatAppearance.BorderSize = 0;
+            btnCerca.FlatStyle = FlatStyle.Flat;
+            btnCerca.ForeColor = Color.White;
+            btnCerca.Image = (Image)resources.GetObject("btnCerca.Image");
+            btnCerca.ImageAlign = ContentAlignment.MiddleLeft;
+            btnCerca.Location = new Point(0, 450);
+            btnCerca.Name = "btnCerca";
+            btnCerca.Padding = new Padding(10, 0, 0, 0);
+            btnCerca.Size = new Size(250, 40);
+            btnCerca.TabIndex = 8;
+            btnCerca.Text = "Cerca";
+            btnCerca.TextAlign = ContentAlignment.MiddleLeft;
+            btnCerca.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnCerca.UseVisualStyleBackColor = true;
+            // 
+            // panelVisuaizza
+            // 
+            panelVisuaizza.BackColor = Color.FromArgb(35, 32, 39);
+            panelVisuaizza.Controls.Add(button5);
+            panelVisuaizza.Controls.Add(Buttn6);
+            panelVisuaizza.Dock = DockStyle.Top;
+            panelVisuaizza.Location = new Point(0, 367);
+            panelVisuaizza.Name = "panelVisuaizza";
+            panelVisuaizza.Size = new Size(250, 83);
+            panelVisuaizza.TabIndex = 7;
+            // 
+            // button5
+            // 
+            button5.Dock = DockStyle.Top;
+            button5.FlatAppearance.BorderSize = 0;
+            button5.FlatStyle = FlatStyle.Flat;
+            button5.ForeColor = Color.White;
+            button5.Image = (Image)resources.GetObject("button5.Image");
+            button5.ImageAlign = ContentAlignment.MiddleLeft;
+            button5.Location = new Point(0, 40);
+            button5.Name = "button5";
+            button5.Padding = new Padding(35, 0, 0, 0);
+            button5.Size = new Size(250, 40);
+            button5.TabIndex = 5;
+            button5.Text = "Voto";
+            button5.TextAlign = ContentAlignment.MiddleLeft;
+            button5.TextImageRelation = TextImageRelation.ImageBeforeText;
+            button5.UseVisualStyleBackColor = true;
+            // 
+            // Buttn6
+            // 
+            Buttn6.Dock = DockStyle.Top;
+            Buttn6.FlatAppearance.BorderSize = 0;
+            Buttn6.FlatStyle = FlatStyle.Flat;
+            Buttn6.ForeColor = Color.White;
+            Buttn6.Image = Properties.Resources.Line;
+            Buttn6.ImageAlign = ContentAlignment.MiddleLeft;
+            Buttn6.Location = new Point(0, 0);
+            Buttn6.Name = "Buttn6";
+            Buttn6.Padding = new Padding(35, 0, 0, 0);
+            Buttn6.Size = new Size(250, 40);
+            Buttn6.TabIndex = 4;
+            Buttn6.Text = "Classe e Materie";
+            Buttn6.TextAlign = ContentAlignment.MiddleLeft;
+            Buttn6.TextImageRelation = TextImageRelation.ImageBeforeText;
+            Buttn6.UseVisualStyleBackColor = true;
+            // 
+            // btnVisualizza
+            // 
+            btnVisualizza.Dock = DockStyle.Top;
+            btnVisualizza.FlatAppearance.BorderSize = 0;
+            btnVisualizza.FlatStyle = FlatStyle.Flat;
+            btnVisualizza.ForeColor = Color.White;
+            btnVisualizza.Image = (Image)resources.GetObject("btnVisualizza.Image");
+            btnVisualizza.ImageAlign = ContentAlignment.MiddleLeft;
+            btnVisualizza.Location = new Point(0, 327);
+            btnVisualizza.Name = "btnVisualizza";
+            btnVisualizza.Padding = new Padding(10, 0, 0, 0);
+            btnVisualizza.Size = new Size(250, 40);
+            btnVisualizza.TabIndex = 6;
+            btnVisualizza.Text = "Visualizza";
+            btnVisualizza.TextAlign = ContentAlignment.MiddleLeft;
+            btnVisualizza.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnVisualizza.UseVisualStyleBackColor = true;
+            btnVisualizza.Click += btnVisualizza_Click;
             // 
             // button1
             // 
@@ -176,6 +269,7 @@
             // 
             // btnHome
             // 
+            btnHome.AutoSize = true;
             btnHome.Dock = DockStyle.Top;
             btnHome.FlatAppearance.BorderSize = 0;
             btnHome.FlatStyle = FlatStyle.Flat;
@@ -212,7 +306,7 @@
             label2.ForeColor = Color.White;
             label2.Location = new Point(5, 90);
             label2.Name = "label2";
-            label2.Size = new Size(164, 36);
+            label2.Size = new Size(207, 45);
             label2.TabIndex = 2;
             label2.Text = "Scuola Gorilla";
             label2.TextAlign = ContentAlignment.MiddleCenter;
@@ -263,7 +357,7 @@
             // 
             // Client
             // 
-            AutoScaleDimensions = new SizeF(8F, 16F);
+            AutoScaleDimensions = new SizeF(10F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(952, 608);
             Controls.Add(panelChildForm);
@@ -276,6 +370,8 @@
             Name = "Client";
             Text = "Scuola Gorilla";
             panelSidemenu.ResumeLayout(false);
+            panelSidemenu.PerformLayout();
+            panelVisuaizza.ResumeLayout(false);
             panelAggiungiMenu.ResumeLayout(false);
             panelLogo.ResumeLayout(false);
             panelLogo.PerformLayout();
@@ -302,6 +398,11 @@
         private PictureBox pictureBox2;
         private Button button1;
         private Label label2;
+        private Panel panelVisuaizza;
+        private Button button5;
+        private Button Buttn6;
+        private Button btnVisualizza;
+        private Button btnCerca;
     }
 }
 
