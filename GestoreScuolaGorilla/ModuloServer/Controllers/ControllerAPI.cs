@@ -42,6 +42,21 @@ namespace ModuloServer.Controllers
             return Ok();
         }
 
+        [HttpPost("voto")]
+        public ActionResult<string> PostVoti(List<string> voto)
+        {
+            var cs = $"Host={datasource};Port={port};Username={username};Password={passwd};Database={database}";
+            using (var con = new NpgsqlConnection(cs))
+            {
+                con.Open();
+                var cmd = new NpgsqlCommand();
+                cmd.Connection = con;
+                cmd.CommandText = $"INSERT INTO VOTI (id_matricola,id_voto,id_materie) VALUES ('{voto[0]}',{voto[1]},'{voto[2]}')";
+                cmd.ExecuteNonQuery();
+            }
+            return Ok("Voto inserito!");
+        }
+
         [HttpPost("classi")]
         public ActionResult<string> PostClasse(List<string> classe)
         {
@@ -93,7 +108,7 @@ namespace ModuloServer.Controllers
         }
 
         [HttpGet("materieByMatricola")]
-        public ActionResult<List<string>> GetMaterieByMatricola(string id_studente)
+        public ActionResult<List<string>> GetMaterieByClasse(string id_classe)
         {
             var cs = $"Host={datasource};Port={port};Username={username};Password={passwd};Database={database}";
             List<string> materie = new List<string>();
@@ -102,7 +117,7 @@ namespace ModuloServer.Controllers
                 con.Open();
                 var cmd = new NpgsqlCommand();
                 cmd.Connection = con;
-                cmd.CommandText = $"SELECT DISTINCT ID_MATERIE FROM VOTI WHERE ID_MATRICOLA = '{id_studente}'";
+                cmd.CommandText = $"SELECT DISTINCT ID_MATERIE FROM VOTI WHERE ID_CLASSE = '{id_classe}'";
                 var rdr = cmd.ExecuteReader();
                 while (rdr.Read())
                 {
@@ -153,7 +168,7 @@ namespace ModuloServer.Controllers
         }
 
         [HttpGet("studente")]
-        public ActionResult<Studente> GetStudente(string id_classe, string id_studente) 
+        public ActionResult<Studente> GetStudente(string id_studente) 
         {
             var cs = $"Host={datasource};Port={port};Username={username};Password={passwd};Database={database}";
             Studente studente = new Studente();
@@ -162,7 +177,7 @@ namespace ModuloServer.Controllers
                 con.Open();
                 var cmd = new NpgsqlCommand();
                 cmd.Connection = con;
-                cmd.CommandText = $"SELECT * FROM STUDENTI WHERE ID_CLASSE = '{id_classe}' AND ID_MATRICOLA = '{id_studente}'";
+                cmd.CommandText = $"SELECT * FROM STUDENTI WHERE ID_MATRICOLA = '{id_studente}'";
                 var rdr = cmd.ExecuteReader();
                 while (rdr.Read())
                 {
@@ -207,6 +222,51 @@ namespace ModuloServer.Controllers
                 cmd.ExecuteNonQuery();
             }
             return Ok();
+        }
+
+        [HttpDelete("voto")]
+        public ActionResult<string> DeleteVoto(string id_voto, string id_materia, string id_studente)
+        {
+            var cs = $"Host={datasource};Port={port};Username={username};Password={passwd};Database={database}";
+            using (var con = new NpgsqlConnection(cs))
+            {
+                con.Open();
+                var cmd = new NpgsqlCommand();
+                cmd.Connection = con;
+                cmd.CommandText = $"DELETE FROM VOTI WHERE ID_VOTO = {id_voto} AND ID_MATERIE = '{id_materia}' AND ID_MATRICOLA = '{id_studente}";
+                cmd.ExecuteNonQuery();
+            }
+            return Ok("Voto eliminato!");
+        }
+
+        [HttpDelete("allvoti")]
+        public ActionResult<string> DeleteVoti(string id_studente)
+        {
+            var cs = $"Host={datasource};Port={port};Username={username};Password={passwd};Database={database}";
+            using (var con = new NpgsqlConnection(cs))
+            {
+                con.Open();
+                var cmd = new NpgsqlCommand();
+                cmd.Connection = con;
+                cmd.CommandText = $"DELETE FROM VOTI WHERE ID_MATRICOLA = '{id_studente}'";
+                cmd.ExecuteNonQuery();
+            }
+            return Ok("Voti eliminati!");
+        }
+
+        [HttpDelete("votimateria")]
+        public ActionResult<string> DeleteVotiByMateria(string id_studente, string id_materia)
+        {
+            var cs = $"Host={datasource};Port={port};Username={username};Password={passwd};Database={database}";
+            using (var con = new NpgsqlConnection(cs))
+            {
+                con.Open();
+                var cmd = new NpgsqlCommand();
+                cmd.Connection = con;
+                cmd.CommandText = $"DELETE FROM VOTI WHERE ID_MATRICOLA = '{id_studente}' AND ID_MATERIE = '{id_materia}'";
+                cmd.ExecuteNonQuery();
+            }
+            return Ok("Voti eliminati!");
         }
     }
 }

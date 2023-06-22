@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            comboBox2 = new ComboBox();
+            label1 = new Label();
             button3 = new Button();
             panel2 = new Panel();
             button1 = new Button();
@@ -43,8 +45,6 @@
             Materie = new DataGridViewTextBoxColumn();
             Voti = new DataGridViewTextBoxColumn();
             panel3 = new Panel();
-            label1 = new Label();
-            comboBox2 = new ComboBox();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)DgwVoti).BeginInit();
             panel3.SuspendLayout();
@@ -71,6 +71,29 @@
             panel1.Size = new Size(286, 500);
             panel1.TabIndex = 8;
             // 
+            // comboBox2
+            // 
+            comboBox2.BackColor = Color.FromArgb(32, 30, 45);
+            comboBox2.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBox2.FlatStyle = FlatStyle.Flat;
+            comboBox2.ForeColor = Color.White;
+            comboBox2.FormattingEnabled = true;
+            comboBox2.Location = new Point(111, 96);
+            comboBox2.Margin = new Padding(3, 4, 3, 4);
+            comboBox2.Name = "comboBox2";
+            comboBox2.Size = new Size(157, 28);
+            comboBox2.TabIndex = 40;
+            // 
+            // label1
+            // 
+            label1.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = Color.FromArgb(231, 61, 61);
+            label1.Location = new Point(3, 99);
+            label1.Name = "label1";
+            label1.Size = new Size(102, 25);
+            label1.TabIndex = 39;
+            label1.Text = "Classe";
+            // 
             // button3
             // 
             button3.Dock = DockStyle.Bottom;
@@ -84,6 +107,7 @@
             button3.TabIndex = 38;
             button3.Text = "Aggiungi";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // panel2
             // 
@@ -104,10 +128,10 @@
             button1.TabIndex = 35;
             button1.Text = "Rimuovi";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // comboBox1
             // 
-            comboBox1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             comboBox1.BackColor = Color.FromArgb(32, 30, 45);
             comboBox1.DropDownHeight = 75;
             comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
@@ -115,69 +139,64 @@
             comboBox1.ForeColor = Color.White;
             comboBox1.FormattingEnabled = true;
             comboBox1.IntegralHeight = false;
-            comboBox1.Items.AddRange(new object[] { "0", "0.5", "1", "1.5", "2", "2.5", "3", "3.5", "4", "4.5", "5", "5.5", "6", "6.5", "7", "7.5", "8", "8.5", "9", "9.5", "10" });
-            comboBox1.Location = new Point(111, 161);
-            comboBox1.Margin = new Padding(3, 4, 3, 4);
+            comboBox1.Items.AddRange(new object[] { "", "1", "1.5", "2", "2.5", "3", "3.5", "4", "4.5", "5", "5.5", "6", "6.5", "7", "7.5", "8", "8.5", "9", "9.5", "10" });
+            comboBox1.Location = new Point(109, 233);
             comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(127, 28);
+            comboBox1.Size = new Size(155, 28);
             comboBox1.TabIndex = 34;
             // 
             // CbxMateria
             // 
-            CbxMateria.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             CbxMateria.BackColor = Color.FromArgb(32, 30, 45);
             CbxMateria.DropDownStyle = ComboBoxStyle.DropDownList;
             CbxMateria.FlatStyle = FlatStyle.Flat;
             CbxMateria.ForeColor = Color.White;
             CbxMateria.FormattingEnabled = true;
-            CbxMateria.Location = new Point(111, 112);
+            CbxMateria.Location = new Point(109, 162);
             CbxMateria.Margin = new Padding(3, 4, 3, 4);
             CbxMateria.Name = "CbxMateria";
-            CbxMateria.Size = new Size(127, 28);
+            CbxMateria.Size = new Size(157, 28);
             CbxMateria.TabIndex = 33;
             // 
             // label13
             // 
-            label13.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            label13.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label13.ForeColor = Color.FromArgb(231, 1, 61);
-            label13.Location = new Point(3, 164);
+            label13.Location = new Point(3, 232);
             label13.Name = "label13";
             label13.Size = new Size(69, 20);
             label13.TabIndex = 32;
-            label13.Text = "Voto:";
+            label13.Text = "Voto";
             // 
             // label16
             // 
-            label16.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            label16.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label16.ForeColor = Color.FromArgb(231, 61, 61);
-            label16.Location = new Point(3, 115);
+            label16.Location = new Point(3, 162);
             label16.Name = "label16";
-            label16.Size = new Size(69, 20);
+            label16.Size = new Size(86, 25);
             label16.TabIndex = 31;
-            label16.Text = "Materia:";
-            label16.Click += label16_Click;
+            label16.Text = "Materia";
             // 
             // LblMatricola
             // 
-            LblMatricola.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            LblMatricola.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
             LblMatricola.ForeColor = Color.FromArgb(231, 61, 61);
             LblMatricola.Location = new Point(3, 24);
             LblMatricola.Name = "LblMatricola";
-            LblMatricola.Size = new Size(102, 16);
+            LblMatricola.Size = new Size(111, 30);
             LblMatricola.TabIndex = 25;
-            LblMatricola.Text = "Matricola:";
-            LblMatricola.Click += LblMatricola_Click;
+            LblMatricola.Text = "Matricola";
             // 
             // TxtMatricola
             // 
-            TxtMatricola.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             TxtMatricola.BackColor = Color.FromArgb(32, 30, 45);
-            TxtMatricola.Font = new Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point);
+            TxtMatricola.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
             TxtMatricola.ForeColor = Color.White;
-            TxtMatricola.Location = new Point(111, 24);
+            TxtMatricola.Location = new Point(113, 24);
             TxtMatricola.Margin = new Padding(3, 5, 3, 5);
             TxtMatricola.Name = "TxtMatricola";
-            TxtMatricola.Size = new Size(129, 22);
+            TxtMatricola.Size = new Size(164, 30);
             TxtMatricola.TabIndex = 26;
             TxtMatricola.Text = "Inserisci Matricola";
             TxtMatricola.MouseClick += TxtMatricola_MouseClick;
@@ -210,7 +229,6 @@
             DgwVoti.RowTemplate.Height = 24;
             DgwVoti.Size = new Size(414, 473);
             DgwVoti.TabIndex = 36;
-            DgwVoti.CellContentClick += DgwVoti_CellContentClick;
             // 
             // Materie
             // 
@@ -235,31 +253,6 @@
             panel3.Name = "panel3";
             panel3.Size = new Size(414, 473);
             panel3.TabIndex = 37;
-            // 
-            // label1
-            // 
-            label1.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.ForeColor = Color.FromArgb(231, 61, 61);
-            label1.Location = new Point(3, 66);
-            label1.Name = "label1";
-            label1.Size = new Size(84, 20);
-            label1.TabIndex = 39;
-            label1.Text = "Classe:";
-            label1.Click += label1_Click;
-            // 
-            // comboBox2
-            // 
-            comboBox2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            comboBox2.BackColor = Color.FromArgb(32, 30, 45);
-            comboBox2.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox2.FlatStyle = FlatStyle.Flat;
-            comboBox2.ForeColor = Color.White;
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(111, 63);
-            comboBox2.Margin = new Padding(3, 4, 3, 4);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(127, 28);
-            comboBox2.TabIndex = 40;
             // 
             // Gestione_Voti
             // 
