@@ -72,19 +72,13 @@
             button3.FlatAppearance.BorderSize = 0;
             button3.FlatStyle = FlatStyle.Flat;
             button3.ForeColor = Color.FromArgb(231, 61, 61);
-<<<<<<< HEAD
-            button3.Location = new Point(0, 394);
+            button3.Location = new Point(0, 282);
             button3.Name = "button3";
-            button3.Size = new Size(286, 53);
-=======
-            button3.Location = new Point(0, 295);
-            button3.Margin = new Padding(3, 2, 3, 2);
-            button3.Name = "button3";
-            button3.Size = new Size(250, 40);
->>>>>>> 56b36cb7dd5f8414ff71d041a604cd21d867e4ab
+            button3.Size = new Size(250, 53);
             button3.TabIndex = 38;
             button3.Text = "Aggiungi";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // panel2
             // 
@@ -107,6 +101,7 @@
             button1.TabIndex = 35;
             button1.Text = "Rimuovi";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // comboBox1
             // 
@@ -116,7 +111,7 @@
             comboBox1.FlatStyle = FlatStyle.Flat;
             comboBox1.FormattingEnabled = true;
             comboBox1.IntegralHeight = false;
-            comboBox1.Items.AddRange(new object[] { "0", "0.5", "1", "1.5", "2", "2.5", "3", "3.5", "4", "4.5", "5", "5.5", "6", "6.5", "7", "7.5", "8", "8.5", "9", "9.5", "10" });
+            comboBox1.Items.AddRange(new object[] { "", "1", "1.5", "2", "2.5", "3", "3.5", "4", "4.5", "5", "5.5", "6", "6.5", "7", "7.5", "8", "8.5", "9", "9.5", "10" });
             comboBox1.Location = new Point(83, 90);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(112, 23);
@@ -168,24 +163,15 @@
             TxtMatricola.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             TxtMatricola.BackColor = Color.FromArgb(32, 30, 45);
             TxtMatricola.Font = new Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point);
-<<<<<<< HEAD
             TxtMatricola.ForeColor = Color.White;
             TxtMatricola.Location = new Point(97, 17);
             TxtMatricola.Margin = new Padding(3, 4, 3, 4);
-=======
-            TxtMatricola.ForeColor = Color.FromArgb(231, 60, 61);
-            TxtMatricola.Location = new Point(85, 13);
->>>>>>> 56b36cb7dd5f8414ff71d041a604cd21d867e4ab
             TxtMatricola.Name = "TxtMatricola";
             TxtMatricola.Size = new Size(112, 19);
             TxtMatricola.TabIndex = 26;
             TxtMatricola.Text = "Inserisci Matricola";
             TxtMatricola.MouseClick += TxtMatricola_MouseClick;
-<<<<<<< HEAD
-            TxtMatricola.TextChanged += TxtMatricola_TextChanged;
-=======
             TxtMatricola.TextChanged += TxtMatricola_TextChanged_1;
->>>>>>> 56b36cb7dd5f8414ff71d041a604cd21d867e4ab
             TxtMatricola.MouseLeave += TxtMatricola_MouseLeave;
             // 
             // textBox12
