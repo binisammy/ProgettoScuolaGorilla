@@ -89,6 +89,18 @@ namespace ClassLibrary1
             }
         }
 
+        public Dictionary<string, Voti> VotiMaterie
+        {
+            get
+            {
+                return votiMaterie;
+            }
+            set
+            {
+                votiMaterie = value;
+            }
+        }
+
         public Voti getVotiMateria(string materia)
         {
             materia = materia.ToLower();

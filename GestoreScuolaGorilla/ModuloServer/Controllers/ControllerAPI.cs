@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Hosting.Server;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Security.Permissions;
 using System.Collections.Generic;
+using System.Data;
 
 namespace ModuloServer.Controllers
 {
@@ -112,7 +113,7 @@ namespace ModuloServer.Controllers
         }
 
         [HttpGet("studenti")]
-        public ActionResult<List<Studente>> GetStudente(string id_classe)
+        public ActionResult<List<Studente>> GetStudenti(string id_classe)
         {
             var cs = $"Host={datasource};Port={port};Username={username};Password={passwd};Database={database}";
             List<Studente> studenti = new List<Studente>();
@@ -129,6 +130,46 @@ namespace ModuloServer.Controllers
                 }
             }
             return Ok(studenti);
+        }
+
+        [HttpGet("studente")]
+        public ActionResult<Studente> GetStudente(string id_classe, string id_studente) 
+        {
+            var cs = $"Host={datasource};Port={port};Username={username};Password={passwd};Database={database}";
+            Studente studente = new Studente();
+            using (var con = new NpgsqlConnection(cs))
+            {
+                con.Open();
+                var cmd = new NpgsqlCommand();
+                cmd.Connection = con;
+                cmd.CommandText = $"SELECT * FROM STUDENTI WHERE ID_CLASSE = '{id_classe}' AND ID_MATRICOLA = '{id_studente}'";
+                var rdr = cmd.ExecuteReader();
+                while (rdr.Read())
+                {
+                    studente = new Studente(rdr.GetString(2), rdr.GetString(3), rdr.GetString(0), rdr.GetString(1));
+                }
+            }
+            return Ok(studente);
+        }
+
+        [HttpGet("voti")]
+        public ActionResult<Studente> GetVoti(string id_studente)
+        {
+            var cs = $"Host={datasource};Port={port};Username={username};Password={passwd};Database={database}";
+            Studente studente = new Studente("from", "api", id_studente, "AAA");
+            using (var con = new NpgsqlConnection(cs))
+            {
+                con.Open();
+                var cmd = new NpgsqlCommand();
+                cmd.Connection = con;
+                cmd.CommandText = $"SELECT ID_VOTO, ID_MATERIE FROM VOTI WHERE ID_MATRICOLA = '{id_studente}' ORDER BY ID_MATERIE";
+                var rdr = cmd.ExecuteReader();
+                while (rdr.Read())
+                {
+                    studente.addVotiMateria(rdr.GetDouble(0), rdr.GetString(1));
+                }
+                return Ok(studente);
+            }
         }
 
         [HttpDelete("classe")]

@@ -25,6 +25,30 @@
             this.voto.Add(voto);
         }
 
+        public string Materia
+        {
+            get
+            {
+                return materia;
+            }
+            set
+            {
+                materia = value;
+            }
+        }
+
+        public List<double> Voto
+        {
+            get
+            {
+                return voto;
+            }
+            set
+            {
+                voto = value;
+            }
+        }
+
         public void add(double v)
         {
             voto.Add(v);
