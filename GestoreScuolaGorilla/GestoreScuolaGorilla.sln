@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClassLibrary1", "ClassLibra
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModuloForm", "ModuloForm\ModuloForm.csproj", "{719750C4-6C14-4FB1-9745-0A6B5181722F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Menu", "..\..\Menu\Menu\Menu\Menu.csproj", "{ACAD9109-0123-486A-9179-3CA4899F1E71}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{719750C4-6C14-4FB1-9745-0A6B5181722F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{719750C4-6C14-4FB1-9745-0A6B5181722F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{719750C4-6C14-4FB1-9745-0A6B5181722F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACAD9109-0123-486A-9179-3CA4899F1E71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACAD9109-0123-486A-9179-3CA4899F1E71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACAD9109-0123-486A-9179-3CA4899F1E71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACAD9109-0123-486A-9179-3CA4899F1E71}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
