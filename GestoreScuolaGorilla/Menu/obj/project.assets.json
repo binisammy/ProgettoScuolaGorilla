@@ -1,0 +1,115 @@
+{
+  "version": 3,
+  "targets": {
+    "net6.0-windows7.0": {
+      "ClassLibrary1/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/ClassLibrary1.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ClassLibrary1.dll": {}
+        }
+      },
+      "Scuola_Gorilla/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "ClassLibrary1": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Scuola_Gorilla.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Scuola_Gorilla.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WindowsForms"
+        ]
+      }
+    }
+  },
+  "libraries": {
+    "ClassLibrary1/1.0.0": {
+      "type": "project",
+      "path": "../ClassLibrary1/ClassLibrary1.csproj",
+      "msbuildProject": "../ClassLibrary1/ClassLibrary1.csproj"
+    },
+    "Scuola_Gorilla/1.0.0": {
+      "type": "project",
+      "path": "../Scuola_Gorilla/Scuola_Gorilla.csproj",
+      "msbuildProject": "../Scuola_Gorilla/Scuola_Gorilla.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net6.0-windows7.0": [
+      "Scuola_Gorilla >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\user9_12_1\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\user9_12_1\\Documents\\ANNO1\\Ingegneria del Software\\Progettone\\GestoreScuolaGorilla\\Menu\\Menu.csproj",
+      "projectName": "Menu",
+      "projectPath": "C:\\Users\\user9_12_1\\Documents\\ANNO1\\Ingegneria del Software\\Progettone\\GestoreScuolaGorilla\\Menu\\Menu.csproj",
+      "packagesPath": "C:\\Users\\user9_12_1\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\user9_12_1\\Documents\\ANNO1\\Ingegneria del Software\\Progettone\\GestoreScuolaGorilla\\Menu\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\user9_12_1\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net6.0-windows"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net6.0-windows7.0": {
+          "targetAlias": "net6.0-windows",
+          "projectReferences": {
+            "C:\\Users\\user9_12_1\\Documents\\ANNO1\\Ingegneria del Software\\Progettone\\GestoreScuolaGorilla\\Scuola_Gorilla\\Scuola_Gorilla.csproj": {
+              "projectPath": "C:\\Users\\user9_12_1\\Documents\\ANNO1\\Ingegneria del Software\\Progettone\\GestoreScuolaGorilla\\Scuola_Gorilla\\Scuola_Gorilla.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net6.0-windows7.0": {
+        "targetAlias": "net6.0-windows",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          },
+          "Microsoft.WindowsDesktop.App.WindowsForms": {
+            "privateAssets": "none"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
