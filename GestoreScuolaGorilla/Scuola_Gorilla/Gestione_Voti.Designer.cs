@@ -180,6 +180,7 @@
             TxtMatricola.TabIndex = 26;
             TxtMatricola.Text = "Inserisci Matricola";
             TxtMatricola.MouseClick += TxtMatricola_MouseClick;
+            TxtMatricola.TextChanged += TxtMatricola_TextChanged;
             TxtMatricola.MouseLeave += TxtMatricola_MouseLeave;
             // 
             // textBox12

@@ -32,6 +32,13 @@ namespace ClassLibrary1
             return responseStudente;
         }
 
+        public async Task<List<string>> getMaterieByMatricola(string id_studente)
+        {
+            string getstudentiUrl = BaseUrl + $"/materieByMatricola?id_studente={id_studente}";
+            var responseStudente = await client.GetFromJsonAsync<List<string>>(getstudentiUrl);
+            return responseStudente;
+        }
+
         public async Task<Studente> getVoti(string id_matricola)
         {
             string getvotiUrl = BaseUrl + $"/voti?id_studente={id_matricola}";

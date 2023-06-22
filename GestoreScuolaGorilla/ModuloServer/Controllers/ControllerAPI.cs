@@ -92,6 +92,26 @@ namespace ModuloServer.Controllers
             return Ok(materie);
         }
 
+        [HttpGet("materieByMatricola")]
+        public ActionResult<List<string>> GetMaterieByMatricola(string id_studente)
+        {
+            var cs = $"Host={datasource};Port={port};Username={username};Password={passwd};Database={database}";
+            List<string> materie = new List<string>();
+            using (var con = new NpgsqlConnection(cs))
+            {
+                con.Open();
+                var cmd = new NpgsqlCommand();
+                cmd.Connection = con;
+                cmd.CommandText = $"SELECT DISTINCT ID_MATERIE FROM VOTI WHERE ID_MATRICOLA = '{id_studente}'";
+                var rdr = cmd.ExecuteReader();
+                while (rdr.Read())
+                {
+                    materie.Add(rdr.GetString(0));
+                }
+            }
+            return Ok(materie);
+        }
+
         [HttpGet("classi")]
         public ActionResult<List<string>> GetClassi()
         {

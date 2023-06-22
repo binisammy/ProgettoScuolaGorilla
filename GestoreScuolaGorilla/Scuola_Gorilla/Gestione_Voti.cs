@@ -55,5 +55,16 @@ namespace Scuola_Gorilla
             }
 
         }
+
+        private async void TxtMatricola_TextChanged(object sender, EventArgs e)
+        {
+            if (TxtMatricola.Text == "" || TxtMatricola.Text.Length == 0) return;
+            List<string> materie = await api.getMaterieByMatricola(TxtMatricola.Text);
+            CbxMateria.Items.Clear();
+            foreach (var m in materie)
+            {
+                CbxMateria.Items.Add(m);
+            }
+        }
     }
 }
