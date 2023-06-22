@@ -233,7 +233,7 @@ namespace ModuloServer.Controllers
                 con.Open();
                 var cmd = new NpgsqlCommand();
                 cmd.Connection = con;
-                cmd.CommandText = $"DELETE FROM VOTI WHERE ID_VOTO = {id_voto} AND ID_MATERIE = '{id_materia}' AND ID_MATRICOLA = '{id_studente}";
+                cmd.CommandText = $"DELETE FROM VOTI WHERE ID_VOTO = {id_voto} AND ID_MATERIE = '{id_materia}' AND ID_MATRICOLA = '{id_studente}'";
                 cmd.ExecuteNonQuery();
             }
             return Ok("Voto eliminato!");
