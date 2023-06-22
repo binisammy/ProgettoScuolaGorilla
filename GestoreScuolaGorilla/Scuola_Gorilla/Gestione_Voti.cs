@@ -54,15 +54,12 @@ namespace Scuola_Gorilla
         //        }
         //    }
 
-<<<<<<< HEAD
-        }
+        
 
-        private async void TxtMatricola_TextChanged(object sender, EventArgs e)
-=======
+
         //}
 
         private async void TxtMatricola_TextChanged_1(object sender, EventArgs e)
->>>>>>> 56b36cb7dd5f8414ff71d041a604cd21d867e4ab
         {
             if (TxtMatricola.Text == "" || TxtMatricola.Text.Length == 0) return;
             List<string> materie = await api.getMaterieByMatricola(TxtMatricola.Text);
