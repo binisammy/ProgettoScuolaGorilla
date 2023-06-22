@@ -55,7 +55,10 @@ namespace Scuola_Gorilla
             }
 
         }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 89195c34e9ffb3a09201208401ed1303c32259f7
         private void DgwVoti_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -80,8 +83,11 @@ namespace Scuola_Gorilla
         {
 
         }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 89195c34e9ffb3a09201208401ed1303c32259f7
         private async void TxtMatricola_TextChanged(object sender, EventArgs e)
         {
             if (TxtMatricola.Text == "" || TxtMatricola.Text.Length == 0) return;
