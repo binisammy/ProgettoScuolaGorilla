@@ -55,39 +55,7 @@ namespace Scuola_Gorilla
             }
 
         }
-<<<<<<< HEAD
 
-=======
->>>>>>> 89195c34e9ffb3a09201208401ed1303c32259f7
-        private void DgwVoti_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void DgwVoti_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 89195c34e9ffb3a09201208401ed1303c32259f7
         private async void TxtMatricola_TextChanged(object sender, EventArgs e)
         {
             if (TxtMatricola.Text == "" || TxtMatricola.Text.Length == 0) return;
