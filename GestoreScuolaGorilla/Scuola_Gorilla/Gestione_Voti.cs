@@ -35,24 +35,6 @@ namespace Scuola_Gorilla
             }
         }
 
-        //private async void CbxClasse_SelectedIndexChanged(object sender, EventArgs e)
-        //{
-        //    //get value set in combobox CbxClasse
-
-        //    var id_classe = this.CbxClasse.SelectedItem.ToString();
-        //    var materie = await api.getMaterie(id_classe);
-        //    this.CbxMateria.Items.Clear();
-        //    foreach (var materia in materie)
-        //    {
-        //        this.CbxMateria.Items.Add(materia);
-        //    }
-        //}
-
-        private void LblCognome_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private async void btnSearch_Click(object sender, EventArgs e)
         {
             if (TxtMatricola.Text.Equals(""))
@@ -71,11 +53,6 @@ namespace Scuola_Gorilla
                         this.DgwVoti.Rows.Add(voto.Key.ToUpper(), v);
                 }
             }
-
-        }
-
-        private void label13_Click(object sender, EventArgs e)
-        {
 
         }
     }

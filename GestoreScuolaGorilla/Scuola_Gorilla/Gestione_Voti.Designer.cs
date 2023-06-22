@@ -147,7 +147,6 @@
             label13.Size = new Size(60, 15);
             label13.TabIndex = 32;
             label13.Text = "Voto:";
-            label13.Click += label13_Click;
             // 
             // label16
             // 
