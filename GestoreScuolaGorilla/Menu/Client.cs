@@ -27,6 +27,7 @@ namespace Menu
         private void customizeDesing()
         {
             panelAggiungiMenu.Visible = false;
+            panelVisuaizza.Visible = false;
 
         }
         private void hideSubMenu()
@@ -34,6 +35,10 @@ namespace Menu
             if (panelAggiungiMenu.Visible == true)
             {
                 panelAggiungiMenu.Visible = false;
+            }
+            if (panelVisuaizza.Visible == true)
+            {
+                panelVisuaizza.Visible = false;
             }
         }
         private void showSubMenu(Panel subMenuu)
@@ -101,5 +106,24 @@ namespace Menu
                 Application.Exit();
             }
         }
+
+        private void btnVisualizza_Click(object sender, EventArgs e)
+        {
+            showSubMenu(panelVisuaizza);
+        }
+
+  
+
+
+
+
+
+
+
+
+        /*private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }*/
     }
 }
