@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            button3 = new Button();
             panel2 = new Panel();
             button1 = new Button();
             comboBox1 = new ComboBox();
@@ -42,7 +43,6 @@
             Materie = new DataGridViewTextBoxColumn();
             Voti = new DataGridViewTextBoxColumn();
             panel3 = new Panel();
-            button3 = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)DgwVoti).BeginInit();
             panel3.SuspendLayout();
@@ -66,6 +66,19 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(286, 500);
             panel1.TabIndex = 8;
+            // 
+            // button3
+            // 
+            button3.Dock = DockStyle.Bottom;
+            button3.FlatAppearance.BorderSize = 0;
+            button3.FlatStyle = FlatStyle.Flat;
+            button3.ForeColor = Color.FromArgb(231, 61, 61);
+            button3.Location = new Point(0, 394);
+            button3.Name = "button3";
+            button3.Size = new Size(286, 53);
+            button3.TabIndex = 38;
+            button3.Text = "Aggiungi";
+            button3.UseVisualStyleBackColor = true;
             // 
             // panel2
             // 
@@ -149,7 +162,7 @@
             TxtMatricola.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             TxtMatricola.BackColor = Color.FromArgb(32, 30, 45);
             TxtMatricola.Font = new Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point);
-            TxtMatricola.ForeColor = Color.FromArgb(231, 60, 61);
+            TxtMatricola.ForeColor = Color.White;
             TxtMatricola.Location = new Point(97, 17);
             TxtMatricola.Margin = new Padding(3, 4, 3, 4);
             TxtMatricola.Name = "TxtMatricola";
@@ -210,19 +223,6 @@
             panel3.Name = "panel3";
             panel3.Size = new Size(414, 473);
             panel3.TabIndex = 37;
-            // 
-            // button3
-            // 
-            button3.Dock = DockStyle.Bottom;
-            button3.FlatAppearance.BorderSize = 0;
-            button3.FlatStyle = FlatStyle.Flat;
-            button3.ForeColor = Color.FromArgb(231, 61, 61);
-            button3.Location = new Point(0, 394);
-            button3.Name = "button3";
-            button3.Size = new Size(286, 53);
-            button3.TabIndex = 38;
-            button3.Text = "Aggiungi";
-            button3.UseVisualStyleBackColor = true;
             // 
             // Gestione_Voti
             // 
