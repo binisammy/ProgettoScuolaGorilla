@@ -269,6 +269,7 @@
             // 
             // btnHome
             // 
+            btnHome.AutoEllipsis = true;
             btnHome.AutoSize = true;
             btnHome.Dock = DockStyle.Top;
             btnHome.FlatAppearance.BorderSize = 0;

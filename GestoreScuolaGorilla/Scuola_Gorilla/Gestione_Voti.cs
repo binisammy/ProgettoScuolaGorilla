@@ -54,7 +54,7 @@ namespace Scuola_Gorilla
         //        }
         //    }
 
-        
+
 
 
         //}
@@ -68,6 +68,27 @@ namespace Scuola_Gorilla
             {
                 CbxMateria.Items.Add(m);
             }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void label16_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void LblMatricola_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void DgwVoti_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
         }
     }
 }
