@@ -207,6 +207,28 @@ namespace ModuloServer.Controllers
             }
         }
 
+        [HttpGet("matricola")]
+        public ActionResult<string> GetMatricola (string id_classe, string nome, string cognome)
+        {
+            var cs = $"Host={datasource};Port={port};Username={username};Password={passwd};Database={database}";
+            string matricola = "";
+            using (var con = new NpgsqlConnection(cs))
+            {
+                con.Open();
+                var cmd = new NpgsqlCommand();
+                cmd.Connection = con;
+                cmd.CommandText = $"SELECT ID_MATRICOLA FROM STUDENTI WHERE ID_CLASSE = '{id_classe}' AND NOME = '{nome}' AND COGNOME = '{cognome}'";
+                var rdr = cmd.ExecuteReader();
+                while (rdr.Read())
+                {
+                    matricola = rdr.GetValue(0).ToString();
+                }
+                if (matricola == "")
+                    matricola = "Non trovato!";
+            }
+            return Ok(matricola);
+        }
+
         [HttpDelete("classe")]
         public ActionResult<string> DeleteClasse(string id_classe)
         {
@@ -228,15 +250,32 @@ namespace ModuloServer.Controllers
         public ActionResult<string> DeleteVoto(string id_voto, string id_materia, string id_studente)
         {
             var cs = $"Host={datasource};Port={port};Username={username};Password={passwd};Database={database}";
+            int before = 0, after = 0;
             using (var con = new NpgsqlConnection(cs))
             {
                 con.Open();
                 var cmd = new NpgsqlCommand();
                 cmd.Connection = con;
-                cmd.CommandText = $"DELETE FROM VOTI WHERE ID_VOTO = {id_voto} AND ID_MATERIE = '{id_materia}' AND ID_MATRICOLA = '{id_studente}'";
+                cmd.CommandText =$"SELECT COUNT(KEY_VOTO) FROM VOTI WHERE ID_MATRICOLA = '{id_studente}'";
+                var rdr = cmd.ExecuteReader();
+                while (rdr.Read())
+                {
+                    before = rdr.GetInt32(0);
+                }
+                rdr.Close();
+                cmd.CommandText = $"DELETE FROM VOTI WHERE KEY_VOTO IN (SELECT KEY_VOTO FROM VOTI WHERE ID_VOTO = {id_voto} AND ID_MATERIE = '{id_materia}' AND ID_MATRICOLA = '{id_studente}' LIMIT 1)";
                 cmd.ExecuteNonQuery();
+                cmd.CommandText = $"SELECT COUNT(KEY_VOTO) FROM VOTI WHERE ID_MATRICOLA = '{id_studente}'";
+                rdr = cmd.ExecuteReader();
+                while (rdr.Read())
+                {
+                    after = rdr.GetInt32(0);
+                }
             }
-            return Ok("Voto eliminato!");
+            if (before == after)
+                return Ok("Voto non trovato!");
+            else
+                return Ok("Voto eliminato!");
         }
 
         [HttpDelete("allvoti")]

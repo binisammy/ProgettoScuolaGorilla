@@ -67,7 +67,7 @@
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(250, 375);
+            panel1.Size = new Size(252, 375);
             panel1.TabIndex = 8;
             // 
             // txtClasse
@@ -99,7 +99,7 @@
             button3.ForeColor = Color.FromArgb(231, 61, 61);
             button3.Location = new Point(0, 282);
             button3.Name = "button3";
-            button3.Size = new Size(250, 53);
+            button3.Size = new Size(252, 53);
             button3.TabIndex = 38;
             button3.Text = "Aggiungi";
             button3.UseVisualStyleBackColor = true;
@@ -122,7 +122,7 @@
             button1.Location = new Point(0, 335);
             button1.Margin = new Padding(3, 2, 3, 2);
             button1.Name = "button1";
-            button1.Size = new Size(250, 40);
+            button1.Size = new Size(252, 40);
             button1.TabIndex = 35;
             button1.Text = "Rimuovi";
             button1.UseVisualStyleBackColor = true;
@@ -205,10 +205,10 @@
             // 
             textBox12.Dock = DockStyle.Top;
             textBox12.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            textBox12.Location = new Point(250, 0);
+            textBox12.Location = new Point(252, 0);
             textBox12.Name = "textBox12";
             textBox12.ReadOnly = true;
-            textBox12.Size = new Size(362, 23);
+            textBox12.Size = new Size(360, 23);
             textBox12.TabIndex = 36;
             textBox12.Text = "Voti Studente";
             textBox12.TextAlign = HorizontalAlignment.Center;

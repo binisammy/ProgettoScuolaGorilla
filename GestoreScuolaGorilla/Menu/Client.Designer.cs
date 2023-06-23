@@ -93,6 +93,7 @@
             btnCerca.TextAlign = ContentAlignment.MiddleLeft;
             btnCerca.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnCerca.UseVisualStyleBackColor = true;
+            btnCerca.Click += btnCerca_Click;
             // 
             // panelVisuaizza
             // 
