@@ -74,6 +74,7 @@
             // txtClasse
             // 
             txtClasse.BackColor = Color.FromArgb(32, 30, 45);
+            txtClasse.BorderStyle = BorderStyle.FixedSingle;
             txtClasse.ForeColor = SystemColors.Info;
             txtClasse.Location = new Point(111, 96);
             txtClasse.Margin = new Padding(3, 4, 3, 4);
@@ -190,6 +191,7 @@
             // TxtMatricola
             // 
             TxtMatricola.BackColor = Color.FromArgb(32, 30, 45);
+            TxtMatricola.BorderStyle = BorderStyle.FixedSingle;
             TxtMatricola.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
             TxtMatricola.ForeColor = Color.White;
             TxtMatricola.Location = new Point(111, 21);
