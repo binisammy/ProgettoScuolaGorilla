@@ -8,7 +8,7 @@ using System.Collections.Generic;
 using System.Data;
 
 namespace ModuloServer.Controllers
-{
+{   
     [Route("[controller]")]
     [ApiController]
     public class ValuesController : ControllerBase
