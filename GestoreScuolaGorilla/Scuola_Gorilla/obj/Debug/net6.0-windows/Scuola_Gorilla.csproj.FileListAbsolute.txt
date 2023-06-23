@@ -43,3 +43,4 @@ C:\Users\user4_12_1\Desktop\Gorilla\GestoreScuolaGorilla\Scuola_Gorilla\obj\Debu
 C:\Users\user4_12_1\Desktop\Gorilla\GestoreScuolaGorilla\Scuola_Gorilla\obj\Debug\net6.0-windows\Scuola_Gorilla.genruntimeconfig.cache
 C:\Users\user4_12_1\Desktop\Gorilla\GestoreScuolaGorilla\Scuola_Gorilla\obj\Debug\net6.0-windows\ref\Scuola_Gorilla.dll
 C:\Users\user9_12_1\Documents\ANNO1\Ingegneria del Software\Progettone\GestoreScuolaGorilla\Scuola_Gorilla\obj\Debug\net6.0-windows\Scuola_Gorilla.TrovaMatricola.resources
+C:\Users\user4_12_1\Desktop\Gorilla\GestoreScuolaGorilla\Scuola_Gorilla\obj\Debug\net6.0-windows\Scuola_Gorilla.TrovaMatricola.resources
