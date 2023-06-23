@@ -205,8 +205,11 @@
             // 
             // textBox12
             // 
+            textBox12.BackColor = Color.FromArgb(32, 30, 45);
+            textBox12.BorderStyle = BorderStyle.FixedSingle;
             textBox12.Dock = DockStyle.Top;
             textBox12.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            textBox12.ForeColor = Color.White;
             textBox12.Location = new Point(286, 0);
             textBox12.Margin = new Padding(3, 4, 3, 4);
             textBox12.Name = "textBox12";
@@ -218,7 +221,8 @@
             // 
             // DgwVoti
             // 
-            DgwVoti.BackgroundColor = Color.White;
+            DgwVoti.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            DgwVoti.BackgroundColor = Color.FromArgb(32, 30, 45);
             DgwVoti.ColumnHeadersHeight = 29;
             DgwVoti.Columns.AddRange(new DataGridViewColumn[] { Materie, Voti });
             DgwVoti.Dock = DockStyle.Fill;
@@ -235,14 +239,12 @@
             Materie.HeaderText = "Materie";
             Materie.MinimumWidth = 6;
             Materie.Name = "Materie";
-            Materie.Width = 164;
             // 
             // Voti
             // 
             Voti.HeaderText = "Voti";
             Voti.MinimumWidth = 6;
             Voti.Name = "Voti";
-            Voti.Width = 164;
             // 
             // panel3
             // 
