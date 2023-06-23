@@ -8,18 +8,29 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 
 namespace Scuola_Gorilla
 {
     public partial class Gestione_Aule : Form
     {
-        private const string BaseUrl = "http://192.168.11.66:10212/values";
-        private readonly HttpClient client;
+        ApiMethods api;
 
         public Gestione_Aule()
         {
             InitializeComponent();
-            client = new HttpClient();
+            api = new ApiMethods();
+            initializeMaterie();
+        }
+
+        private async void initializeMaterie()
+        {
+            List<string> materie = await api.getMaterie();
+            ClbListaMaterie.Items.Clear();
+            foreach (string materia in materie)
+            {
+                ClbListaMaterie.Items.Add(materia);
+            }
         }
 
         // Form Principale
@@ -67,7 +78,7 @@ namespace Scuola_Gorilla
         }
 
         // Button Conferma Aggiunta Materia
-        private void BtnAddMateria_Click(object sender, EventArgs e)
+        private async void BtnAddMateria_Click(object sender, EventArgs e)
         {
             DialogResult dialogResult = DialogResult.Cancel;
             BtnClearMateria.Visible = false;
@@ -76,13 +87,23 @@ namespace Scuola_Gorilla
             TxtNuovaMateria.Visible = false;
 
             // Controllo Pre-Esistenza Materia
-            if (ClbListaMaterie.Items.Contains(TxtNuovaMateria.Text))
+            if (TxtNuovaMateria.Text != "" && TxtNuovaMateria.Text != "Inserisci nuova Materia")
             {
-                dialogResult = MessageBox.Show("La materia aggiunta è già presente!", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                List<string> materie = await api.getMaterie();
+                if (materie.Contains(TxtNuovaMateria.Text.ToUpper()))
+                {
+                    dialogResult = MessageBox.Show("La materia aggiunta è già presente!", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    var result = await api.postMateriaInInsieme(TxtNuovaMateria.Text.ToUpper());
+                    initializeMaterie();
+                    MessageBox.Show(result.ToString(), "Avviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
             else
             {
-                ClbListaMaterie.Items.Add(TxtNuovaMateria.Text);
+                dialogResult = MessageBox.Show("Inserire una materia valida!", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -93,18 +114,18 @@ namespace Scuola_Gorilla
         }
 
         // Button Delete Materia
-        private void BtnDeleteMateria_Click(object sender, EventArgs e)
+        private async void BtnDeleteMateria_Click(object sender, EventArgs e)
         {
-            DialogResult dialogResult = DialogResult.Cancel;
-
-            // Controllo Esistenza Materia da Eliminare
-            if (ClbListaMaterie.FindStringExact(TxtNuovaMateria.Text) == -1)
+            List<string> materie = await api.getMaterie();
+            if (materie.Contains(TxtNuovaMateria.Text.ToUpper()))
             {
-                dialogResult = MessageBox.Show("La materia da eliminare non è presente", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                var result = await api.deleteMateriaFromInsieme(TxtNuovaMateria.Text.ToUpper());
+                initializeMaterie();
+                MessageBox.Show(result, "Avviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                ClbListaMaterie.Items.RemoveAt(ClbListaMaterie.FindStringExact(TxtNuovaMateria.Text));
+                MessageBox.Show("La materia inserita non è presente!", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -121,6 +142,132 @@ namespace Scuola_Gorilla
         private void ClbListaMaterie_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private async void TxtIDaula_TextChanged(object sender, EventArgs e)
+        {
+            if (TxtIDaula.Text != "")
+            {
+                List<string> classi = await api.getClassi();
+                if (classi.Contains(TxtIDaula.Text.ToUpper()))
+                {
+                    List<string> materie = await api.getMaterieByClasse(TxtIDaula.Text.ToUpper());
+
+                    foreach (string materia in materie)
+                    {
+                        if (ClbListaMaterie.Items.Contains(materia))
+                        {
+                            ClbListaMaterie.SetItemChecked(ClbListaMaterie.FindStringExact(materia), true);
+                        }
+                    }
+                }
+                else
+                {
+                    for (int i = 0; i < ClbListaMaterie.Items.Count; i++)
+                    {
+                        ClbListaMaterie.SetItemChecked(i, false);
+                    }
+                }
+
+            }
+            else
+            {
+                for (int i = 0; i < ClbListaMaterie.Items.Count; i++)
+                {
+                    ClbListaMaterie.SetItemChecked(i, false);
+                }
+            }
+
+        }
+
+        private async void btnCercaClasse_Click(object sender, EventArgs e)
+        {
+            if (TxtIDaula.Text != "")
+            {
+                List<string> classi = await api.getClassi();
+                if (classi.Contains(TxtIDaula.Text.ToUpper()))
+                {
+                    List<Studente> studenti = await api.getStudenti(TxtIDaula.Text.ToUpper());
+                    foreach (Studente studente in studenti)
+                    {
+                        dataGridView4.Rows.Add(studente.Matricola, studente.Nome, studente.Cognome);
+                    }
+                }
+            }
+        }
+
+        private async void btnAggiungiClasse_Click(object sender, EventArgs e)
+        {
+            if (TxtIDaula.Text != "" && TxtIDaula.Text != "Inserisci ID classe" && TxtIDaula.Text.Length == 3)
+            {
+                List<string> classi = await api.getClassi();
+                if (classi.Contains(TxtIDaula.Text.ToUpper()))
+                {
+                    MessageBox.Show("Classe già esistente!", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                else
+                {
+                    var result = await api.postClasse(TxtIDaula.Text.ToUpper());
+                    MessageBox.Show(result, "Avviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Inserire un ID classe valido!", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private async void btnModificaMaterieClasse_Click(object sender, EventArgs e)
+        {
+            List<string> classi = await api.getClassi();
+            if (!classi.Contains(TxtIDaula.Text.ToUpper()))
+            {
+                MessageBox.Show("Classe non trovata!\nCrea la classe o inserisci una classe esistente", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            DialogResult res = MessageBox.Show("Sei sicuro di voler modificare le materie della classe?", "Avviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (res == DialogResult.No)
+            {
+                return;
+            }
+            List<string> materieDB = await api.getMaterieByClasse(TxtIDaula.Text.ToUpper());
+            List<string> materieClasse = new List<string>();
+            foreach (string materia in ClbListaMaterie.CheckedItems)
+            {
+                materieClasse.Add(materia);
+            }
+            foreach (string materiaDB in materieDB)
+            {
+                if (!materieClasse.Contains(materiaDB))
+                {
+                    await api.deleteMateriaFromClasse(TxtIDaula.Text.ToUpper(), materiaDB);
+                }
+            }
+            foreach (string materiaClasse in materieClasse)
+            {
+                if (!materieDB.Contains(materiaClasse))
+                {
+                    await api.postMateriaInClasse(materiaClasse, TxtIDaula.Text.ToUpper());
+                }
+            }
+        }
+
+        private async void btnEliminaClasse_Click(object sender, EventArgs e)
+        {
+            List<string> classi = await api.getClassi();
+            if (!classi.Contains(TxtIDaula.Text.ToUpper()))
+            {
+                MessageBox.Show("Classe non trovata!\nCrea la classe o inserisci una classe esistente", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            DialogResult res = MessageBox.Show($"Sei sicuro di voler eliminare definitivamente la classe {TxtIDaula.Text.ToUpper()}?", "Avviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (res == DialogResult.No)
+            {
+                return;
+            }
+            var result = await api.deleteClasse(TxtIDaula.Text.ToUpper());
+            MessageBox.Show(result, "Avviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
