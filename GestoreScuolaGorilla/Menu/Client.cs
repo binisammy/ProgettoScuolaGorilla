@@ -112,6 +112,11 @@ namespace Menu
             showSubMenu(panelVisuaizza);
         }
 
+        private void btnCerca_Click(object sender, EventArgs e)
+        {
+            openChildForm(new TrovaMatricola());
+        }
+
 
 
 

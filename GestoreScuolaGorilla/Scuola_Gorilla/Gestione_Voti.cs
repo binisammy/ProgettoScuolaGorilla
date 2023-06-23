@@ -21,7 +21,6 @@ namespace Scuola_Gorilla
             api = new ApiMethods();
         }
 
-
         // TextBox Matricola
         private void TxtMatricola_MouseClick(object sender, MouseEventArgs e)
         {
@@ -38,12 +37,17 @@ namespace Scuola_Gorilla
 
         private async void TxtMatricola_TextChanged_1(object sender, EventArgs e)
         {
-            if (TxtMatricola.Text == "" || TxtMatricola.Text.Length == 0) return;
-            List<string> materie = await api.getMaterieByClasse(TxtMatricola.Text);
-            CbxMateria.Items.Clear();
-            foreach (var m in materie)
+            if (TxtMatricola.Text != "")
             {
-                CbxMateria.Items.Add(m);
+                Studente s = await api.getStudente(TxtMatricola.Text);
+                if (s.Matricola != "")
+                    txtClasse.Text = s.IdClasse;
+                else
+                    txtClasse.Text = "";
+            }
+            else
+            {
+                txtClasse.Text = "";
             }
         }
 
@@ -61,13 +65,13 @@ namespace Scuola_Gorilla
                 return;
             }
 
-            if (CbxMateria.SelectedIndex == -1)
+            if (CbxMateria.SelectedIndex == -1 || CbxMateria.SelectedItem.ToString() == "")
             {
                 MessageBox.Show("Scegliere una materia", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            if (comboBox1.SelectedIndex == -1)
+            if (comboBox1.SelectedIndex == -1 || comboBox1.SelectedItem.ToString() == "")
             {
                 MessageBox.Show("Scegliere un voto", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -100,19 +104,13 @@ namespace Scuola_Gorilla
                 return;
             }
 
-            if (CbxMateria.SelectedIndex == -1)
+            if (CbxMateria.SelectedIndex == -1 || CbxMateria.SelectedItem.ToString() == "")
             {
-                DialogResult res = MessageBox.Show("Nessuna materia scelta.\n Eliminare tutti i voti?", "Attenzione", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                if (res == DialogResult.Yes)
-                {
-                    string deleteVotiRes = await api.deleteVoti(TxtMatricola.Text);
-                    MessageBox.Show(deleteVotiRes, "Messaggio", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else
-                    return;
+                DialogResult res = MessageBox.Show("Scegliere una materia", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
 
-            else if (comboBox1.SelectedIndex == -1)
+            if (comboBox1.SelectedIndex == -1 || comboBox1.SelectedItem.ToString() == "")
             {
                 DialogResult res = MessageBox.Show("Nessuna voto scelta.\n Eliminare tutti i voti della materia selezionata?", "Attenzione", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (res == DialogResult.Yes)
@@ -126,7 +124,7 @@ namespace Scuola_Gorilla
 
             else
             {
-                string deleteVotoRes = await api.deleteVoto(TxtMatricola.Text, CbxMateria.SelectedItem.ToString(), comboBox1.Text);
+                string deleteVotoRes = await api.deleteVoto(comboBox1.SelectedItem.ToString(), CbxMateria.SelectedItem.ToString(), TxtMatricola.Text);
                 MessageBox.Show(deleteVotoRes, "Messaggio", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             s = await api.getVoti(TxtMatricola.Text);
@@ -137,6 +135,19 @@ namespace Scuola_Gorilla
                 foreach (var v in voti)
                 {
                     this.DgwVoti.Rows.Add(voto.Key.ToUpper(), v);
+                }
+            }
+        }
+
+        private async void txtClasse_TextChanged(object sender, EventArgs e)
+        {
+            if (txtClasse.Text != "")
+            {
+                List<string> materie = await api.getMaterie(txtClasse.Text);
+                CbxMateria.Items.Clear();
+                foreach (var m in materie)
+                {
+                    CbxMateria.Items.Add(m);
                 }
             }
         }

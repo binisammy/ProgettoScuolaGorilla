@@ -93,6 +93,7 @@
             btnCerca.TextAlign = ContentAlignment.MiddleLeft;
             btnCerca.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnCerca.UseVisualStyleBackColor = true;
+            btnCerca.Click += btnCerca_Click;
             // 
             // panelVisuaizza
             // 
@@ -269,7 +270,6 @@
             // 
             // btnHome
             // 
-            btnHome.AutoEllipsis = true;
             btnHome.AutoSize = true;
             btnHome.Dock = DockStyle.Top;
             btnHome.FlatAppearance.BorderSize = 0;
@@ -307,7 +307,7 @@
             label2.ForeColor = Color.White;
             label2.Location = new Point(5, 90);
             label2.Name = "label2";
-            label2.Size = new Size(207, 45);
+            label2.Size = new Size(164, 36);
             label2.TabIndex = 2;
             label2.Text = "Scuola Gorilla";
             label2.TextAlign = ContentAlignment.MiddleCenter;
@@ -358,7 +358,7 @@
             // 
             // Client
             // 
-            AutoScaleDimensions = new SizeF(10F, 20F);
+            AutoScaleDimensions = new SizeF(8F, 16F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(952, 608);
             Controls.Add(panelChildForm);
@@ -369,6 +369,7 @@
             Margin = new Padding(4);
             MinimumSize = new Size(968, 647);
             Name = "Client";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Scuola Gorilla";
             panelSidemenu.ResumeLayout(false);
             panelSidemenu.PerformLayout();

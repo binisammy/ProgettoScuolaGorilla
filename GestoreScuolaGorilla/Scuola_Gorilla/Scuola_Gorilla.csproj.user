@@ -10,5 +10,8 @@
     <Compile Update="Gestione_Voti.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="TrovaMatricola.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

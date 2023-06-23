@@ -46,6 +46,12 @@ namespace ClassLibrary1
             return responseStudente;
         }
 
+        public async Task<string> getMatricola(string id_classe, string nome, string cognome)
+        {
+            string getmatricolaUrl = BaseUrl + $"/matricola?id_classe={id_classe}&nome={nome}&cognome={cognome}";
+            var response = await client.GetStringAsync(getmatricolaUrl);
+            return response;
+        }
         public async Task<string> postVoto(string id_materia, string id_studente, string voto)
         {
             List<string> parametri = new List<string>
