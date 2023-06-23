@@ -207,13 +207,11 @@
             textBox12.BorderStyle = BorderStyle.FixedSingle;
             textBox12.Dock = DockStyle.Top;
             textBox12.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-<<<<<<< HEAD
+
             textBox12.ForeColor = Color.White;
             textBox12.Location = new Point(286, 0);
             textBox12.Margin = new Padding(3, 4, 3, 4);
-=======
-            textBox12.Location = new Point(252, 0);
->>>>>>> 3244318789a7746e53985c8628698b900d70553c
+
             textBox12.Name = "textBox12";
             textBox12.ReadOnly = true;
             textBox12.Size = new Size(360, 23);
