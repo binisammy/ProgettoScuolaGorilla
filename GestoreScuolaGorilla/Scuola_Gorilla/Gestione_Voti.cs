@@ -26,14 +26,13 @@ namespace Scuola_Gorilla
         {
             this.TxtMatricola.Text = "";
         }
-        private void TxtMatricola_MouseLeave(object sender, EventArgs e)
+        private void TxtMatricola_Leave(object sender, EventArgs e)
         {
             if (this.TxtMatricola.Text == "")
             {
                 this.TxtMatricola.Text = "Inserisci Matricola";
             }
         }
-
 
         private async void TxtMatricola_TextChanged_1(object sender, EventArgs e)
         {

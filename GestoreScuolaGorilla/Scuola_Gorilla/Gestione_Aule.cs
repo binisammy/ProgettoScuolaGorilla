@@ -36,7 +36,7 @@ namespace Scuola_Gorilla
         {
             this.TxtIDaula.Text = "";
         }
-        private void TxtIDaula_MouseLeave(object sender, EventArgs e)
+        private void TxtIDaula_Leave(object sender, EventArgs e)
         {
             if (this.TxtIDaula.Text == "")
             {
@@ -49,16 +49,12 @@ namespace Scuola_Gorilla
         {
             this.TxtNuovaMateria.Text = "";
         }
-        private void TxtNuovaMateria_MouseLeave(object sender, EventArgs e)
+        private void TxrNuovaMateria_Leave(object sender, EventArgs e)
         {
             if (this.TxtNuovaMateria.Text == "")
             {
                 this.TxtNuovaMateria.Text = "Inserisci nuova Materia";
             }
-        }
-        private void TxtNuovaMateria_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         // Button AggiungiMateria
@@ -118,6 +114,11 @@ namespace Scuola_Gorilla
         }
 
         private void dataGridView4_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void ClbListaMaterie_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

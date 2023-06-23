@@ -26,7 +26,7 @@ namespace Scuola_Gorilla
         {
             this.TxtNome.Text = "";
         }
-        private void TxtNome_MouseLeave(object sender, EventArgs e)
+        private void TxtNome_Leave(object sender, EventArgs e)
         {
             if (this.TxtNome.Text == "")
             {
@@ -39,7 +39,7 @@ namespace Scuola_Gorilla
         {
             this.TxtCognome.Text = "";
         }
-        private void TxtCognome_MouseLeave(object sender, EventArgs e)
+        private void TxtCognome_Leave(object sender, EventArgs e)
         {
             if (this.TxtCognome.Text == "")
             {
@@ -52,19 +52,12 @@ namespace Scuola_Gorilla
         {
             this.TxtMatricola.Text = "";
         }
-        private void TxtMatricola_MouseLeave(object sender, EventArgs e)
+        private void TxtMatricola_Leave(object sender, EventArgs e)
         {
             if (this.TxtMatricola.Text == "")
             {
                 this.TxtMatricola.Text = "Inserisci Matricola";
             }
-        }
-
-        private void Form2_Load(object sender, EventArgs e)
-        {
-        }
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
         }
     }
 }
