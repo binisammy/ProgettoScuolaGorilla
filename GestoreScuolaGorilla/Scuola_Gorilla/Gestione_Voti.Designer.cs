@@ -245,7 +245,7 @@
             DgwVoti.Name = "DgwVoti";
             DgwVoti.RowHeadersWidth = 51;
             DgwVoti.RowTemplate.Height = 24;
-            DgwVoti.Size = new Size(362, 355);
+            DgwVoti.Size = new Size(362, 349);
             DgwVoti.TabIndex = 36;
             // 
             // Materie
@@ -265,10 +265,10 @@
             panel3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             panel3.BackColor = Color.FromArgb(32, 30, 45);
             panel3.Controls.Add(DgwVoti);
-            panel3.Location = new Point(250, 20);
+            panel3.Location = new Point(250, 26);
             panel3.Margin = new Padding(3, 2, 3, 2);
             panel3.Name = "panel3";
-            panel3.Size = new Size(362, 355);
+            panel3.Size = new Size(362, 349);
             panel3.TabIndex = 37;
             // 
             // Gestione_Voti
