@@ -67,8 +67,9 @@
             panel1.Controls.Add(TxtMatricola);
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
+            panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(252, 375);
+            panel1.Size = new Size(288, 500);
             panel1.TabIndex = 8;
             // 
             // txtClasse
@@ -77,10 +78,11 @@
             txtClasse.BorderStyle = BorderStyle.FixedSingle;
             txtClasse.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             txtClasse.ForeColor = SystemColors.Info;
-            txtClasse.Location = new Point(103, 72);
+            txtClasse.Location = new Point(118, 96);
+            txtClasse.Margin = new Padding(3, 4, 3, 4);
             txtClasse.Name = "txtClasse";
             txtClasse.ReadOnly = true;
-            txtClasse.Size = new Size(133, 25);
+            txtClasse.Size = new Size(152, 29);
             txtClasse.TabIndex = 40;
             txtClasse.TextChanged += txtClasse_TextChanged;
             // 
@@ -88,9 +90,9 @@
             // 
             label1.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.FromArgb(231, 61, 61);
-            label1.Location = new Point(12, 72);
+            label1.Location = new Point(14, 96);
             label1.Name = "label1";
-            label1.Size = new Size(79, 23);
+            label1.Size = new Size(90, 31);
             label1.TabIndex = 39;
             label1.Text = "Classe";
             // 
@@ -101,9 +103,10 @@
             button3.FlatStyle = FlatStyle.Flat;
             button3.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
             button3.ForeColor = Color.FromArgb(231, 61, 61);
-            button3.Location = new Point(0, 282);
+            button3.Location = new Point(0, 388);
+            button3.Margin = new Padding(3, 4, 3, 4);
             button3.Name = "button3";
-            button3.Size = new Size(252, 53);
+            button3.Size = new Size(288, 59);
             button3.TabIndex = 38;
             button3.Text = "Aggiungi";
             button3.UseVisualStyleBackColor = true;
@@ -111,10 +114,9 @@
             // 
             // panel2
             // 
-            panel2.Location = new Point(250, 26);
-            panel2.Margin = new Padding(3, 2, 3, 2);
+            panel2.Location = new Point(286, 35);
             panel2.Name = "panel2";
-            panel2.Size = new Size(219, 94);
+            panel2.Size = new Size(250, 125);
             panel2.TabIndex = 37;
             // 
             // button1
@@ -124,10 +126,9 @@
             button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
             button1.ForeColor = Color.FromArgb(231, 61, 61);
-            button1.Location = new Point(0, 335);
-            button1.Margin = new Padding(3, 2, 3, 2);
+            button1.Location = new Point(0, 447);
             button1.Name = "button1";
-            button1.Size = new Size(252, 40);
+            button1.Size = new Size(288, 53);
             button1.TabIndex = 35;
             button1.Text = "Rimuovi";
             button1.UseVisualStyleBackColor = true;
@@ -144,10 +145,9 @@
             comboBox1.FormattingEnabled = true;
             comboBox1.IntegralHeight = false;
             comboBox1.Items.AddRange(new object[] { "", "1", "1.5", "2", "2.5", "3", "3.5", "4", "4.5", "5", "5.5", "6", "6.5", "7", "7.5", "8", "8.5", "9", "9.5", "10" });
-            comboBox1.Location = new Point(103, 173);
-            comboBox1.Margin = new Padding(3, 2, 3, 2);
+            comboBox1.Location = new Point(118, 231);
             comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(133, 23);
+            comboBox1.Size = new Size(151, 28);
             comboBox1.TabIndex = 34;
             // 
             // CbxMateria
@@ -158,18 +158,19 @@
             CbxMateria.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             CbxMateria.ForeColor = Color.White;
             CbxMateria.FormattingEnabled = true;
-            CbxMateria.Location = new Point(104, 122);
+            CbxMateria.Location = new Point(119, 163);
+            CbxMateria.Margin = new Padding(3, 4, 3, 4);
             CbxMateria.Name = "CbxMateria";
-            CbxMateria.Size = new Size(132, 23);
+            CbxMateria.Size = new Size(150, 28);
             CbxMateria.TabIndex = 33;
             // 
             // label13
             // 
             label13.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label13.ForeColor = Color.FromArgb(231, 61, 61);
-            label13.Location = new Point(12, 173);
+            label13.Location = new Point(14, 231);
             label13.Name = "label13";
-            label13.Size = new Size(60, 23);
+            label13.Size = new Size(69, 31);
             label13.TabIndex = 32;
             label13.Text = "Voto";
             // 
@@ -177,9 +178,9 @@
             // 
             label16.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label16.ForeColor = Color.FromArgb(231, 61, 61);
-            label16.Location = new Point(12, 122);
+            label16.Location = new Point(14, 163);
             label16.Name = "label16";
-            label16.Size = new Size(75, 23);
+            label16.Size = new Size(86, 31);
             label16.TabIndex = 31;
             label16.Text = "Materia";
             // 
@@ -187,9 +188,9 @@
             // 
             LblMatricola.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point);
             LblMatricola.ForeColor = Color.FromArgb(231, 61, 61);
-            LblMatricola.Location = new Point(12, 20);
+            LblMatricola.Location = new Point(14, 27);
             LblMatricola.Name = "LblMatricola";
-            LblMatricola.Size = new Size(88, 22);
+            LblMatricola.Size = new Size(101, 29);
             LblMatricola.TabIndex = 25;
             LblMatricola.Text = "Matricola";
             // 
@@ -199,10 +200,10 @@
             TxtMatricola.BorderStyle = BorderStyle.FixedSingle;
             TxtMatricola.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             TxtMatricola.ForeColor = Color.White;
-            TxtMatricola.Location = new Point(103, 19);
-            TxtMatricola.Margin = new Padding(3, 4, 3, 4);
+            TxtMatricola.Location = new Point(118, 25);
+            TxtMatricola.Margin = new Padding(3, 5, 3, 5);
             TxtMatricola.Name = "TxtMatricola";
-            TxtMatricola.Size = new Size(133, 25);
+            TxtMatricola.Size = new Size(152, 29);
             TxtMatricola.TabIndex = 26;
             TxtMatricola.Text = "Inserisci Matricola";
             TxtMatricola.TextAlign = HorizontalAlignment.Center;
@@ -217,11 +218,11 @@
             textBox12.Dock = DockStyle.Top;
             textBox12.Font = new Font("Segoe UI Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             textBox12.ForeColor = Color.White;
-            textBox12.Location = new Point(252, 0);
-            textBox12.Margin = new Padding(3, 4, 3, 4);
+            textBox12.Location = new Point(288, 0);
+            textBox12.Margin = new Padding(3, 5, 3, 5);
             textBox12.Name = "textBox12";
             textBox12.ReadOnly = true;
-            textBox12.Size = new Size(360, 28);
+            textBox12.Size = new Size(411, 33);
             textBox12.TabIndex = 36;
             textBox12.Text = "Voti Studente";
             textBox12.TextAlign = HorizontalAlignment.Center;
@@ -242,10 +243,15 @@
             DgwVoti.Columns.AddRange(new DataGridViewColumn[] { Materie, Voti });
             DgwVoti.Dock = DockStyle.Fill;
             DgwVoti.Location = new Point(0, 0);
+            DgwVoti.Margin = new Padding(3, 4, 3, 4);
             DgwVoti.Name = "DgwVoti";
             DgwVoti.RowHeadersWidth = 51;
             DgwVoti.RowTemplate.Height = 24;
+<<<<<<< HEAD
             DgwVoti.Size = new Size(362, 349);
+=======
+            DgwVoti.Size = new Size(414, 473);
+>>>>>>> 277e13d74c324389fca05b2d924f6e3265291e95
             DgwVoti.TabIndex = 36;
             // 
             // Materie
@@ -265,23 +271,30 @@
             panel3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             panel3.BackColor = Color.FromArgb(32, 30, 45);
             panel3.Controls.Add(DgwVoti);
+<<<<<<< HEAD
             panel3.Location = new Point(250, 26);
             panel3.Margin = new Padding(3, 2, 3, 2);
             panel3.Name = "panel3";
             panel3.Size = new Size(362, 349);
+=======
+            panel3.Location = new Point(286, 27);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(414, 473);
+>>>>>>> 277e13d74c324389fca05b2d924f6e3265291e95
             panel3.TabIndex = 37;
             // 
             // Gestione_Voti
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlDark;
-            ClientSize = new Size(612, 375);
+            ClientSize = new Size(699, 500);
             Controls.Add(panel3);
             Controls.Add(textBox12);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
-            MinimumSize = new Size(612, 375);
+            Margin = new Padding(3, 4, 3, 4);
+            MinimumSize = new Size(699, 500);
             Name = "Gestione_Voti";
             Text = " ";
             panel1.ResumeLayout(false);

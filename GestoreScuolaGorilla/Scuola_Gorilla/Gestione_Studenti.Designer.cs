@@ -29,6 +29,11 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            button5 = new Button();
+            button4 = new Button();
+            button1 = new Button();
+            button2 = new Button();
+            button3 = new Button();
             comboBox1 = new ComboBox();
             LblClasse = new Label();
             LblMatricola = new Label();
@@ -37,26 +42,27 @@
             TxtCognome = new TextBox();
             LblNome = new Label();
             TxtNome = new TextBox();
+            textBox11 = new TextBox();
+            panel2 = new Panel();
             dataGridView3 = new DataGridView();
             dataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn4 = new DataGridViewTextBoxColumn();
-            panel2 = new Panel();
-            button5 = new Button();
-            button4 = new Button();
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
-            textBox11 = new TextBox();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView3).BeginInit();
             panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView3).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.AutoSize = true;
+            panel1.BackColor = Color.FromArgb(32, 30, 45);
+            panel1.Controls.Add(button5);
+            panel1.Controls.Add(button4);
+            panel1.Controls.Add(button1);
+            panel1.Controls.Add(button2);
+            panel1.Controls.Add(button3);
             panel1.Controls.Add(comboBox1);
             panel1.Controls.Add(LblClasse);
             panel1.Controls.Add(LblMatricola);
@@ -65,55 +71,132 @@
             panel1.Controls.Add(TxtCognome);
             panel1.Controls.Add(LblNome);
             panel1.Controls.Add(TxtNome);
-            panel1.Location = new Point(0, 4);
+            panel1.Dock = DockStyle.Left;
+            panel1.Location = new Point(0, 0);
             panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(305, 291);
+            panel1.Size = new Size(256, 500);
             panel1.TabIndex = 1;
+            // 
+            // button5
+            // 
+            button5.Dock = DockStyle.Bottom;
+            button5.FlatAppearance.BorderSize = 0;
+            button5.FlatStyle = FlatStyle.Flat;
+            button5.ForeColor = Color.FromArgb(231, 61, 61);
+            button5.Location = new Point(0, 280);
+            button5.Margin = new Padding(3, 4, 3, 4);
+            button5.Name = "button5";
+            button5.Size = new Size(256, 40);
+            button5.TabIndex = 33;
+            button5.Text = "Update";
+            button5.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            button4.Dock = DockStyle.Bottom;
+            button4.FlatAppearance.BorderSize = 0;
+            button4.FlatStyle = FlatStyle.Flat;
+            button4.ForeColor = Color.FromArgb(231, 61, 61);
+            button4.Location = new Point(0, 320);
+            button4.Margin = new Padding(3, 4, 3, 4);
+            button4.Name = "button4";
+            button4.Size = new Size(256, 45);
+            button4.TabIndex = 32;
+            button4.Text = "Search";
+            button4.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            button1.Dock = DockStyle.Bottom;
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.ForeColor = Color.FromArgb(231, 61, 61);
+            button1.Location = new Point(0, 365);
+            button1.Margin = new Padding(3, 4, 3, 4);
+            button1.Name = "button1";
+            button1.Size = new Size(256, 45);
+            button1.TabIndex = 29;
+            button1.Text = "Add";
+            button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            button2.Dock = DockStyle.Bottom;
+            button2.FlatAppearance.BorderSize = 0;
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.ForeColor = Color.FromArgb(231, 61, 61);
+            button2.Location = new Point(0, 410);
+            button2.Margin = new Padding(3, 4, 3, 4);
+            button2.Name = "button2";
+            button2.Size = new Size(256, 45);
+            button2.TabIndex = 30;
+            button2.Text = "Delete";
+            button2.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            button3.Dock = DockStyle.Bottom;
+            button3.FlatAppearance.BorderSize = 0;
+            button3.FlatStyle = FlatStyle.Flat;
+            button3.ForeColor = Color.FromArgb(231, 61, 61);
+            button3.Location = new Point(0, 455);
+            button3.Margin = new Padding(3, 4, 3, 4);
+            button3.Name = "button3";
+            button3.Size = new Size(256, 45);
+            button3.TabIndex = 31;
+            button3.Text = "Reset";
+            button3.UseVisualStyleBackColor = true;
             // 
             // comboBox1
             // 
-            comboBox1.Anchor = AnchorStyles.None;
+            comboBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            comboBox1.BackColor = Color.FromArgb(32, 30, 45);
             comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox1.Font = new Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point);
+            comboBox1.FlatStyle = FlatStyle.Flat;
+            comboBox1.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            comboBox1.ForeColor = Color.White;
             comboBox1.FormattingEnabled = true;
             comboBox1.Items.AddRange(new object[] { "1A", "1B", "2A", "2B", "3A", "3B", "4A", "4B", "5A", "5B" });
-            comboBox1.Location = new Point(92, 165);
+            comboBox1.Location = new Point(117, 240);
             comboBox1.Margin = new Padding(3, 4, 3, 4);
             comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(133, 24);
+            comboBox1.Size = new Size(133, 26);
             comboBox1.TabIndex = 28;
             // 
             // LblClasse
             // 
-            LblClasse.Anchor = AnchorStyles.None;
             LblClasse.AutoSize = true;
-            LblClasse.Font = new Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold, GraphicsUnit.Point);
-            LblClasse.Location = new Point(3, 169);
+            LblClasse.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            LblClasse.ForeColor = Color.FromArgb(231, 61, 61);
+            LblClasse.Location = new Point(12, 241);
             LblClasse.Name = "LblClasse";
-            LblClasse.Size = new Size(59, 16);
+            LblClasse.Size = new Size(79, 25);
             LblClasse.TabIndex = 23;
-            LblClasse.Text = "Classe:";
+            LblClasse.Text = "Classe";
             // 
             // LblMatricola
             // 
-            LblMatricola.Anchor = AnchorStyles.None;
             LblMatricola.AutoSize = true;
-            LblMatricola.Font = new Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold, GraphicsUnit.Point);
-            LblMatricola.Location = new Point(1, 111);
+            LblMatricola.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            LblMatricola.ForeColor = Color.FromArgb(231, 61, 61);
+            LblMatricola.Location = new Point(12, 171);
             LblMatricola.Name = "LblMatricola";
-            LblMatricola.Size = new Size(75, 16);
+            LblMatricola.Size = new Size(100, 25);
             LblMatricola.TabIndex = 19;
-            LblMatricola.Text = "Matricola:";
+            LblMatricola.Text = "Matricola";
             // 
             // TxtMatricola
             // 
-            TxtMatricola.Anchor = AnchorStyles.None;
-            TxtMatricola.Font = new Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point);
-            TxtMatricola.Location = new Point(92, 108);
+            TxtMatricola.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            TxtMatricola.BackColor = Color.FromArgb(32, 30, 45);
+            TxtMatricola.BorderStyle = BorderStyle.None;
+            TxtMatricola.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            TxtMatricola.ForeColor = Color.White;
+            TxtMatricola.Location = new Point(118, 176);
             TxtMatricola.Margin = new Padding(3, 4, 3, 4);
             TxtMatricola.Name = "TxtMatricola";
-            TxtMatricola.Size = new Size(133, 22);
+            TxtMatricola.Size = new Size(133, 17);
             TxtMatricola.TabIndex = 20;
             TxtMatricola.Text = "Inserisci Matricola";
             TxtMatricola.MouseClick += TxtMatricola_MouseClick;
@@ -121,23 +204,26 @@
             // 
             // LblCognome
             // 
-            LblCognome.Anchor = AnchorStyles.None;
             LblCognome.AutoSize = true;
-            LblCognome.Font = new Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold, GraphicsUnit.Point);
-            LblCognome.Location = new Point(1, 54);
+            LblCognome.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            LblCognome.ForeColor = Color.FromArgb(231, 61, 61);
+            LblCognome.Location = new Point(13, 95);
             LblCognome.Name = "LblCognome";
-            LblCognome.Size = new Size(77, 16);
+            LblCognome.Size = new Size(105, 25);
             LblCognome.TabIndex = 17;
-            LblCognome.Text = "Cognome:";
+            LblCognome.Text = "Cognome";
             // 
             // TxtCognome
             // 
-            TxtCognome.Anchor = AnchorStyles.None;
-            TxtCognome.Font = new Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point);
-            TxtCognome.Location = new Point(92, 50);
+            TxtCognome.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            TxtCognome.BackColor = Color.FromArgb(32, 30, 45);
+            TxtCognome.BorderStyle = BorderStyle.None;
+            TxtCognome.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            TxtCognome.ForeColor = Color.White;
+            TxtCognome.Location = new Point(120, 100);
             TxtCognome.Margin = new Padding(3, 4, 3, 4);
             TxtCognome.Name = "TxtCognome";
-            TxtCognome.Size = new Size(133, 22);
+            TxtCognome.Size = new Size(133, 17);
             TxtCognome.TabIndex = 18;
             TxtCognome.Text = "Inserisci Cognome";
             TxtCognome.MouseClick += TxtCognome_MouseClick;
@@ -145,40 +231,73 @@
             // 
             // LblNome
             // 
-            LblNome.Anchor = AnchorStyles.None;
             LblNome.AutoSize = true;
-            LblNome.Font = new Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold, GraphicsUnit.Point);
-            LblNome.Location = new Point(1, 16);
+            LblNome.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            LblNome.ForeColor = Color.FromArgb(231, 61, 61);
+            LblNome.Location = new Point(12, 27);
             LblNome.Name = "LblNome";
-            LblNome.Size = new Size(52, 16);
+            LblNome.Size = new Size(68, 25);
             LblNome.TabIndex = 15;
-            LblNome.Text = "Nome:";
+            LblNome.Text = "Nome";
             // 
             // TxtNome
             // 
-            TxtNome.Font = new Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point);
-            TxtNome.Location = new Point(92, 9);
+            TxtNome.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            TxtNome.BackColor = Color.FromArgb(32, 30, 45);
+            TxtNome.BorderStyle = BorderStyle.None;
+            TxtNome.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            TxtNome.ForeColor = Color.White;
+            TxtNome.Location = new Point(117, 32);
             TxtNome.Margin = new Padding(3, 4, 3, 4);
             TxtNome.Name = "TxtNome";
-            TxtNome.Size = new Size(133, 22);
+            TxtNome.Size = new Size(133, 17);
             TxtNome.TabIndex = 16;
             TxtNome.Text = "Inserisci Nome";
             TxtNome.MouseClick += TxtNome_MouseClick;
             TxtNome.Leave += TxtNome_Leave;
             // 
+            // textBox11
+            // 
+            textBox11.BackColor = Color.FromArgb(32, 30, 45);
+            textBox11.BorderStyle = BorderStyle.None;
+            textBox11.Dock = DockStyle.Top;
+            textBox11.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            textBox11.ForeColor = Color.White;
+            textBox11.Location = new Point(256, 0);
+            textBox11.Margin = new Padding(3, 4, 3, 4);
+            textBox11.Name = "textBox11";
+            textBox11.ReadOnly = true;
+            textBox11.Size = new Size(444, 20);
+            textBox11.TabIndex = 4;
+            textBox11.Text = "Lista Studenti";
+            textBox11.TextAlign = HorizontalAlignment.Center;
+            textBox11.TextChanged += textBox11_TextChanged;
+            // 
+            // panel2
+            // 
+            panel2.Controls.Add(dataGridView3);
+            panel2.Dock = DockStyle.Fill;
+            panel2.Location = new Point(256, 20);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(444, 480);
+            panel2.TabIndex = 5;
+            // 
             // dataGridView3
             // 
-            dataGridView3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dataGridView3.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView3.BackgroundColor = Color.FromArgb(32, 30, 45);
+            dataGridView3.BorderStyle = BorderStyle.None;
             dataGridView3.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView3.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn3, dataGridViewTextBoxColumn1, dataGridViewTextBoxColumn2, dataGridViewTextBoxColumn4 });
-            dataGridView3.Location = new Point(304, 35);
+            dataGridView3.Dock = DockStyle.Fill;
+            dataGridView3.Location = new Point(0, 0);
             dataGridView3.Margin = new Padding(3, 4, 3, 4);
             dataGridView3.Name = "dataGridView3";
             dataGridView3.RowHeadersWidth = 51;
             dataGridView3.RowTemplate.Height = 24;
-            dataGridView3.Size = new Size(378, 535);
-            dataGridView3.TabIndex = 2;
+            dataGridView3.Size = new Size(444, 480);
+            dataGridView3.TabIndex = 3;
+            dataGridView3.CellContentClick += dataGridView3_CellContentClick;
             // 
             // dataGridViewTextBoxColumn3
             // 
@@ -204,107 +323,25 @@
             dataGridViewTextBoxColumn4.MinimumWidth = 6;
             dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             // 
-            // panel2
-            // 
-            panel2.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            panel2.Controls.Add(button5);
-            panel2.Controls.Add(button4);
-            panel2.Controls.Add(button1);
-            panel2.Controls.Add(button2);
-            panel2.Controls.Add(button3);
-            panel2.Location = new Point(0, 295);
-            panel2.Margin = new Padding(3, 4, 3, 4);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(305, 275);
-            panel2.TabIndex = 3;
-            // 
-            // button5
-            // 
-            button5.Anchor = AnchorStyles.None;
-            button5.Location = new Point(4, 170);
-            button5.Margin = new Padding(3, 4, 3, 4);
-            button5.Name = "button5";
-            button5.Size = new Size(147, 32);
-            button5.TabIndex = 12;
-            button5.Text = "Update";
-            button5.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            button4.Anchor = AnchorStyles.None;
-            button4.Location = new Point(4, 132);
-            button4.Margin = new Padding(3, 4, 3, 4);
-            button4.Name = "button4";
-            button4.Size = new Size(147, 32);
-            button4.TabIndex = 11;
-            button4.Text = "Search";
-            button4.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            button1.Anchor = AnchorStyles.None;
-            button1.Location = new Point(4, 20);
-            button1.Margin = new Padding(3, 4, 3, 4);
-            button1.Name = "button1";
-            button1.Size = new Size(147, 32);
-            button1.TabIndex = 8;
-            button1.Text = "Add";
-            button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            button2.Anchor = AnchorStyles.None;
-            button2.Location = new Point(4, 58);
-            button2.Margin = new Padding(3, 4, 3, 4);
-            button2.Name = "button2";
-            button2.Size = new Size(147, 32);
-            button2.TabIndex = 9;
-            button2.Text = "Delete";
-            button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            button3.Anchor = AnchorStyles.None;
-            button3.Location = new Point(4, 95);
-            button3.Margin = new Padding(3, 4, 3, 4);
-            button3.Name = "button3";
-            button3.Size = new Size(147, 32);
-            button3.TabIndex = 10;
-            button3.Text = "Reset";
-            button3.UseVisualStyleBackColor = true;
-            // 
-            // textBox11
-            // 
-            textBox11.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            textBox11.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            textBox11.Location = new Point(304, 2);
-            textBox11.Margin = new Padding(3, 4, 3, 4);
-            textBox11.Name = "textBox11";
-            textBox11.ReadOnly = true;
-            textBox11.Size = new Size(378, 27);
-            textBox11.TabIndex = 4;
-            textBox11.Text = "Lista Studenti";
-            textBox11.TextAlign = HorizontalAlignment.Center;
-            // 
             // Gestione_Studenti
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
             BackColor = SystemColors.ControlDark;
-            ClientSize = new Size(682, 566);
-            Controls.Add(textBox11);
+            ClientSize = new Size(700, 500);
             Controls.Add(panel2);
-            Controls.Add(dataGridView3);
+            Controls.Add(textBox11);
             Controls.Add(panel1);
+            FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(3, 4, 3, 4);
-            MinimumSize = new Size(700, 613);
+            MinimumSize = new Size(700, 500);
             Name = "Gestione_Studenti";
             Text = "Gestione Studenti";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView3).EndInit();
             panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dataGridView3).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -320,17 +357,17 @@
         private TextBox TxtCognome;
         private Label LblNome;
         private TextBox TxtNome;
-        private DataGridView dataGridView3;
-        private Panel panel2;
+        private TextBox textBox11;
+        private Button button5;
         private Button button4;
         private Button button1;
         private Button button2;
         private Button button3;
-        private TextBox textBox11;
+        private Panel panel2;
+        private DataGridView dataGridView3;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private Button button5;
     }
 }
