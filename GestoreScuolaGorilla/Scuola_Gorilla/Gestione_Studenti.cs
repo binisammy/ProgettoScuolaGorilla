@@ -59,5 +59,14 @@ namespace Scuola_Gorilla
                 this.TxtMatricola.Text = "Inserisci Matricola";
             }
         }
+
+        private void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void textBox11_TextChanged(object sender, EventArgs e)
+        {
+        }
     }
 }
