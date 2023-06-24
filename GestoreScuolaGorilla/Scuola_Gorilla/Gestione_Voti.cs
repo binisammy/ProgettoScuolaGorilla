@@ -114,7 +114,7 @@ namespace Scuola_Gorilla
                 DialogResult res = MessageBox.Show("Nessuna voto scelta.\n Eliminare tutti i voti della materia selezionata?", "Attenzione", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (res == DialogResult.Yes)
                 {
-                    string deleteVotiByMateriaRes = await api.deleteVotiByMateria(TxtMatricola.Text, CbxMateria.SelectedItem.ToString());
+                    string deleteVotiByMateriaRes = await api.deleteVotiByMateriaStudente(TxtMatricola.Text, CbxMateria.SelectedItem.ToString());
                     MessageBox.Show(deleteVotiByMateriaRes, "Messaggio", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
@@ -142,7 +142,7 @@ namespace Scuola_Gorilla
         {
             if (txtClasse.Text != "")
             {
-                List<string> materie = await api.getMaterie(txtClasse.Text);
+                List<string> materie = await api.getMaterieByClasse(txtClasse.Text);
                 CbxMateria.Items.Clear();
                 foreach (var m in materie)
                 {

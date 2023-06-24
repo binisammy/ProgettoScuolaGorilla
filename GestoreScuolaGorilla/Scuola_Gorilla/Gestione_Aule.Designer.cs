@@ -28,11 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             panel1 = new Panel();
-            button8 = new Button();
-            button4 = new Button();
-            button1 = new Button();
-            button2 = new Button();
+            btnModificaMaterieClasse = new Button();
+            btnCercaClasse = new Button();
+            btnAggiungiClasse = new Button();
+            btnEliminaClasse = new Button();
             BtnDeleteMateria = new Button();
             BtnClearMateria = new Button();
             BtnAddMateria = new Button();
@@ -45,9 +46,9 @@
             textBox12 = new TextBox();
             panel2 = new Panel();
             dataGridView4 = new DataGridView();
-            ID_aula = new DataGridViewTextBoxColumn();
-            Materie = new DataGridViewTextBoxColumn();
-            Studenti = new DataGridViewTextBoxColumn();
+            Matricola = new DataGridViewTextBoxColumn();
+            Nome = new DataGridViewTextBoxColumn();
+            Cognome = new DataGridViewTextBoxColumn();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView4).BeginInit();
@@ -56,10 +57,10 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(32, 30, 45);
-            panel1.Controls.Add(button8);
-            panel1.Controls.Add(button4);
-            panel1.Controls.Add(button1);
-            panel1.Controls.Add(button2);
+            panel1.Controls.Add(btnModificaMaterieClasse);
+            panel1.Controls.Add(btnCercaClasse);
+            panel1.Controls.Add(btnAggiungiClasse);
+            panel1.Controls.Add(btnEliminaClasse);
             panel1.Controls.Add(BtnDeleteMateria);
             panel1.Controls.Add(BtnClearMateria);
             panel1.Controls.Add(BtnAddMateria);
@@ -71,79 +72,81 @@
             panel1.Controls.Add(TxtIDaula);
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
-            panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(307, 612);
+            panel1.Size = new Size(269, 459);
             panel1.TabIndex = 2;
             // 
-            // button8
+            // btnModificaMaterieClasse
             // 
-            button8.Dock = DockStyle.Bottom;
-            button8.FlatAppearance.BorderSize = 0;
-            button8.FlatStyle = FlatStyle.Flat;
-            button8.ForeColor = Color.FromArgb(231, 61, 61);
-            button8.Location = new Point(0, 460);
-            button8.Margin = new Padding(3, 4, 3, 4);
-            button8.Name = "button8";
-            button8.Size = new Size(307, 38);
-            button8.TabIndex = 18;
-            button8.Text = "Update";
-            button8.UseVisualStyleBackColor = true;
+            btnModificaMaterieClasse.FlatAppearance.BorderSize = 0;
+            btnModificaMaterieClasse.FlatStyle = FlatStyle.Flat;
+            btnModificaMaterieClasse.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btnModificaMaterieClasse.ForeColor = Color.FromArgb(231, 61, 61);
+            btnModificaMaterieClasse.Location = new Point(154, 198);
+            btnModificaMaterieClasse.Name = "btnModificaMaterieClasse";
+            btnModificaMaterieClasse.Size = new Size(58, 25);
+            btnModificaMaterieClasse.TabIndex = 22;
+            btnModificaMaterieClasse.Text = "Applica";
+            btnModificaMaterieClasse.UseVisualStyleBackColor = true;
+            btnModificaMaterieClasse.Click += btnModificaMaterieClasse_Click;
             // 
-            // button4
+            // btnCercaClasse
             // 
-            button4.Dock = DockStyle.Bottom;
-            button4.FlatAppearance.BorderSize = 0;
-            button4.FlatStyle = FlatStyle.Flat;
-            button4.ForeColor = Color.FromArgb(231, 61, 61);
-            button4.Location = new Point(0, 498);
-            button4.Margin = new Padding(3, 4, 3, 4);
-            button4.Name = "button4";
-            button4.Size = new Size(307, 38);
-            button4.TabIndex = 21;
-            button4.Text = "Search";
-            button4.UseVisualStyleBackColor = true;
+            btnCercaClasse.Dock = DockStyle.Bottom;
+            btnCercaClasse.FlatAppearance.BorderSize = 0;
+            btnCercaClasse.FlatStyle = FlatStyle.Flat;
+            btnCercaClasse.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btnCercaClasse.ForeColor = Color.FromArgb(231, 61, 61);
+            btnCercaClasse.Location = new Point(0, 375);
+            btnCercaClasse.Name = "btnCercaClasse";
+            btnCercaClasse.Size = new Size(269, 28);
+            btnCercaClasse.TabIndex = 21;
+            btnCercaClasse.Text = "Cerca";
+            btnCercaClasse.UseVisualStyleBackColor = true;
+            btnCercaClasse.Click += btnCercaClasse_Click;
             // 
-            // button1
+            // btnAggiungiClasse
             // 
-            button1.Dock = DockStyle.Bottom;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.ForeColor = Color.FromArgb(231, 61, 61);
-            button1.Location = new Point(0, 536);
-            button1.Margin = new Padding(3, 4, 3, 4);
-            button1.Name = "button1";
-            button1.Size = new Size(307, 38);
-            button1.TabIndex = 19;
-            button1.Text = "Add";
-            button1.UseVisualStyleBackColor = true;
+            btnAggiungiClasse.Dock = DockStyle.Bottom;
+            btnAggiungiClasse.FlatAppearance.BorderSize = 0;
+            btnAggiungiClasse.FlatStyle = FlatStyle.Flat;
+            btnAggiungiClasse.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btnAggiungiClasse.ForeColor = Color.FromArgb(231, 61, 61);
+            btnAggiungiClasse.Location = new Point(0, 403);
+            btnAggiungiClasse.Name = "btnAggiungiClasse";
+            btnAggiungiClasse.Size = new Size(269, 28);
+            btnAggiungiClasse.TabIndex = 19;
+            btnAggiungiClasse.Text = "Aggiungi Classe";
+            btnAggiungiClasse.UseVisualStyleBackColor = true;
+            btnAggiungiClasse.Click += btnAggiungiClasse_Click;
             // 
-            // button2
+            // btnEliminaClasse
             // 
-            button2.Dock = DockStyle.Bottom;
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.ForeColor = Color.FromArgb(231, 61, 61);
-            button2.Location = new Point(0, 574);
-            button2.Margin = new Padding(3, 4, 3, 4);
-            button2.Name = "button2";
-            button2.Size = new Size(307, 38);
-            button2.TabIndex = 20;
-            button2.Text = "Delete";
-            button2.UseVisualStyleBackColor = true;
+            btnEliminaClasse.Dock = DockStyle.Bottom;
+            btnEliminaClasse.FlatAppearance.BorderSize = 0;
+            btnEliminaClasse.FlatStyle = FlatStyle.Flat;
+            btnEliminaClasse.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btnEliminaClasse.ForeColor = Color.FromArgb(231, 61, 61);
+            btnEliminaClasse.Location = new Point(0, 431);
+            btnEliminaClasse.Name = "btnEliminaClasse";
+            btnEliminaClasse.Size = new Size(269, 28);
+            btnEliminaClasse.TabIndex = 20;
+            btnEliminaClasse.Text = "Elimina Classe";
+            btnEliminaClasse.UseVisualStyleBackColor = true;
+            btnEliminaClasse.Click += btnEliminaClasse_Click;
             // 
             // BtnDeleteMateria
             // 
             BtnDeleteMateria.Anchor = AnchorStyles.Right;
             BtnDeleteMateria.FlatAppearance.BorderSize = 0;
             BtnDeleteMateria.FlatStyle = FlatStyle.Flat;
+            BtnDeleteMateria.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
             BtnDeleteMateria.ForeColor = Color.FromArgb(231, 61, 61);
-            BtnDeleteMateria.Location = new Point(120, 403);
-            BtnDeleteMateria.Margin = new Padding(3, 4, 3, 4);
+            BtnDeleteMateria.Location = new Point(105, 333);
             BtnDeleteMateria.Name = "BtnDeleteMateria";
-            BtnDeleteMateria.Size = new Size(67, 28);
+            BtnDeleteMateria.Size = new Size(59, 26);
             BtnDeleteMateria.TabIndex = 17;
-            BtnDeleteMateria.Text = "Delete";
+            BtnDeleteMateria.Text = "Rimuovi";
             BtnDeleteMateria.UseVisualStyleBackColor = true;
             BtnDeleteMateria.Click += BtnDeleteMateria_Click;
             // 
@@ -152,13 +155,13 @@
             BtnClearMateria.Anchor = AnchorStyles.Right;
             BtnClearMateria.FlatAppearance.BorderSize = 0;
             BtnClearMateria.FlatStyle = FlatStyle.Flat;
+            BtnClearMateria.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
             BtnClearMateria.ForeColor = Color.FromArgb(231, 61, 61);
-            BtnClearMateria.Location = new Point(245, 403);
-            BtnClearMateria.Margin = new Padding(3, 4, 3, 4);
+            BtnClearMateria.Location = new Point(198, 333);
             BtnClearMateria.Name = "BtnClearMateria";
-            BtnClearMateria.Size = new Size(59, 28);
+            BtnClearMateria.Size = new Size(65, 26);
             BtnClearMateria.TabIndex = 16;
-            BtnClearMateria.Text = "Clear";
+            BtnClearMateria.Text = "Cancella";
             BtnClearMateria.UseVisualStyleBackColor = true;
             BtnClearMateria.Click += BtnClearMateria_Click;
             // 
@@ -167,13 +170,13 @@
             BtnAddMateria.Anchor = AnchorStyles.Left;
             BtnAddMateria.FlatAppearance.BorderSize = 0;
             BtnAddMateria.FlatStyle = FlatStyle.Flat;
+            BtnAddMateria.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
             BtnAddMateria.ForeColor = Color.FromArgb(231, 61, 61);
-            BtnAddMateria.Location = new Point(6, 403);
-            BtnAddMateria.Margin = new Padding(3, 4, 3, 4);
+            BtnAddMateria.Location = new Point(5, 333);
             BtnAddMateria.Name = "BtnAddMateria";
-            BtnAddMateria.Size = new Size(59, 28);
+            BtnAddMateria.Size = new Size(64, 26);
             BtnAddMateria.TabIndex = 15;
-            BtnAddMateria.Text = "Add";
+            BtnAddMateria.Text = "Aggiungi";
             BtnAddMateria.UseVisualStyleBackColor = true;
             BtnAddMateria.Click += BtnAddMateria_Click;
             // 
@@ -182,12 +185,11 @@
             TxtNuovaMateria.Anchor = AnchorStyles.Left;
             TxtNuovaMateria.BackColor = Color.FromArgb(32, 30, 45);
             TxtNuovaMateria.BorderStyle = BorderStyle.FixedSingle;
-            TxtNuovaMateria.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            TxtNuovaMateria.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             TxtNuovaMateria.ForeColor = Color.FromArgb(231, 61, 61);
-            TxtNuovaMateria.Location = new Point(6, 354);
-            TxtNuovaMateria.Margin = new Padding(3, 4, 3, 4);
+            TxtNuovaMateria.Location = new Point(5, 297);
             TxtNuovaMateria.Name = "TxtNuovaMateria";
-            TxtNuovaMateria.Size = new Size(298, 30);
+            TxtNuovaMateria.Size = new Size(261, 25);
             TxtNuovaMateria.TabIndex = 14;
             TxtNuovaMateria.Text = "Inserisci nuova Materia";
             TxtNuovaMateria.TextAlign = HorizontalAlignment.Center;
@@ -199,12 +201,11 @@
             BtnAggiungiMateria.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             BtnAggiungiMateria.FlatAppearance.BorderSize = 0;
             BtnAggiungiMateria.FlatStyle = FlatStyle.Flat;
-            BtnAggiungiMateria.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            BtnAggiungiMateria.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             BtnAggiungiMateria.ForeColor = Color.FromArgb(231, 61, 61);
-            BtnAggiungiMateria.Location = new Point(6, 307);
-            BtnAggiungiMateria.Margin = new Padding(3, 4, 3, 4);
+            BtnAggiungiMateria.Location = new Point(5, 261);
             BtnAggiungiMateria.Name = "BtnAggiungiMateria";
-            BtnAggiungiMateria.Size = new Size(298, 39);
+            BtnAggiungiMateria.Size = new Size(261, 29);
             BtnAggiungiMateria.TabIndex = 9;
             BtnAggiungiMateria.Text = "Aggiungi/Elimina Materia";
             BtnAggiungiMateria.UseVisualStyleBackColor = true;
@@ -213,35 +214,34 @@
             // ClbListaMaterie
             // 
             ClbListaMaterie.BackColor = Color.FromArgb(32, 30, 45);
+            ClbListaMaterie.BorderStyle = BorderStyle.FixedSingle;
             ClbListaMaterie.CheckOnClick = true;
-            ClbListaMaterie.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            ClbListaMaterie.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             ClbListaMaterie.ForeColor = Color.White;
             ClbListaMaterie.FormattingEnabled = true;
-            ClbListaMaterie.Items.AddRange(new object[] { "materia1", "materia2", "materia3", "materia4", "materia5", "materia6", "materia7", "materia8" });
-            ClbListaMaterie.Location = new Point(13, 107);
-            ClbListaMaterie.Margin = new Padding(3, 4, 3, 4);
+            ClbListaMaterie.Location = new Point(12, 109);
             ClbListaMaterie.Name = "ClbListaMaterie";
-            ClbListaMaterie.Size = new Size(146, 172);
+            ClbListaMaterie.Size = new Size(136, 122);
             ClbListaMaterie.TabIndex = 3;
             ClbListaMaterie.SelectedIndexChanged += ClbListaMaterie_SelectedIndexChanged;
             // 
             // label8
             // 
-            label8.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label8.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label8.ForeColor = Color.FromArgb(231, 61, 61);
-            label8.Location = new Point(12, 77);
+            label8.Location = new Point(8, 77);
             label8.Name = "label8";
-            label8.Size = new Size(194, 26);
+            label8.Size = new Size(153, 20);
             label8.TabIndex = 4;
-            label8.Text = "Seleziona Materie:";
+            label8.Text = "Seleziona Materie";
             // 
             // label14
             // 
-            label14.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label14.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label14.ForeColor = Color.FromArgb(231, 61, 61);
-            label14.Location = new Point(13, 26);
+            label14.Location = new Point(8, 23);
             label14.Name = "label14";
-            label14.Size = new Size(129, 28);
+            label14.Size = new Size(101, 21);
             label14.TabIndex = 6;
             label14.Text = "Inserisci ID aula:";
             // 
@@ -249,15 +249,16 @@
             // 
             TxtIDaula.BackColor = Color.FromArgb(32, 30, 45);
             TxtIDaula.BorderStyle = BorderStyle.FixedSingle;
-            TxtIDaula.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            TxtIDaula.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             TxtIDaula.ForeColor = Color.White;
-            TxtIDaula.Location = new Point(148, 23);
-            TxtIDaula.Margin = new Padding(3, 4, 3, 4);
+            TxtIDaula.Location = new Point(115, 24);
             TxtIDaula.Name = "TxtIDaula";
-            TxtIDaula.Size = new Size(156, 30);
+            TxtIDaula.Size = new Size(148, 25);
             TxtIDaula.TabIndex = 5;
             TxtIDaula.Text = "Inserisci ID classe";
+            TxtIDaula.TextAlign = HorizontalAlignment.Center;
             TxtIDaula.MouseClick += TxtIDaula_MouseClick;
+            TxtIDaula.TextChanged += TxtIDaula_TextChanged;
             TxtIDaula.Leave += TxtIDaula_Leave;
             // 
             // textBox12
@@ -267,13 +268,13 @@
             textBox12.Dock = DockStyle.Top;
             textBox12.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             textBox12.ForeColor = Color.White;
-            textBox12.Location = new Point(307, 0);
-            textBox12.Margin = new Padding(3, 5, 3, 5);
+            textBox12.Location = new Point(269, 0);
+            textBox12.Margin = new Padding(3, 4, 3, 4);
             textBox12.Name = "textBox12";
             textBox12.ReadOnly = true;
-            textBox12.Size = new Size(392, 27);
+            textBox12.Size = new Size(343, 23);
             textBox12.TabIndex = 37;
-            textBox12.Text = "Voti Studente";
+            textBox12.Text = "Studenti";
             textBox12.TextAlign = HorizontalAlignment.Center;
             // 
             // panel2
@@ -281,56 +282,63 @@
             panel2.BackColor = Color.FromArgb(32, 30, 45);
             panel2.Controls.Add(dataGridView4);
             panel2.Dock = DockStyle.Fill;
-            panel2.Location = new Point(307, 27);
+            panel2.Location = new Point(269, 23);
+            panel2.Margin = new Padding(3, 2, 3, 2);
             panel2.Name = "panel2";
-            panel2.Size = new Size(392, 585);
+            panel2.Size = new Size(343, 436);
             panel2.TabIndex = 38;
             // 
             // dataGridView4
             // 
             dataGridView4.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView4.BackgroundColor = Color.FromArgb(32, 30, 45);
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.Control;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dataGridView4.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataGridView4.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView4.Columns.AddRange(new DataGridViewColumn[] { ID_aula, Materie, Studenti });
+            dataGridView4.Columns.AddRange(new DataGridViewColumn[] { Matricola, Nome, Cognome });
             dataGridView4.Dock = DockStyle.Fill;
             dataGridView4.Location = new Point(0, 0);
-            dataGridView4.Margin = new Padding(3, 4, 3, 4);
             dataGridView4.Name = "dataGridView4";
             dataGridView4.RowHeadersWidth = 51;
             dataGridView4.RowTemplate.Height = 24;
-            dataGridView4.Size = new Size(392, 585);
+            dataGridView4.Size = new Size(343, 436);
             dataGridView4.TabIndex = 15;
             // 
-            // ID_aula
+            // Matricola
             // 
-            ID_aula.HeaderText = "ID_aula";
-            ID_aula.MinimumWidth = 6;
-            ID_aula.Name = "ID_aula";
+            Matricola.HeaderText = "Matricola";
+            Matricola.MinimumWidth = 6;
+            Matricola.Name = "Matricola";
             // 
-            // Materie
+            // Nome
             // 
-            Materie.HeaderText = "Materie";
-            Materie.MinimumWidth = 6;
-            Materie.Name = "Materie";
+            Nome.HeaderText = "Nome";
+            Nome.MinimumWidth = 6;
+            Nome.Name = "Nome";
             // 
-            // Studenti
+            // Cognome
             // 
-            Studenti.HeaderText = "Studenti";
-            Studenti.MinimumWidth = 6;
-            Studenti.Name = "Studenti";
+            Cognome.HeaderText = "Cognome";
+            Cognome.MinimumWidth = 6;
+            Cognome.Name = "Cognome";
             // 
             // Gestione_Aule
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlDark;
-            ClientSize = new Size(699, 612);
+            ClientSize = new Size(612, 459);
             Controls.Add(panel2);
             Controls.Add(textBox12);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(3, 4, 3, 4);
-            MinimumSize = new Size(699, 612);
+            MinimumSize = new Size(612, 459);
             Name = "Gestione_Aule";
             Text = "Gestione Aule";
             Load += Gestione_Aule_Load;
@@ -354,15 +362,15 @@
         private Button BtnClearMateria;
         private Button BtnDeleteMateria;
         private TextBox TxtNuovaMateria;
-        private Button button8;
-        private Button button4;
-        private Button button1;
-        private Button button2;
+        private Button btnCercaClasse;
+        private Button btnAggiungiClasse;
+        private Button btnEliminaClasse;
         private TextBox textBox12;
         private Panel panel2;
         private DataGridView dataGridView4;
-        private DataGridViewTextBoxColumn ID_aula;
-        private DataGridViewTextBoxColumn Materie;
-        private DataGridViewTextBoxColumn Studenti;
+        private DataGridViewTextBoxColumn Matricola;
+        private DataGridViewTextBoxColumn Nome;
+        private DataGridViewTextBoxColumn Cognome;
+        private Button btnModificaMaterieClasse;
     }
 }

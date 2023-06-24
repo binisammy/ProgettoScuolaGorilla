@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http.Json;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -25,16 +26,16 @@ namespace ClassLibrary1
             return responseClasse;
         }
 
-        public async Task<List<string>> getMaterie(string id_classe)
+        public async Task<List<string>> getMaterie()
         {
-            string getmaterieUrl = BaseUrl + $"/materie?id_classe={id_classe}";
+            string getmaterieUrl = BaseUrl + $"/materie";
             var responseStudente = await client.GetFromJsonAsync<List<string>>(getmaterieUrl);
             return responseStudente;
         }
 
         public async Task<List<string>> getMaterieByClasse(string id_classe)
         {
-            string getstudentiUrl = BaseUrl + $"/materieByMatricola?id_classe={id_classe}";
+            string getstudentiUrl = BaseUrl + $"/materieByClasse?id_classe={id_classe}";
             var responseStudente = await client.GetFromJsonAsync<List<string>>(getstudentiUrl);
             return responseStudente;
         }
@@ -52,6 +53,14 @@ namespace ClassLibrary1
             var response = await client.GetStringAsync(getmatricolaUrl);
             return response;
         }
+
+        public async Task<List<Studente>> getStudenti(string id_classe)
+        {
+            string getstudentiUrl = BaseUrl + $"/studenti?id_classe={id_classe}";
+            var responseStudente = await client.GetFromJsonAsync<List<Studente>>(getstudentiUrl);
+            return responseStudente;
+        }
+
         public async Task<string> postVoto(string id_materia, string id_studente, string voto)
         {
             List<string> parametri = new List<string>
@@ -62,6 +71,30 @@ namespace ClassLibrary1
             };
             string postvotoUrl = BaseUrl + $"/voto";
             var response = await client.PostAsJsonAsync(postvotoUrl, parametri);
+            return response.Content.ReadAsStringAsync().Result;
+        }
+
+        public async Task<string> postMateriaInInsieme(string id_materia)
+        {
+            string postMateriaUrl = BaseUrl + "/insieme_materie";
+            List<string> materia = new List<string> { id_materia };
+            var response = await client.PostAsJsonAsync(postMateriaUrl, materia);
+            return response.Content.ReadAsStringAsync().Result;
+        }
+
+        public async Task<string> postMateriaInClasse(string id_materia, string id_classe)
+        {
+            string postMateriaUrl = BaseUrl + "/materia_classe";
+            List<string> materia = new List<string> { id_materia, id_classe };
+            var response = await client.PostAsJsonAsync(postMateriaUrl, materia);
+            return response.Content.ReadAsStringAsync().Result;
+        }
+
+        public async Task<string> postClasse(string id_classe)
+        {
+            string postClasseUrl = BaseUrl + "/classi";
+            List<string> classe = new List<string> { id_classe };
+            var response = await client.PostAsJsonAsync(postClasseUrl, classe);
             return response.Content.ReadAsStringAsync().Result;
         }
 
@@ -86,10 +119,31 @@ namespace ClassLibrary1
             return response.Content.ReadAsStringAsync().Result;
         }
 
-        public async Task<string> deleteVotiByMateria(string id_studente, string id_materia)
+        public async Task<string> deleteVotiByMateriaStudente(string id_studente, string id_materia)
         {
-            string deletevotiUrl = BaseUrl + $"/votimateria?id_studente={id_studente}&id_materia={id_materia}";
+            string deletevotiUrl = BaseUrl + $"/votimateriastudente?id_studente={id_studente}&id_materia={id_materia}";
             var response = await client.DeleteAsync(deletevotiUrl);
+            return response.Content.ReadAsStringAsync().Result;
+        }
+
+        public async Task<string> deleteMateriaFromClasse(string id_classe, string id_materia)
+        {
+            string deletevotiUrl = BaseUrl + $"/materia_classe?id_materia={id_materia}&id_classe={id_classe}";
+            var response = await client.DeleteAsync(deletevotiUrl);
+            return response.Content.ReadAsStringAsync().Result;
+        }
+
+        public async Task<string> deleteMateriaFromInsieme(string id_materia)
+        {
+            string deletemateriaUrl = BaseUrl + $"/materia?id_materia={id_materia}";
+            var response = await client.DeleteAsync(deletemateriaUrl);
+            return response.Content.ReadAsStringAsync().Result;
+        }
+
+        public async Task<string> deleteClasse(string id_classe)
+        {
+            string deleteclasseUrl = BaseUrl + $"/classe?id_classe={id_classe}";
+            var response = await client.DeleteAsync(deleteclasseUrl);
             return response.Content.ReadAsStringAsync().Result;
         }
     }

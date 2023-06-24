@@ -89,7 +89,7 @@
             btnCerca.Padding = new Padding(10, 0, 0, 0);
             btnCerca.Size = new Size(250, 40);
             btnCerca.TabIndex = 8;
-            btnCerca.Text = "Cerca";
+            btnCerca.Text = "  Cerca matricola";
             btnCerca.TextAlign = ContentAlignment.MiddleLeft;
             btnCerca.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnCerca.UseVisualStyleBackColor = true;
@@ -155,7 +155,7 @@
             btnVisualizza.Padding = new Padding(10, 0, 0, 0);
             btnVisualizza.Size = new Size(250, 40);
             btnVisualizza.TabIndex = 6;
-            btnVisualizza.Text = "Visualizza";
+            btnVisualizza.Text = "  Visualizza";
             btnVisualizza.TextAlign = ContentAlignment.MiddleLeft;
             btnVisualizza.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnVisualizza.UseVisualStyleBackColor = true;
@@ -169,12 +169,12 @@
             button1.ForeColor = Color.White;
             button1.Image = (Image)resources.GetObject("button1.Image");
             button1.ImageAlign = ContentAlignment.MiddleLeft;
-            button1.Location = new Point(0, 568);
+            button1.Location = new Point(0, 556);
             button1.Name = "button1";
             button1.Padding = new Padding(10, 0, 0, 0);
-            button1.Size = new Size(250, 40);
+            button1.Size = new Size(250, 52);
             button1.TabIndex = 5;
-            button1.Text = "Esci";
+            button1.Text = "  Esci";
             button1.TextAlign = ContentAlignment.MiddleLeft;
             button1.TextImageRelation = TextImageRelation.ImageBeforeText;
             button1.UseVisualStyleBackColor = true;
@@ -262,7 +262,7 @@
             btnAggiungi.Padding = new Padding(10, 0, 0, 0);
             btnAggiungi.Size = new Size(250, 40);
             btnAggiungi.TabIndex = 3;
-            btnAggiungi.Text = "Aggiungi";
+            btnAggiungi.Text = "  Aggiungi";
             btnAggiungi.TextAlign = ContentAlignment.MiddleLeft;
             btnAggiungi.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnAggiungi.UseVisualStyleBackColor = true;
@@ -282,7 +282,7 @@
             btnHome.Padding = new Padding(10, 0, 0, 0);
             btnHome.Size = new Size(250, 40);
             btnHome.TabIndex = 2;
-            btnHome.Text = "Home";
+            btnHome.Text = "  Home";
             btnHome.TextAlign = ContentAlignment.MiddleLeft;
             btnHome.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnHome.UseVisualStyleBackColor = true;
@@ -303,11 +303,11 @@
             label2.Anchor = AnchorStyles.None;
             label2.AutoSize = true;
             label2.FlatStyle = FlatStyle.Flat;
-            label2.Font = new Font("Viner Hand ITC", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Font = new Font("Segoe UI Black", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(5, 90);
+            label2.Location = new Point(12, 79);
             label2.Name = "label2";
-            label2.Size = new Size(164, 36);
+            label2.Size = new Size(163, 30);
             label2.TabIndex = 2;
             label2.Text = "Scuola Gorilla";
             label2.TextAlign = ContentAlignment.MiddleCenter;
@@ -316,9 +316,9 @@
             // 
             pictureBox2.Anchor = AnchorStyles.None;
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(0, 17);
+            pictureBox2.Location = new Point(0, 19);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(91, 59);
+            pictureBox2.Size = new Size(66, 41);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 0;
             pictureBox2.TabStop = false;
@@ -339,6 +339,7 @@
             panelChildForm.BackgroundImageLayout = ImageLayout.Center;
             panelChildForm.Controls.Add(pictureBox1);
             panelChildForm.Dock = DockStyle.Fill;
+            panelChildForm.Font = new Font("MS PGothic", 10F, FontStyle.Regular, GraphicsUnit.Point);
             panelChildForm.Location = new Point(250, 0);
             panelChildForm.Name = "panelChildForm";
             panelChildForm.Size = new Size(702, 508);
