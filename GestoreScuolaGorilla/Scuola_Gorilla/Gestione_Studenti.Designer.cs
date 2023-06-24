@@ -73,9 +73,8 @@
             panel1.Controls.Add(TxtNome);
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
-            panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(256, 500);
+            panel1.Size = new Size(224, 375);
             panel1.TabIndex = 1;
             // 
             // button5
@@ -84,10 +83,9 @@
             button5.FlatAppearance.BorderSize = 0;
             button5.FlatStyle = FlatStyle.Flat;
             button5.ForeColor = Color.FromArgb(231, 61, 61);
-            button5.Location = new Point(0, 280);
-            button5.Margin = new Padding(3, 4, 3, 4);
+            button5.Location = new Point(0, 209);
             button5.Name = "button5";
-            button5.Size = new Size(256, 40);
+            button5.Size = new Size(224, 30);
             button5.TabIndex = 33;
             button5.Text = "Update";
             button5.UseVisualStyleBackColor = true;
@@ -98,10 +96,9 @@
             button4.FlatAppearance.BorderSize = 0;
             button4.FlatStyle = FlatStyle.Flat;
             button4.ForeColor = Color.FromArgb(231, 61, 61);
-            button4.Location = new Point(0, 320);
-            button4.Margin = new Padding(3, 4, 3, 4);
+            button4.Location = new Point(0, 239);
             button4.Name = "button4";
-            button4.Size = new Size(256, 45);
+            button4.Size = new Size(224, 34);
             button4.TabIndex = 32;
             button4.Text = "Search";
             button4.UseVisualStyleBackColor = true;
@@ -112,10 +109,9 @@
             button1.FlatAppearance.BorderSize = 0;
             button1.FlatStyle = FlatStyle.Flat;
             button1.ForeColor = Color.FromArgb(231, 61, 61);
-            button1.Location = new Point(0, 365);
-            button1.Margin = new Padding(3, 4, 3, 4);
+            button1.Location = new Point(0, 273);
             button1.Name = "button1";
-            button1.Size = new Size(256, 45);
+            button1.Size = new Size(224, 34);
             button1.TabIndex = 29;
             button1.Text = "Add";
             button1.UseVisualStyleBackColor = true;
@@ -126,10 +122,9 @@
             button2.FlatAppearance.BorderSize = 0;
             button2.FlatStyle = FlatStyle.Flat;
             button2.ForeColor = Color.FromArgb(231, 61, 61);
-            button2.Location = new Point(0, 410);
-            button2.Margin = new Padding(3, 4, 3, 4);
+            button2.Location = new Point(0, 307);
             button2.Name = "button2";
-            button2.Size = new Size(256, 45);
+            button2.Size = new Size(224, 34);
             button2.TabIndex = 30;
             button2.Text = "Delete";
             button2.UseVisualStyleBackColor = true;
@@ -140,10 +135,9 @@
             button3.FlatAppearance.BorderSize = 0;
             button3.FlatStyle = FlatStyle.Flat;
             button3.ForeColor = Color.FromArgb(231, 61, 61);
-            button3.Location = new Point(0, 455);
-            button3.Margin = new Padding(3, 4, 3, 4);
+            button3.Location = new Point(0, 341);
             button3.Name = "button3";
-            button3.Size = new Size(256, 45);
+            button3.Size = new Size(224, 34);
             button3.TabIndex = 31;
             button3.Text = "Reset";
             button3.UseVisualStyleBackColor = true;
@@ -158,10 +152,9 @@
             comboBox1.ForeColor = Color.White;
             comboBox1.FormattingEnabled = true;
             comboBox1.Items.AddRange(new object[] { "1A", "1B", "2A", "2B", "3A", "3B", "4A", "4B", "5A", "5B" });
-            comboBox1.Location = new Point(117, 240);
-            comboBox1.Margin = new Padding(3, 4, 3, 4);
+            comboBox1.Location = new Point(102, 180);
             comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(133, 26);
+            comboBox1.Size = new Size(116, 23);
             comboBox1.TabIndex = 28;
             // 
             // LblClasse
@@ -169,9 +162,9 @@
             LblClasse.AutoSize = true;
             LblClasse.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
             LblClasse.ForeColor = Color.FromArgb(231, 61, 61);
-            LblClasse.Location = new Point(12, 241);
+            LblClasse.Location = new Point(10, 181);
             LblClasse.Name = "LblClasse";
-            LblClasse.Size = new Size(79, 25);
+            LblClasse.Size = new Size(63, 20);
             LblClasse.TabIndex = 23;
             LblClasse.Text = "Classe";
             // 
@@ -180,9 +173,9 @@
             LblMatricola.AutoSize = true;
             LblMatricola.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
             LblMatricola.ForeColor = Color.FromArgb(231, 61, 61);
-            LblMatricola.Location = new Point(12, 171);
+            LblMatricola.Location = new Point(10, 128);
             LblMatricola.Name = "LblMatricola";
-            LblMatricola.Size = new Size(100, 25);
+            LblMatricola.Size = new Size(82, 20);
             LblMatricola.TabIndex = 19;
             LblMatricola.Text = "Matricola";
             // 
@@ -190,13 +183,12 @@
             // 
             TxtMatricola.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             TxtMatricola.BackColor = Color.FromArgb(32, 30, 45);
-            TxtMatricola.BorderStyle = BorderStyle.None;
+            TxtMatricola.BorderStyle = BorderStyle.FixedSingle;
             TxtMatricola.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
             TxtMatricola.ForeColor = Color.White;
-            TxtMatricola.Location = new Point(118, 176);
-            TxtMatricola.Margin = new Padding(3, 4, 3, 4);
+            TxtMatricola.Location = new Point(102, 129);
             TxtMatricola.Name = "TxtMatricola";
-            TxtMatricola.Size = new Size(133, 17);
+            TxtMatricola.Size = new Size(116, 21);
             TxtMatricola.TabIndex = 20;
             TxtMatricola.Text = "Inserisci Matricola";
             TxtMatricola.MouseClick += TxtMatricola_MouseClick;
@@ -207,9 +199,9 @@
             LblCognome.AutoSize = true;
             LblCognome.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
             LblCognome.ForeColor = Color.FromArgb(231, 61, 61);
-            LblCognome.Location = new Point(13, 95);
+            LblCognome.Location = new Point(11, 71);
             LblCognome.Name = "LblCognome";
-            LblCognome.Size = new Size(105, 25);
+            LblCognome.Size = new Size(85, 20);
             LblCognome.TabIndex = 17;
             LblCognome.Text = "Cognome";
             // 
@@ -217,13 +209,12 @@
             // 
             TxtCognome.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             TxtCognome.BackColor = Color.FromArgb(32, 30, 45);
-            TxtCognome.BorderStyle = BorderStyle.None;
+            TxtCognome.BorderStyle = BorderStyle.FixedSingle;
             TxtCognome.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
             TxtCognome.ForeColor = Color.White;
-            TxtCognome.Location = new Point(120, 100);
-            TxtCognome.Margin = new Padding(3, 4, 3, 4);
+            TxtCognome.Location = new Point(102, 72);
             TxtCognome.Name = "TxtCognome";
-            TxtCognome.Size = new Size(133, 17);
+            TxtCognome.Size = new Size(116, 21);
             TxtCognome.TabIndex = 18;
             TxtCognome.Text = "Inserisci Cognome";
             TxtCognome.MouseClick += TxtCognome_MouseClick;
@@ -234,9 +225,9 @@
             LblNome.AutoSize = true;
             LblNome.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
             LblNome.ForeColor = Color.FromArgb(231, 61, 61);
-            LblNome.Location = new Point(12, 27);
+            LblNome.Location = new Point(10, 20);
             LblNome.Name = "LblNome";
-            LblNome.Size = new Size(68, 25);
+            LblNome.Size = new Size(55, 20);
             LblNome.TabIndex = 15;
             LblNome.Text = "Nome";
             // 
@@ -244,13 +235,12 @@
             // 
             TxtNome.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             TxtNome.BackColor = Color.FromArgb(32, 30, 45);
-            TxtNome.BorderStyle = BorderStyle.None;
+            TxtNome.BorderStyle = BorderStyle.FixedSingle;
             TxtNome.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
             TxtNome.ForeColor = Color.White;
-            TxtNome.Location = new Point(117, 32);
-            TxtNome.Margin = new Padding(3, 4, 3, 4);
+            TxtNome.Location = new Point(102, 24);
             TxtNome.Name = "TxtNome";
-            TxtNome.Size = new Size(133, 17);
+            TxtNome.Size = new Size(116, 21);
             TxtNome.TabIndex = 16;
             TxtNome.Text = "Inserisci Nome";
             TxtNome.MouseClick += TxtNome_MouseClick;
@@ -263,11 +253,10 @@
             textBox11.Dock = DockStyle.Top;
             textBox11.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             textBox11.ForeColor = Color.White;
-            textBox11.Location = new Point(256, 0);
-            textBox11.Margin = new Padding(3, 4, 3, 4);
+            textBox11.Location = new Point(224, 0);
             textBox11.Name = "textBox11";
             textBox11.ReadOnly = true;
-            textBox11.Size = new Size(444, 20);
+            textBox11.Size = new Size(388, 16);
             textBox11.TabIndex = 4;
             textBox11.Text = "Lista Studenti";
             textBox11.TextAlign = HorizontalAlignment.Center;
@@ -277,25 +266,24 @@
             // 
             panel2.Controls.Add(dataGridView3);
             panel2.Dock = DockStyle.Fill;
-            panel2.Location = new Point(256, 20);
+            panel2.Location = new Point(224, 16);
+            panel2.Margin = new Padding(3, 2, 3, 2);
             panel2.Name = "panel2";
-            panel2.Size = new Size(444, 480);
+            panel2.Size = new Size(388, 359);
             panel2.TabIndex = 5;
             // 
             // dataGridView3
             // 
             dataGridView3.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView3.BackgroundColor = Color.FromArgb(32, 30, 45);
-            dataGridView3.BorderStyle = BorderStyle.None;
             dataGridView3.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView3.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn3, dataGridViewTextBoxColumn1, dataGridViewTextBoxColumn2, dataGridViewTextBoxColumn4 });
             dataGridView3.Dock = DockStyle.Fill;
             dataGridView3.Location = new Point(0, 0);
-            dataGridView3.Margin = new Padding(3, 4, 3, 4);
             dataGridView3.Name = "dataGridView3";
             dataGridView3.RowHeadersWidth = 51;
             dataGridView3.RowTemplate.Height = 24;
-            dataGridView3.Size = new Size(444, 480);
+            dataGridView3.Size = new Size(388, 359);
             dataGridView3.TabIndex = 3;
             dataGridView3.CellContentClick += dataGridView3_CellContentClick;
             // 
@@ -325,17 +313,16 @@
             // 
             // Gestione_Studenti
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
             BackColor = SystemColors.ControlDark;
-            ClientSize = new Size(700, 500);
+            ClientSize = new Size(612, 375);
             Controls.Add(panel2);
             Controls.Add(textBox11);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(3, 4, 3, 4);
-            MinimumSize = new Size(700, 500);
+            MinimumSize = new Size(612, 375);
             Name = "Gestione_Studenti";
             Text = "Gestione Studenti";
             panel1.ResumeLayout(false);
