@@ -29,12 +29,9 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
-            button5 = new Button();
-            button4 = new Button();
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
-            comboBox1 = new ComboBox();
+            btnAddStudente = new Button();
+            btnDelete = new Button();
+            cbClassi = new ComboBox();
             LblClasse = new Label();
             LblMatricola = new Label();
             TxtMatricola = new TextBox();
@@ -44,26 +41,23 @@
             TxtNome = new TextBox();
             textBox11 = new TextBox();
             panel2 = new Panel();
-            dataGridView3 = new DataGridView();
+            dgwStudenti = new DataGridView();
             dataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn4 = new DataGridViewTextBoxColumn();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgwStudenti).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.AutoSize = true;
             panel1.BackColor = Color.FromArgb(32, 30, 45);
-            panel1.Controls.Add(button5);
-            panel1.Controls.Add(button4);
-            panel1.Controls.Add(button1);
-            panel1.Controls.Add(button2);
-            panel1.Controls.Add(button3);
-            panel1.Controls.Add(comboBox1);
+            panel1.Controls.Add(btnAddStudente);
+            panel1.Controls.Add(btnDelete);
+            panel1.Controls.Add(cbClassi);
             panel1.Controls.Add(LblClasse);
             panel1.Controls.Add(LblMatricola);
             panel1.Controls.Add(TxtMatricola);
@@ -74,88 +68,51 @@
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(224, 375);
+            panel1.Size = new Size(269, 375);
             panel1.TabIndex = 1;
             // 
-            // button5
+            // btnAddStudente
             // 
-            button5.Dock = DockStyle.Bottom;
-            button5.FlatAppearance.BorderSize = 0;
-            button5.FlatStyle = FlatStyle.Flat;
-            button5.ForeColor = Color.FromArgb(231, 61, 61);
-            button5.Location = new Point(0, 209);
-            button5.Name = "button5";
-            button5.Size = new Size(224, 30);
-            button5.TabIndex = 33;
-            button5.Text = "Update";
-            button5.UseVisualStyleBackColor = true;
+            btnAddStudente.Dock = DockStyle.Bottom;
+            btnAddStudente.FlatAppearance.BorderSize = 0;
+            btnAddStudente.FlatStyle = FlatStyle.Flat;
+            btnAddStudente.ForeColor = Color.FromArgb(231, 61, 61);
+            btnAddStudente.Location = new Point(0, 307);
+            btnAddStudente.Name = "btnAddStudente";
+            btnAddStudente.Size = new Size(269, 34);
+            btnAddStudente.TabIndex = 29;
+            btnAddStudente.Text = "Add";
+            btnAddStudente.UseVisualStyleBackColor = true;
+            btnAddStudente.Click += btnAddStudente_Click;
             // 
-            // button4
+            // btnDelete
             // 
-            button4.Dock = DockStyle.Bottom;
-            button4.FlatAppearance.BorderSize = 0;
-            button4.FlatStyle = FlatStyle.Flat;
-            button4.ForeColor = Color.FromArgb(231, 61, 61);
-            button4.Location = new Point(0, 239);
-            button4.Name = "button4";
-            button4.Size = new Size(224, 34);
-            button4.TabIndex = 32;
-            button4.Text = "Search";
-            button4.UseVisualStyleBackColor = true;
+            btnDelete.Dock = DockStyle.Bottom;
+            btnDelete.FlatAppearance.BorderSize = 0;
+            btnDelete.FlatStyle = FlatStyle.Flat;
+            btnDelete.ForeColor = Color.FromArgb(231, 61, 61);
+            btnDelete.Location = new Point(0, 341);
+            btnDelete.Name = "btnDelete";
+            btnDelete.Size = new Size(269, 34);
+            btnDelete.TabIndex = 30;
+            btnDelete.Text = "Delete";
+            btnDelete.UseVisualStyleBackColor = true;
+            btnDelete.Click += btnDelete_Click;
             // 
-            // button1
+            // cbClassi
             // 
-            button1.Dock = DockStyle.Bottom;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.ForeColor = Color.FromArgb(231, 61, 61);
-            button1.Location = new Point(0, 273);
-            button1.Name = "button1";
-            button1.Size = new Size(224, 34);
-            button1.TabIndex = 29;
-            button1.Text = "Add";
-            button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            button2.Dock = DockStyle.Bottom;
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.ForeColor = Color.FromArgb(231, 61, 61);
-            button2.Location = new Point(0, 307);
-            button2.Name = "button2";
-            button2.Size = new Size(224, 34);
-            button2.TabIndex = 30;
-            button2.Text = "Delete";
-            button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            button3.Dock = DockStyle.Bottom;
-            button3.FlatAppearance.BorderSize = 0;
-            button3.FlatStyle = FlatStyle.Flat;
-            button3.ForeColor = Color.FromArgb(231, 61, 61);
-            button3.Location = new Point(0, 341);
-            button3.Name = "button3";
-            button3.Size = new Size(224, 34);
-            button3.TabIndex = 31;
-            button3.Text = "Reset";
-            button3.UseVisualStyleBackColor = true;
-            // 
-            // comboBox1
-            // 
-            comboBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            comboBox1.BackColor = Color.FromArgb(32, 30, 45);
-            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox1.FlatStyle = FlatStyle.Flat;
-            comboBox1.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            comboBox1.ForeColor = Color.White;
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "1A", "1B", "2A", "2B", "3A", "3B", "4A", "4B", "5A", "5B" });
-            comboBox1.Location = new Point(102, 180);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(116, 23);
-            comboBox1.TabIndex = 28;
+            cbClassi.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            cbClassi.BackColor = Color.FromArgb(32, 30, 45);
+            cbClassi.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbClassi.FlatStyle = FlatStyle.Flat;
+            cbClassi.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            cbClassi.ForeColor = Color.White;
+            cbClassi.FormattingEnabled = true;
+            cbClassi.Items.AddRange(new object[] { "" });
+            cbClassi.Location = new Point(147, 180);
+            cbClassi.Name = "cbClassi";
+            cbClassi.Size = new Size(116, 23);
+            cbClassi.TabIndex = 28;
             // 
             // LblClasse
             // 
@@ -186,7 +143,7 @@
             TxtMatricola.BorderStyle = BorderStyle.FixedSingle;
             TxtMatricola.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
             TxtMatricola.ForeColor = Color.White;
-            TxtMatricola.Location = new Point(102, 129);
+            TxtMatricola.Location = new Point(147, 129);
             TxtMatricola.Name = "TxtMatricola";
             TxtMatricola.Size = new Size(116, 21);
             TxtMatricola.TabIndex = 20;
@@ -212,7 +169,7 @@
             TxtCognome.BorderStyle = BorderStyle.FixedSingle;
             TxtCognome.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
             TxtCognome.ForeColor = Color.White;
-            TxtCognome.Location = new Point(102, 72);
+            TxtCognome.Location = new Point(147, 72);
             TxtCognome.Name = "TxtCognome";
             TxtCognome.Size = new Size(116, 21);
             TxtCognome.TabIndex = 18;
@@ -238,7 +195,7 @@
             TxtNome.BorderStyle = BorderStyle.FixedSingle;
             TxtNome.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
             TxtNome.ForeColor = Color.White;
-            TxtNome.Location = new Point(102, 24);
+            TxtNome.Location = new Point(147, 24);
             TxtNome.Name = "TxtNome";
             TxtNome.Size = new Size(116, 21);
             TxtNome.TabIndex = 16;
@@ -249,14 +206,14 @@
             // textBox11
             // 
             textBox11.BackColor = Color.FromArgb(32, 30, 45);
-            textBox11.BorderStyle = BorderStyle.None;
+            textBox11.BorderStyle = BorderStyle.FixedSingle;
             textBox11.Dock = DockStyle.Top;
             textBox11.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             textBox11.ForeColor = Color.White;
-            textBox11.Location = new Point(224, 0);
+            textBox11.Location = new Point(269, 0);
             textBox11.Name = "textBox11";
             textBox11.ReadOnly = true;
-            textBox11.Size = new Size(388, 16);
+            textBox11.Size = new Size(343, 23);
             textBox11.TabIndex = 4;
             textBox11.Text = "Lista Studenti";
             textBox11.TextAlign = HorizontalAlignment.Center;
@@ -264,28 +221,28 @@
             // 
             // panel2
             // 
-            panel2.Controls.Add(dataGridView3);
-            panel2.Dock = DockStyle.Fill;
-            panel2.Location = new Point(224, 16);
+            panel2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            panel2.Controls.Add(dgwStudenti);
+            panel2.Location = new Point(269, 24);
             panel2.Margin = new Padding(3, 2, 3, 2);
             panel2.Name = "panel2";
-            panel2.Size = new Size(388, 359);
+            panel2.Size = new Size(343, 351);
             panel2.TabIndex = 5;
             // 
-            // dataGridView3
+            // dgwStudenti
             // 
-            dataGridView3.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridView3.BackgroundColor = Color.FromArgb(32, 30, 45);
-            dataGridView3.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView3.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn3, dataGridViewTextBoxColumn1, dataGridViewTextBoxColumn2, dataGridViewTextBoxColumn4 });
-            dataGridView3.Dock = DockStyle.Fill;
-            dataGridView3.Location = new Point(0, 0);
-            dataGridView3.Name = "dataGridView3";
-            dataGridView3.RowHeadersWidth = 51;
-            dataGridView3.RowTemplate.Height = 24;
-            dataGridView3.Size = new Size(388, 359);
-            dataGridView3.TabIndex = 3;
-            dataGridView3.CellContentClick += dataGridView3_CellContentClick;
+            dgwStudenti.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgwStudenti.BackgroundColor = Color.FromArgb(32, 30, 45);
+            dgwStudenti.ColumnHeadersHeight = 29;
+            dgwStudenti.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn3, dataGridViewTextBoxColumn1, dataGridViewTextBoxColumn2, dataGridViewTextBoxColumn4 });
+            dgwStudenti.Dock = DockStyle.Fill;
+            dgwStudenti.Location = new Point(0, 0);
+            dgwStudenti.Name = "dgwStudenti";
+            dgwStudenti.RowHeadersWidth = 51;
+            dgwStudenti.RowTemplate.Height = 24;
+            dgwStudenti.Size = new Size(343, 351);
+            dgwStudenti.TabIndex = 3;
+            dgwStudenti.CellContentClick += dataGridView3_CellContentClick;
             // 
             // dataGridViewTextBoxColumn3
             // 
@@ -328,7 +285,7 @@
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgwStudenti).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -336,7 +293,7 @@
         #endregion
 
         private Panel panel1;
-        private ComboBox comboBox1;
+        private ComboBox cbClassi;
         private Label LblClasse;
         private Label LblMatricola;
         private TextBox TxtMatricola;
@@ -347,11 +304,10 @@
         private TextBox textBox11;
         private Button button5;
         private Button button4;
-        private Button button1;
-        private Button button2;
-        private Button button3;
+        private Button btnAddStudente;
+        private Button btnDelete;
         private Panel panel2;
-        private DataGridView dataGridView3;
+        private DataGridView dgwStudenti;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;

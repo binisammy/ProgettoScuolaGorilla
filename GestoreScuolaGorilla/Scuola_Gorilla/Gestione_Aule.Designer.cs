@@ -97,9 +97,9 @@
             btnCercaClasse.FlatStyle = FlatStyle.Flat;
             btnCercaClasse.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             btnCercaClasse.ForeColor = Color.FromArgb(231, 61, 61);
-            btnCercaClasse.Location = new Point(0, 375);
+            btnCercaClasse.Location = new Point(0, 351);
             btnCercaClasse.Name = "btnCercaClasse";
-            btnCercaClasse.Size = new Size(269, 28);
+            btnCercaClasse.Size = new Size(269, 38);
             btnCercaClasse.TabIndex = 21;
             btnCercaClasse.Text = "Cerca";
             btnCercaClasse.UseVisualStyleBackColor = true;
@@ -112,9 +112,9 @@
             btnAggiungiClasse.FlatStyle = FlatStyle.Flat;
             btnAggiungiClasse.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             btnAggiungiClasse.ForeColor = Color.FromArgb(231, 61, 61);
-            btnAggiungiClasse.Location = new Point(0, 403);
+            btnAggiungiClasse.Location = new Point(0, 389);
             btnAggiungiClasse.Name = "btnAggiungiClasse";
-            btnAggiungiClasse.Size = new Size(269, 28);
+            btnAggiungiClasse.Size = new Size(269, 34);
             btnAggiungiClasse.TabIndex = 19;
             btnAggiungiClasse.Text = "Aggiungi Classe";
             btnAggiungiClasse.UseVisualStyleBackColor = true;
@@ -127,9 +127,9 @@
             btnEliminaClasse.FlatStyle = FlatStyle.Flat;
             btnEliminaClasse.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             btnEliminaClasse.ForeColor = Color.FromArgb(231, 61, 61);
-            btnEliminaClasse.Location = new Point(0, 431);
+            btnEliminaClasse.Location = new Point(0, 423);
             btnEliminaClasse.Name = "btnEliminaClasse";
-            btnEliminaClasse.Size = new Size(269, 28);
+            btnEliminaClasse.Size = new Size(269, 36);
             btnEliminaClasse.TabIndex = 20;
             btnEliminaClasse.Text = "Elimina Classe";
             btnEliminaClasse.UseVisualStyleBackColor = true;

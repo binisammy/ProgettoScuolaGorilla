@@ -18,14 +18,39 @@ namespace Scuola_Gorilla
         {
             InitializeComponent();
             api = new ApiMethods();
+            initializeClasse();
+        }
+
+        private async void initializeClasse()
+        {
+            var classi = await api.getClassi();
+            foreach (var classe in classi)
+            {
+                this.cbClasse.Items.Add(classe);
+            }
         }
 
         private async void btnCerca_Click(object sender, EventArgs e)
         {
-            if (txtClasse.Text == "" || txtCognome.Text == "" || txtNome.Text == "")
+            if (cbClasse.SelectedIndex == -1 || txtCognome.Text == "" || txtNome.Text == "")
                 MessageBox.Show("Riempire tutti i campi!", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
             else
-                txtMatricola.Text = await api.getMatricola(txtClasse.Text, txtNome.Text, txtCognome.Text);
+                txtMatricola.Text = await api.getMatricola(cbClasse.SelectedItem.ToString(), txtNome.Text.ToUpper(), txtCognome.Text.ToUpper());
+        }
+
+        private void txtNome_TextChanged(object sender, EventArgs e)
+        {
+            txtMatricola.Text = "";
+        }
+
+        private void txtCognome_TextChanged(object sender, EventArgs e)
+        {
+            txtMatricola.Text = "";
+        }
+
+        private void cbClasse_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txtMatricola.Text = "";
         }
     }
 }

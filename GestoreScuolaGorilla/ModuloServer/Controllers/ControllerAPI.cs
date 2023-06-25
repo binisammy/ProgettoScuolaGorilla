@@ -39,7 +39,7 @@ namespace ModuloServer.Controllers
                 cmd.CommandText = $"INSERT INTO STUDENTI (nome,cognome,id_matricola,id_classe) VALUES ('{studente[0]}', '{studente[1]}','{studente[2]}','{studente[3]}')";
                 cmd.ExecuteNonQuery();
             }
-            return Ok();
+            return Ok("Studente inserito!");
         }
 
         [HttpPost("voto")]
@@ -167,7 +167,7 @@ namespace ModuloServer.Controllers
                 con.Open();
                 var cmd = new NpgsqlCommand();
                 cmd.Connection = con;
-                cmd.CommandText = $"SELECT * FROM CLASSI";
+                cmd.CommandText = $"SELECT * FROM CLASSI ORDER BY ID_CLASSE";
                 var rdr = cmd.ExecuteReader();
                 while (rdr.Read())
                 {
@@ -375,6 +375,23 @@ namespace ModuloServer.Controllers
                 cmd.ExecuteNonQuery();
             }
             return Ok("Materia eliminata!");
+        }
+
+        [HttpDelete("studente")]
+        public ActionResult<string> DeleteStudente(string id_studente)
+        {
+            var cs = $"Host={datasource};Port={port};Username={username};Password={passwd};Database={database}";
+            using (var con = new NpgsqlConnection(cs))
+            {
+                con.Open();
+                var cmd = new NpgsqlCommand();
+                cmd.Connection = con;
+                cmd.CommandText = $"DELETE FROM VOTI WHERE ID_MATRICOLA = '{id_studente}'";
+                cmd.ExecuteNonQuery();
+                cmd.CommandText = $"DELETE FROM STUDENTI WHERE ID_MATRICOLA = '{id_studente}'";
+                cmd.ExecuteNonQuery();
+            }
+            return Ok("Studente eliminato!");
         }
     }
 }

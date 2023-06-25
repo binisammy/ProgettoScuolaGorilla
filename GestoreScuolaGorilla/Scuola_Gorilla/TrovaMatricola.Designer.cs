@@ -31,12 +31,12 @@
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
-            txtClasse = new TextBox();
             txtNome = new TextBox();
             txtCognome = new TextBox();
             btnCerca = new Button();
             txtMatricola = new TextBox();
             label4 = new Label();
+            cbClasse = new ComboBox();
             SuspendLayout();
             // 
             // label1
@@ -74,17 +74,6 @@
             label3.TabIndex = 2;
             label3.Text = "Classe";
             // 
-            // txtClasse
-            // 
-            txtClasse.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            txtClasse.BackColor = Color.FromArgb(23, 21, 32);
-            txtClasse.BorderStyle = BorderStyle.FixedSingle;
-            txtClasse.ForeColor = SystemColors.Info;
-            txtClasse.Location = new Point(438, 135);
-            txtClasse.Name = "txtClasse";
-            txtClasse.Size = new Size(100, 23);
-            txtClasse.TabIndex = 3;
-            // 
             // txtNome
             // 
             txtNome.BackColor = Color.FromArgb(23, 21, 32);
@@ -94,6 +83,7 @@
             txtNome.Name = "txtNome";
             txtNome.Size = new Size(100, 23);
             txtNome.TabIndex = 4;
+            txtNome.TextChanged += txtNome_TextChanged;
             // 
             // txtCognome
             // 
@@ -105,6 +95,7 @@
             txtCognome.Name = "txtCognome";
             txtCognome.Size = new Size(100, 23);
             txtCognome.TabIndex = 5;
+            txtCognome.TextChanged += txtCognome_TextChanged;
             // 
             // btnCerca
             // 
@@ -141,18 +132,30 @@
             label4.TabIndex = 7;
             label4.Text = "Matricola";
             // 
+            // cbClasse
+            // 
+            cbClasse.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            cbClasse.BackColor = SystemColors.InfoText;
+            cbClasse.ForeColor = SystemColors.Info;
+            cbClasse.FormattingEnabled = true;
+            cbClasse.Location = new Point(436, 135);
+            cbClasse.Name = "cbClasse";
+            cbClasse.Size = new Size(100, 23);
+            cbClasse.TabIndex = 9;
+            cbClasse.SelectedIndexChanged += cbClasse_SelectedIndexChanged;
+            // 
             // TrovaMatricola
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(32, 30, 45);
             ClientSize = new Size(596, 336);
+            Controls.Add(cbClasse);
             Controls.Add(txtMatricola);
             Controls.Add(label4);
             Controls.Add(btnCerca);
             Controls.Add(txtCognome);
             Controls.Add(txtNome);
-            Controls.Add(txtClasse);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
@@ -168,11 +171,11 @@
         private Label label1;
         private Label label2;
         private Label label3;
-        private TextBox txtClasse;
         private TextBox txtNome;
         private TextBox txtCognome;
         private Button btnCerca;
         private TextBox txtMatricola;
         private Label label4;
+        private ComboBox cbClasse;
     }
 }
