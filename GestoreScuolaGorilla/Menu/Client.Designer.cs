@@ -123,6 +123,7 @@
             button5.TextAlign = ContentAlignment.MiddleLeft;
             button5.TextImageRelation = TextImageRelation.ImageBeforeText;
             button5.UseVisualStyleBackColor = true;
+            button5.Click += button5_Click;
             // 
             // Buttn6
             // 
@@ -307,7 +308,7 @@
             label2.ForeColor = Color.White;
             label2.Location = new Point(12, 79);
             label2.Name = "label2";
-            label2.Size = new Size(163, 30);
+            label2.Size = new Size(209, 38);
             label2.TabIndex = 2;
             label2.Text = "Scuola Gorilla";
             label2.TextAlign = ContentAlignment.MiddleCenter;
@@ -359,7 +360,7 @@
             // 
             // Client
             // 
-            AutoScaleDimensions = new SizeF(8F, 16F);
+            AutoScaleDimensions = new SizeF(10F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(952, 608);
             Controls.Add(panelChildForm);

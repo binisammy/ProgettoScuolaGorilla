@@ -80,6 +80,7 @@
             // 
             // button5
             // 
+            button5.AutoSize = true;
             button5.Dock = DockStyle.Bottom;
             button5.FlatAppearance.BorderSize = 0;
             button5.FlatStyle = FlatStyle.Flat;
@@ -94,6 +95,7 @@
             // 
             // button4
             // 
+            button4.AutoSize = true;
             button4.Dock = DockStyle.Bottom;
             button4.FlatAppearance.BorderSize = 0;
             button4.FlatStyle = FlatStyle.Flat;
@@ -108,6 +110,7 @@
             // 
             // button1
             // 
+            button1.AutoSize = true;
             button1.Dock = DockStyle.Bottom;
             button1.FlatAppearance.BorderSize = 0;
             button1.FlatStyle = FlatStyle.Flat;
@@ -122,6 +125,7 @@
             // 
             // button2
             // 
+            button2.AutoSize = true;
             button2.Dock = DockStyle.Bottom;
             button2.FlatAppearance.BorderSize = 0;
             button2.FlatStyle = FlatStyle.Flat;
@@ -136,6 +140,7 @@
             // 
             // button3
             // 
+            button3.AutoSize = true;
             button3.Dock = DockStyle.Bottom;
             button3.FlatAppearance.BorderSize = 0;
             button3.FlatStyle = FlatStyle.Flat;
@@ -150,7 +155,7 @@
             // 
             // comboBox1
             // 
-            comboBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            comboBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             comboBox1.BackColor = Color.FromArgb(32, 30, 45);
             comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBox1.FlatStyle = FlatStyle.Flat;
@@ -166,6 +171,7 @@
             // 
             // LblClasse
             // 
+            LblClasse.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             LblClasse.AutoSize = true;
             LblClasse.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
             LblClasse.ForeColor = Color.FromArgb(231, 61, 61);
