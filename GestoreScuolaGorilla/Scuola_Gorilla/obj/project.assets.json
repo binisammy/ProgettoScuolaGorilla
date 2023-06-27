@@ -27,19 +27,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\user4_12_1\\.nuget\\packages\\": {}
+    "C:\\Users\\user9_12_1\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\user4_12_1\\Desktop\\Gorilla\\GestoreScuolaGorilla\\Scuola_Gorilla\\Scuola_Gorilla.csproj",
+      "projectUniqueName": "C:\\Users\\user9_12_1\\Documents\\ANNO1\\Ingegneria del Software\\Progettone\\GestoreScuolaGorilla\\Scuola_Gorilla\\Scuola_Gorilla.csproj",
       "projectName": "Scuola_Gorilla",
-      "projectPath": "C:\\Users\\user4_12_1\\Desktop\\Gorilla\\GestoreScuolaGorilla\\Scuola_Gorilla\\Scuola_Gorilla.csproj",
-      "packagesPath": "C:\\Users\\user4_12_1\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\user4_12_1\\Desktop\\Gorilla\\GestoreScuolaGorilla\\Scuola_Gorilla\\obj\\",
+      "projectPath": "C:\\Users\\user9_12_1\\Documents\\ANNO1\\Ingegneria del Software\\Progettone\\GestoreScuolaGorilla\\Scuola_Gorilla\\Scuola_Gorilla.csproj",
+      "packagesPath": "C:\\Users\\user9_12_1\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\user9_12_1\\Documents\\ANNO1\\Ingegneria del Software\\Progettone\\GestoreScuolaGorilla\\Scuola_Gorilla\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\user4_12_1\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\user9_12_1\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -53,8 +53,8 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "projectReferences": {
-            "C:\\Users\\user4_12_1\\Desktop\\Gorilla\\GestoreScuolaGorilla\\ClassLibrary1\\ClassLibrary1.csproj": {
-              "projectPath": "C:\\Users\\user4_12_1\\Desktop\\Gorilla\\GestoreScuolaGorilla\\ClassLibrary1\\ClassLibrary1.csproj"
+            "C:\\Users\\user9_12_1\\Documents\\ANNO1\\Ingegneria del Software\\Progettone\\GestoreScuolaGorilla\\ClassLibrary1\\ClassLibrary1.csproj": {
+              "projectPath": "C:\\Users\\user9_12_1\\Documents\\ANNO1\\Ingegneria del Software\\Progettone\\GestoreScuolaGorilla\\ClassLibrary1\\ClassLibrary1.csproj"
             }
           }
         }
@@ -87,7 +87,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }

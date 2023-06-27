@@ -61,6 +61,13 @@ namespace ClassLibrary1
             return responseStudente;
         }
 
+        public async Task<string> postStudente(List<string> studente)
+        {
+            string poststudenteUrl = BaseUrl + "/studenti";
+            var response = await client.PostAsJsonAsync(poststudenteUrl, studente);
+            return response.Content.ReadAsStringAsync().Result;
+        }
+
         public async Task<string> postVoto(string id_materia, string id_studente, string voto)
         {
             List<string> parametri = new List<string>
@@ -144,6 +151,13 @@ namespace ClassLibrary1
         {
             string deleteclasseUrl = BaseUrl + $"/classe?id_classe={id_classe}";
             var response = await client.DeleteAsync(deleteclasseUrl);
+            return response.Content.ReadAsStringAsync().Result;
+        }
+
+        public async Task<string> deleteStudente(string id_studente)
+        {
+            string deletestudenteUrl = BaseUrl + $"/studente?id_studente={id_studente}";
+            var response = await client.DeleteAsync(deletestudenteUrl);
             return response.Content.ReadAsStringAsync().Result;
         }
     }
