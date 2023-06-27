@@ -86,7 +86,7 @@
             btnAddStudente.Click += btnAddStudente_Click;
             // 
             // btnDelete
-            // 
+            //
             btnDelete.Dock = DockStyle.Bottom;
             btnDelete.FlatAppearance.BorderSize = 0;
             btnDelete.FlatStyle = FlatStyle.Flat;
@@ -116,6 +116,7 @@
             // 
             // LblClasse
             // 
+            LblClasse.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             LblClasse.AutoSize = true;
             LblClasse.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
             LblClasse.ForeColor = Color.FromArgb(231, 61, 61);

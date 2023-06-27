@@ -96,13 +96,13 @@
             txtCognome.Size = new Size(100, 23);
             txtCognome.TabIndex = 5;
             txtCognome.TextChanged += txtCognome_TextChanged;
-            // 
             // btnCerca
             // 
             btnCerca.Anchor = AnchorStyles.Bottom;
-            btnCerca.Location = new Point(240, 289);
+            btnCerca.Location = new Point(274, 385);
+            btnCerca.Margin = new Padding(3, 4, 3, 4);
             btnCerca.Name = "btnCerca";
-            btnCerca.Size = new Size(100, 35);
+            btnCerca.Size = new Size(114, 47);
             btnCerca.TabIndex = 6;
             btnCerca.Text = "Cerca";
             btnCerca.UseVisualStyleBackColor = true;
@@ -114,10 +114,11 @@
             txtMatricola.BackColor = Color.FromArgb(23, 21, 32);
             txtMatricola.BorderStyle = BorderStyle.FixedSingle;
             txtMatricola.ForeColor = SystemColors.Info;
-            txtMatricola.Location = new Point(240, 247);
+            txtMatricola.Location = new Point(274, 329);
+            txtMatricola.Margin = new Padding(3, 4, 3, 4);
             txtMatricola.Name = "txtMatricola";
             txtMatricola.ReadOnly = true;
-            txtMatricola.Size = new Size(100, 23);
+            txtMatricola.Size = new Size(114, 27);
             txtMatricola.TabIndex = 8;
             // 
             // label4
@@ -126,12 +127,11 @@
             label4.AutoSize = true;
             label4.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label4.ForeColor = Color.FromArgb(231, 61, 61);
-            label4.Location = new Point(247, 211);
+            label4.Location = new Point(282, 281);
             label4.Name = "label4";
-            label4.Size = new Size(82, 20);
+            label4.Size = new Size(100, 25);
             label4.TabIndex = 7;
             label4.Text = "Matricola";
-            // 
             // cbClasse
             // 
             cbClasse.Anchor = AnchorStyles.Top | AnchorStyles.Right;
@@ -146,7 +146,7 @@
             // 
             // TrovaMatricola
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(32, 30, 45);
             ClientSize = new Size(596, 336);
@@ -159,7 +159,8 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
-            MinimumSize = new Size(612, 375);
+            Margin = new Padding(3, 4, 3, 4);
+            MinimumSize = new Size(697, 484);
             Name = "TrovaMatricola";
             Text = "TrovaMatricola";
             ResumeLayout(false);
@@ -167,7 +168,6 @@
         }
 
         #endregion
-
         private Label label1;
         private Label label2;
         private Label label3;
