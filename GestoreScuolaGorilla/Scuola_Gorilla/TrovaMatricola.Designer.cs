@@ -28,19 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-<<<<<<< HEAD
-            btnCerca = new Button();
-            txtMatricola = new TextBox();
-            label4 = new Label();
-            txtClasse = new TextBox();
-            label3 = new Label();
-            txtCognome = new TextBox();
-            label2 = new Label();
-            txtNome = new TextBox();
-            label1 = new Label();
-            SuspendLayout();
-            // 
-=======
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
@@ -109,8 +96,6 @@
             txtCognome.Size = new Size(100, 23);
             txtCognome.TabIndex = 5;
             txtCognome.TextChanged += txtCognome_TextChanged;
-            // 
->>>>>>> 11c4fa2bad8f7aa77e732f21529cfd16f45c658c
             // btnCerca
             // 
             btnCerca.Anchor = AnchorStyles.Bottom;
@@ -147,78 +132,6 @@
             label4.Size = new Size(100, 25);
             label4.TabIndex = 7;
             label4.Text = "Matricola";
-            // 
-<<<<<<< HEAD
-            // txtClasse
-            // 
-            txtClasse.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            txtClasse.BackColor = Color.FromArgb(23, 21, 32);
-            txtClasse.BorderStyle = BorderStyle.FixedSingle;
-            txtClasse.ForeColor = SystemColors.Info;
-            txtClasse.Location = new Point(501, 180);
-            txtClasse.Margin = new Padding(3, 4, 3, 4);
-            txtClasse.Name = "txtClasse";
-            txtClasse.Size = new Size(114, 27);
-            txtClasse.TabIndex = 3;
-            // 
-            // label3
-            // 
-            label3.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label3.AutoSize = true;
-            label3.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.ForeColor = Color.FromArgb(231, 61, 61);
-            label3.Location = new Point(518, 132);
-            label3.Name = "label3";
-            label3.Size = new Size(79, 25);
-            label3.TabIndex = 2;
-            label3.Text = "Classe";
-            // 
-            // txtCognome
-            // 
-            txtCognome.Anchor = AnchorStyles.Top;
-            txtCognome.BackColor = Color.FromArgb(23, 21, 32);
-            txtCognome.BorderStyle = BorderStyle.FixedSingle;
-            txtCognome.ForeColor = SystemColors.Info;
-            txtCognome.Location = new Point(274, 180);
-            txtCognome.Margin = new Padding(3, 4, 3, 4);
-            txtCognome.Name = "txtCognome";
-            txtCognome.Size = new Size(114, 27);
-            txtCognome.TabIndex = 5;
-            // 
-            // label2
-            // 
-            label2.Anchor = AnchorStyles.Top;
-            label2.AutoSize = true;
-            label2.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.ForeColor = Color.FromArgb(231, 61, 61);
-            label2.Location = new Point(279, 132);
-            label2.Name = "label2";
-            label2.Size = new Size(105, 25);
-            label2.TabIndex = 1;
-            label2.Text = "Cognome";
-            // 
-            // txtNome
-            // 
-            txtNome.BackColor = Color.FromArgb(23, 21, 32);
-            txtNome.BorderStyle = BorderStyle.FixedSingle;
-            txtNome.ForeColor = SystemColors.Info;
-            txtNome.Location = new Point(53, 180);
-            txtNome.Margin = new Padding(3, 4, 3, 4);
-            txtNome.Name = "txtNome";
-            txtNome.Size = new Size(114, 27);
-            txtNome.TabIndex = 4;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.ForeColor = Color.FromArgb(231, 61, 61);
-            label1.Location = new Point(74, 132);
-            label1.Name = "label1";
-            label1.Size = new Size(68, 25);
-            label1.TabIndex = 0;
-            label1.Text = "Nome";
-=======
             // cbClasse
             // 
             cbClasse.Anchor = AnchorStyles.Top | AnchorStyles.Right;
@@ -230,19 +143,14 @@
             cbClasse.Size = new Size(100, 23);
             cbClasse.TabIndex = 9;
             cbClasse.SelectedIndexChanged += cbClasse_SelectedIndexChanged;
->>>>>>> 11c4fa2bad8f7aa77e732f21529cfd16f45c658c
             // 
             // TrovaMatricola
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(32, 30, 45);
-<<<<<<< HEAD
-            ClientSize = new Size(681, 448);
-=======
             ClientSize = new Size(596, 336);
             Controls.Add(cbClasse);
->>>>>>> 11c4fa2bad8f7aa77e732f21529cfd16f45c658c
             Controls.Add(txtMatricola);
             Controls.Add(label4);
             Controls.Add(btnCerca);
@@ -260,18 +168,6 @@
         }
 
         #endregion
-
-<<<<<<< HEAD
-        private Button btnCerca;
-        private TextBox txtMatricola;
-        private Label label4;
-        private TextBox txtClasse;
-        private Label label3;
-        private TextBox txtCognome;
-        private Label label2;
-        private TextBox txtNome;
-        private Label label1;
-=======
         private Label label1;
         private Label label2;
         private Label label3;
@@ -281,6 +177,5 @@
         private TextBox txtMatricola;
         private Label label4;
         private ComboBox cbClasse;
->>>>>>> 11c4fa2bad8f7aa77e732f21529cfd16f45c658c
     }
 }

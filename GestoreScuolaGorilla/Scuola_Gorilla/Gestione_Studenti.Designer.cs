@@ -73,20 +73,6 @@
             // 
             // btnAddStudente
             // 
-<<<<<<< HEAD
-            button5.AutoSize = true;
-            button5.Dock = DockStyle.Bottom;
-            button5.FlatAppearance.BorderSize = 0;
-            button5.FlatStyle = FlatStyle.Flat;
-            button5.ForeColor = Color.FromArgb(231, 61, 61);
-            button5.Location = new Point(0, 280);
-            button5.Margin = new Padding(3, 4, 3, 4);
-            button5.Name = "button5";
-            button5.Size = new Size(256, 40);
-            button5.TabIndex = 33;
-            button5.Text = "Update";
-            button5.UseVisualStyleBackColor = true;
-=======
             btnAddStudente.Dock = DockStyle.Bottom;
             btnAddStudente.FlatAppearance.BorderSize = 0;
             btnAddStudente.FlatStyle = FlatStyle.Flat;
@@ -98,24 +84,9 @@
             btnAddStudente.Text = "Add";
             btnAddStudente.UseVisualStyleBackColor = true;
             btnAddStudente.Click += btnAddStudente_Click;
->>>>>>> 11c4fa2bad8f7aa77e732f21529cfd16f45c658c
             // 
             // btnDelete
-            // 
-<<<<<<< HEAD
-            button4.AutoSize = true;
-            button4.Dock = DockStyle.Bottom;
-            button4.FlatAppearance.BorderSize = 0;
-            button4.FlatStyle = FlatStyle.Flat;
-            button4.ForeColor = Color.FromArgb(231, 61, 61);
-            button4.Location = new Point(0, 320);
-            button4.Margin = new Padding(3, 4, 3, 4);
-            button4.Name = "button4";
-            button4.Size = new Size(256, 45);
-            button4.TabIndex = 32;
-            button4.Text = "Search";
-            button4.UseVisualStyleBackColor = true;
-=======
+            //
             btnDelete.Dock = DockStyle.Bottom;
             btnDelete.FlatAppearance.BorderSize = 0;
             btnDelete.FlatStyle = FlatStyle.Flat;
@@ -127,70 +98,9 @@
             btnDelete.Text = "Delete";
             btnDelete.UseVisualStyleBackColor = true;
             btnDelete.Click += btnDelete_Click;
->>>>>>> 11c4fa2bad8f7aa77e732f21529cfd16f45c658c
             // 
             // cbClassi
             // 
-<<<<<<< HEAD
-            button1.AutoSize = true;
-            button1.Dock = DockStyle.Bottom;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.ForeColor = Color.FromArgb(231, 61, 61);
-            button1.Location = new Point(0, 365);
-            button1.Margin = new Padding(3, 4, 3, 4);
-            button1.Name = "button1";
-            button1.Size = new Size(256, 45);
-            button1.TabIndex = 29;
-            button1.Text = "Add";
-            button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            button2.AutoSize = true;
-            button2.Dock = DockStyle.Bottom;
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.ForeColor = Color.FromArgb(231, 61, 61);
-            button2.Location = new Point(0, 410);
-            button2.Margin = new Padding(3, 4, 3, 4);
-            button2.Name = "button2";
-            button2.Size = new Size(256, 45);
-            button2.TabIndex = 30;
-            button2.Text = "Delete";
-            button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            button3.AutoSize = true;
-            button3.Dock = DockStyle.Bottom;
-            button3.FlatAppearance.BorderSize = 0;
-            button3.FlatStyle = FlatStyle.Flat;
-            button3.ForeColor = Color.FromArgb(231, 61, 61);
-            button3.Location = new Point(0, 455);
-            button3.Margin = new Padding(3, 4, 3, 4);
-            button3.Name = "button3";
-            button3.Size = new Size(256, 45);
-            button3.TabIndex = 31;
-            button3.Text = "Reset";
-            button3.UseVisualStyleBackColor = true;
-            // 
-            // comboBox1
-            // 
-            comboBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
-            comboBox1.BackColor = Color.FromArgb(32, 30, 45);
-            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox1.FlatStyle = FlatStyle.Flat;
-            comboBox1.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            comboBox1.ForeColor = Color.White;
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "1A", "1B", "2A", "2B", "3A", "3B", "4A", "4B", "5A", "5B" });
-            comboBox1.Location = new Point(117, 240);
-            comboBox1.Margin = new Padding(3, 4, 3, 4);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(133, 26);
-            comboBox1.TabIndex = 28;
-=======
             cbClassi.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             cbClassi.BackColor = Color.FromArgb(32, 30, 45);
             cbClassi.DropDownStyle = ComboBoxStyle.DropDownList;
@@ -203,7 +113,6 @@
             cbClassi.Name = "cbClassi";
             cbClassi.Size = new Size(116, 23);
             cbClassi.TabIndex = 28;
->>>>>>> 11c4fa2bad8f7aa77e732f21529cfd16f45c658c
             // 
             // LblClasse
             // 
