@@ -52,10 +52,10 @@
             TxtMatricola.BorderStyle = BorderStyle.FixedSingle;
             TxtMatricola.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             TxtMatricola.ForeColor = Color.White;
-            TxtMatricola.Location = new Point(135, 27);
-            TxtMatricola.Margin = new Padding(3, 5, 3, 5);
+            TxtMatricola.Location = new Point(118, 20);
+            TxtMatricola.Margin = new Padding(3, 4, 3, 4);
             TxtMatricola.Name = "TxtMatricola";
-            TxtMatricola.Size = new Size(152, 29);
+            TxtMatricola.Size = new Size(133, 25);
             TxtMatricola.TabIndex = 28;
             TxtMatricola.Text = "Inserisci Matricola";
             TxtMatricola.TextAlign = HorizontalAlignment.Center;
@@ -68,9 +68,9 @@
             LblMatricola.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
             LblMatricola.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point);
             LblMatricola.ForeColor = Color.FromArgb(231, 61, 61);
-            LblMatricola.Location = new Point(19, 29);
+            LblMatricola.Location = new Point(17, 22);
             LblMatricola.Name = "LblMatricola";
-            LblMatricola.Size = new Size(109, 31);
+            LblMatricola.Size = new Size(95, 23);
             LblMatricola.TabIndex = 27;
             LblMatricola.Text = "Matricola";
             // 
@@ -79,9 +79,9 @@
             label1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
             label1.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.FromArgb(231, 61, 61);
-            label1.Location = new Point(357, 29);
+            label1.Location = new Point(312, 22);
             label1.Name = "label1";
-            label1.Size = new Size(85, 37);
+            label1.Size = new Size(74, 28);
             label1.TabIndex = 30;
             label1.Text = "Materia";
             // 
@@ -96,21 +96,24 @@
             panel1.Controls.Add(TxtMatricola);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
+            panel1.Margin = new Padding(3, 2, 3, 2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(682, 139);
+            panel1.Size = new Size(597, 104);
             panel1.TabIndex = 0;
             // 
             // cbxMateria
             // 
             cbxMateria.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
             cbxMateria.BackColor = Color.FromArgb(32, 30, 45);
+            cbxMateria.DropDownStyle = ComboBoxStyle.DropDownList;
             cbxMateria.FlatStyle = FlatStyle.Flat;
             cbxMateria.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             cbxMateria.ForeColor = SystemColors.Info;
             cbxMateria.FormattingEnabled = true;
-            cbxMateria.Location = new Point(459, 25);
+            cbxMateria.Location = new Point(402, 19);
+            cbxMateria.Margin = new Padding(3, 2, 3, 2);
             cbxMateria.Name = "cbxMateria";
-            cbxMateria.Size = new Size(151, 29);
+            cbxMateria.Size = new Size(133, 25);
             cbxMateria.TabIndex = 34;
             // 
             // btnClearRows
@@ -120,9 +123,10 @@
             btnClearRows.FlatStyle = FlatStyle.Flat;
             btnClearRows.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
             btnClearRows.ForeColor = Color.FromArgb(231, 61, 61);
-            btnClearRows.Location = new Point(357, 83);
+            btnClearRows.Location = new Point(312, 62);
+            btnClearRows.Margin = new Padding(3, 2, 3, 2);
             btnClearRows.Name = "btnClearRows";
-            btnClearRows.Size = new Size(171, 51);
+            btnClearRows.Size = new Size(150, 38);
             btnClearRows.TabIndex = 33;
             btnClearRows.Text = "Svuota";
             btnClearRows.UseVisualStyleBackColor = true;
@@ -137,9 +141,10 @@
             btnVisualizza.FlatStyle = FlatStyle.Flat;
             btnVisualizza.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
             btnVisualizza.ForeColor = Color.FromArgb(231, 61, 61);
-            btnVisualizza.Location = new Point(163, 83);
+            btnVisualizza.Location = new Point(143, 62);
+            btnVisualizza.Margin = new Padding(3, 2, 3, 2);
             btnVisualizza.Name = "btnVisualizza";
-            btnVisualizza.Size = new Size(171, 51);
+            btnVisualizza.Size = new Size(150, 38);
             btnVisualizza.TabIndex = 29;
             btnVisualizza.Text = "Visualizza";
             btnVisualizza.UseVisualStyleBackColor = true;
@@ -175,12 +180,13 @@
             dgwVoti.DefaultCellStyle = dataGridViewCellStyle2;
             dgwVoti.Dock = DockStyle.Fill;
             dgwVoti.Location = new Point(0, 0);
+            dgwVoti.Margin = new Padding(3, 2, 3, 2);
             dgwVoti.Name = "dgwVoti";
             dgwVoti.ReadOnly = true;
             dgwVoti.RowHeadersVisible = false;
             dgwVoti.RowHeadersWidth = 51;
             dgwVoti.RowTemplate.Height = 29;
-            dgwVoti.Size = new Size(682, 314);
+            dgwVoti.Size = new Size(597, 236);
             dgwVoti.TabIndex = 1;
             // 
             // Voti
@@ -194,18 +200,20 @@
             // 
             panel2.Controls.Add(dgwVoti);
             panel2.Dock = DockStyle.Fill;
-            panel2.Location = new Point(0, 139);
+            panel2.Location = new Point(0, 104);
+            panel2.Margin = new Padding(3, 2, 3, 2);
             panel2.Name = "panel2";
-            panel2.Size = new Size(682, 314);
+            panel2.Size = new Size(597, 236);
             panel2.TabIndex = 2;
             // 
             // VisualizzaVoti
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(682, 453);
+            ClientSize = new Size(597, 340);
             Controls.Add(panel2);
             Controls.Add(panel1);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "VisualizzaVoti";
             Text = "VisualizzaVoti";
             Load += VisualizzaVoti_Load;

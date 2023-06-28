@@ -44,7 +44,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.FromArgb(231, 61, 61);
-            label1.Location = new Point(65, 99);
+            label1.Location = new Point(57, 74);
             label1.Name = "label1";
             label1.Size = new Size(55, 20);
             label1.TabIndex = 0;
@@ -56,7 +56,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = Color.FromArgb(231, 61, 61);
-            label2.Location = new Point(244, 99);
+            label2.Location = new Point(214, 74);
             label2.Name = "label2";
             label2.Size = new Size(85, 20);
             label2.TabIndex = 1;
@@ -68,7 +68,7 @@
             label3.AutoSize = true;
             label3.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label3.ForeColor = Color.FromArgb(231, 61, 61);
-            label3.Location = new Point(453, 99);
+            label3.Location = new Point(396, 74);
             label3.Name = "label3";
             label3.Size = new Size(63, 20);
             label3.TabIndex = 2;
@@ -79,9 +79,10 @@
             txtNome.BackColor = Color.FromArgb(23, 21, 32);
             txtNome.BorderStyle = BorderStyle.FixedSingle;
             txtNome.ForeColor = SystemColors.Info;
-            txtNome.Location = new Point(46, 135);
+            txtNome.Location = new Point(40, 101);
+            txtNome.Margin = new Padding(3, 2, 3, 2);
             txtNome.Name = "txtNome";
-            txtNome.Size = new Size(100, 23);
+            txtNome.Size = new Size(88, 23);
             txtNome.TabIndex = 4;
             txtNome.TextChanged += txtNome_TextChanged;
             // 
@@ -91,18 +92,19 @@
             txtCognome.BackColor = Color.FromArgb(23, 21, 32);
             txtCognome.BorderStyle = BorderStyle.FixedSingle;
             txtCognome.ForeColor = SystemColors.Info;
-            txtCognome.Location = new Point(240, 135);
+            txtCognome.Location = new Point(210, 101);
+            txtCognome.Margin = new Padding(3, 2, 3, 2);
             txtCognome.Name = "txtCognome";
-            txtCognome.Size = new Size(100, 23);
+            txtCognome.Size = new Size(88, 23);
             txtCognome.TabIndex = 5;
             txtCognome.TextChanged += txtCognome_TextChanged;
+            // 
             // btnCerca
             // 
             btnCerca.Anchor = AnchorStyles.Bottom;
-            btnCerca.Location = new Point(274, 385);
-            btnCerca.Margin = new Padding(3, 4, 3, 4);
+            btnCerca.Location = new Point(240, 289);
             btnCerca.Name = "btnCerca";
-            btnCerca.Size = new Size(114, 47);
+            btnCerca.Size = new Size(100, 35);
             btnCerca.TabIndex = 6;
             btnCerca.Text = "Cerca";
             btnCerca.UseVisualStyleBackColor = true;
@@ -114,11 +116,10 @@
             txtMatricola.BackColor = Color.FromArgb(23, 21, 32);
             txtMatricola.BorderStyle = BorderStyle.FixedSingle;
             txtMatricola.ForeColor = SystemColors.Info;
-            txtMatricola.Location = new Point(274, 329);
-            txtMatricola.Margin = new Padding(3, 4, 3, 4);
+            txtMatricola.Location = new Point(240, 247);
             txtMatricola.Name = "txtMatricola";
             txtMatricola.ReadOnly = true;
-            txtMatricola.Size = new Size(114, 27);
+            txtMatricola.Size = new Size(100, 23);
             txtMatricola.TabIndex = 8;
             // 
             // label4
@@ -127,29 +128,31 @@
             label4.AutoSize = true;
             label4.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label4.ForeColor = Color.FromArgb(231, 61, 61);
-            label4.Location = new Point(282, 281);
+            label4.Location = new Point(247, 211);
             label4.Name = "label4";
-            label4.Size = new Size(100, 25);
+            label4.Size = new Size(82, 20);
             label4.TabIndex = 7;
             label4.Text = "Matricola";
+            // 
             // cbClasse
             // 
             cbClasse.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             cbClasse.BackColor = SystemColors.InfoText;
-            cbClasse.ForeColor = SystemColors.Info;
+            cbClasse.ForeColor = Color.White;
             cbClasse.FormattingEnabled = true;
-            cbClasse.Location = new Point(436, 135);
+            cbClasse.Location = new Point(384, 101);
+            cbClasse.Margin = new Padding(3, 2, 3, 2);
             cbClasse.Name = "cbClasse";
-            cbClasse.Size = new Size(100, 23);
+            cbClasse.Size = new Size(88, 23);
             cbClasse.TabIndex = 9;
             cbClasse.SelectedIndexChanged += cbClasse_SelectedIndexChanged;
             // 
             // TrovaMatricola
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(32, 30, 45);
-            ClientSize = new Size(596, 336);
+            ClientSize = new Size(596, 334);
             Controls.Add(cbClasse);
             Controls.Add(txtMatricola);
             Controls.Add(label4);
@@ -159,8 +162,7 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
-            Margin = new Padding(3, 4, 3, 4);
-            MinimumSize = new Size(697, 484);
+            MinimumSize = new Size(612, 373);
             Name = "TrovaMatricola";
             Text = "TrovaMatricola";
             ResumeLayout(false);
