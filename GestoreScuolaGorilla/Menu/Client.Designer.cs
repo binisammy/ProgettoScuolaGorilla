@@ -45,7 +45,6 @@
             panelLogo = new Panel();
             label2 = new Label();
             pictureBox2 = new PictureBox();
-            panelPlayer = new Panel();
             panelChildForm = new Panel();
             pictureBox1 = new PictureBox();
             panelSidemenu.SuspendLayout();
@@ -309,7 +308,7 @@
             label2.ForeColor = Color.White;
             label2.Location = new Point(12, 79);
             label2.Name = "label2";
-            label2.Size = new Size(209, 38);
+            label2.Size = new Size(163, 30);
             label2.TabIndex = 2;
             label2.Text = "Scuola Gorilla";
             label2.TextAlign = ContentAlignment.MiddleCenter;
@@ -325,15 +324,6 @@
             pictureBox2.TabIndex = 0;
             pictureBox2.TabStop = false;
             // 
-            // panelPlayer
-            // 
-            panelPlayer.BackColor = Color.FromArgb(23, 21, 32);
-            panelPlayer.Dock = DockStyle.Bottom;
-            panelPlayer.Location = new Point(250, 508);
-            panelPlayer.Name = "panelPlayer";
-            panelPlayer.Size = new Size(702, 100);
-            panelPlayer.TabIndex = 1;
-            // 
             // panelChildForm
             // 
             panelChildForm.AutoSize = true;
@@ -344,7 +334,7 @@
             panelChildForm.Font = new Font("MS PGothic", 10F, FontStyle.Regular, GraphicsUnit.Point);
             panelChildForm.Location = new Point(250, 0);
             panelChildForm.Name = "panelChildForm";
-            panelChildForm.Size = new Size(702, 508);
+            panelChildForm.Size = new Size(702, 608);
             panelChildForm.TabIndex = 0;
             // 
             // pictureBox1
@@ -352,7 +342,7 @@
             pictureBox1.Anchor = AnchorStyles.None;
             pictureBox1.BackgroundImageLayout = ImageLayout.Center;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(212, 153);
+            pictureBox1.Location = new Point(212, 203);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(297, 235);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
@@ -361,11 +351,10 @@
             // 
             // Client
             // 
-            AutoScaleDimensions = new SizeF(10F, 20F);
+            AutoScaleDimensions = new SizeF(8F, 16F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(952, 608);
             Controls.Add(panelChildForm);
-            Controls.Add(panelPlayer);
             Controls.Add(panelSidemenu);
             Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Regular, GraphicsUnit.Point);
             Icon = (Icon)resources.GetObject("$this.Icon");
@@ -397,7 +386,6 @@
         private Button btnAggiungi;
         private Button btnHome;
         private Panel panelLogo;
-        private Panel panelPlayer;
         private Panel panelChildForm;
         private PictureBox pictureBox1;
         private PictureBox pictureBox2;
