@@ -123,7 +123,7 @@ namespace Scuola_Gorilla
             dgwStudenti.Rows.Clear();
             foreach (var studente1 in studenti)
             {
-                this.dgwStudenti.Rows.Add(studente1.Nome, studente1.Cognome, studente1.Matricola);
+                this.dgwStudenti.Rows.Add(studente1.Matricola, studente1.Nome, studente1.Cognome, studente1.IdClasse);
             }
         }
 

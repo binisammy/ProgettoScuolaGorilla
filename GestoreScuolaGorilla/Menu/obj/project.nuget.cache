@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "hGELto7Dz1+mq1oJ/knfvrXXXCuscYOW0cmn++d20TG4Jre0rv7U2tyD4Uh426kmOK5WsuFng+K2VZ49ZmwODg==",
+  "dgSpecHash": "Wcfr9/Ji6u1fkK/XrCYwYmoItyFRbsE3FXwK/rUeNg3TESlLmManXSnzdPHG0rPQM+RFjXo7CCP4tJ8ixKSGHg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\user4_12_1\\Desktop\\Gorilla\\GestoreScuolaGorilla\\Menu\\Menu.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\user9_12_1\\Documents\\ANNO1\\Ingegneria del Software\\Progettone\\GestoreScuolaGorilla\\Menu\\Menu.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\user9_12_1\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\user9_12_1\\.nuget\\packages\\npgsql\\7.0.4\\npgsql.7.0.4.nupkg.sha512",
+    "C:\\Users\\user9_12_1\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

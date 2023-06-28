@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             panel1 = new Panel();
             btnAddStudente = new Button();
             btnDelete = new Button();
@@ -66,6 +68,7 @@
             panel1.Controls.Add(LblNome);
             panel1.Controls.Add(TxtNome);
             panel1.Dock = DockStyle.Left;
+            panel1.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point);
             panel1.Location = new Point(0, 0);
             panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
@@ -77,6 +80,7 @@
             btnAddStudente.Dock = DockStyle.Bottom;
             btnAddStudente.FlatAppearance.BorderSize = 0;
             btnAddStudente.FlatStyle = FlatStyle.Flat;
+            btnAddStudente.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             btnAddStudente.ForeColor = Color.FromArgb(231, 61, 61);
             btnAddStudente.Location = new Point(0, 410);
             btnAddStudente.Margin = new Padding(3, 4, 3, 4);
@@ -92,6 +96,7 @@
             btnDelete.Dock = DockStyle.Bottom;
             btnDelete.FlatAppearance.BorderSize = 0;
             btnDelete.FlatStyle = FlatStyle.Flat;
+            btnDelete.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             btnDelete.ForeColor = Color.FromArgb(231, 61, 61);
             btnDelete.Location = new Point(0, 455);
             btnDelete.Margin = new Padding(3, 4, 3, 4);
@@ -122,7 +127,7 @@
             // 
             LblClasse.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             LblClasse.AutoSize = true;
-            LblClasse.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            LblClasse.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point);
             LblClasse.ForeColor = Color.FromArgb(231, 61, 61);
             LblClasse.Location = new Point(11, 241);
             LblClasse.Name = "LblClasse";
@@ -133,7 +138,7 @@
             // LblMatricola
             // 
             LblMatricola.AutoSize = true;
-            LblMatricola.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            LblMatricola.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point);
             LblMatricola.ForeColor = Color.FromArgb(231, 61, 61);
             LblMatricola.Location = new Point(11, 171);
             LblMatricola.Name = "LblMatricola";
@@ -146,7 +151,7 @@
             TxtMatricola.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             TxtMatricola.BackColor = Color.FromArgb(32, 30, 45);
             TxtMatricola.BorderStyle = BorderStyle.FixedSingle;
-            TxtMatricola.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            TxtMatricola.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             TxtMatricola.ForeColor = Color.White;
             TxtMatricola.Location = new Point(168, 172);
             TxtMatricola.Margin = new Padding(3, 4, 3, 4);
@@ -154,13 +159,14 @@
             TxtMatricola.Size = new Size(132, 24);
             TxtMatricola.TabIndex = 20;
             TxtMatricola.Text = "Inserisci Matricola";
+            TxtMatricola.TextAlign = HorizontalAlignment.Center;
             TxtMatricola.MouseClick += TxtMatricola_MouseClick;
             TxtMatricola.Leave += TxtMatricola_Leave;
             // 
             // LblCognome
             // 
             LblCognome.AutoSize = true;
-            LblCognome.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            LblCognome.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point);
             LblCognome.ForeColor = Color.FromArgb(231, 61, 61);
             LblCognome.Location = new Point(13, 95);
             LblCognome.Name = "LblCognome";
@@ -173,7 +179,7 @@
             TxtCognome.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             TxtCognome.BackColor = Color.FromArgb(32, 30, 45);
             TxtCognome.BorderStyle = BorderStyle.FixedSingle;
-            TxtCognome.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            TxtCognome.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             TxtCognome.ForeColor = Color.White;
             TxtCognome.Location = new Point(168, 96);
             TxtCognome.Margin = new Padding(3, 4, 3, 4);
@@ -181,17 +187,18 @@
             TxtCognome.Size = new Size(132, 24);
             TxtCognome.TabIndex = 18;
             TxtCognome.Text = "Inserisci Cognome";
+            TxtCognome.TextAlign = HorizontalAlignment.Center;
             TxtCognome.MouseClick += TxtCognome_MouseClick;
             TxtCognome.Leave += TxtCognome_Leave;
             // 
             // LblNome
             // 
             LblNome.AutoSize = true;
-            LblNome.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            LblNome.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point);
             LblNome.ForeColor = Color.FromArgb(231, 61, 61);
             LblNome.Location = new Point(11, 27);
             LblNome.Name = "LblNome";
-            LblNome.Size = new Size(68, 25);
+            LblNome.Size = new Size(57, 21);
             LblNome.TabIndex = 15;
             LblNome.Text = "Nome";
             // 
@@ -200,7 +207,7 @@
             TxtNome.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             TxtNome.BackColor = Color.FromArgb(32, 30, 45);
             TxtNome.BorderStyle = BorderStyle.FixedSingle;
-            TxtNome.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            TxtNome.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             TxtNome.ForeColor = Color.White;
             TxtNome.Location = new Point(168, 32);
             TxtNome.Margin = new Padding(3, 4, 3, 4);
@@ -208,6 +215,7 @@
             TxtNome.Size = new Size(132, 24);
             TxtNome.TabIndex = 16;
             TxtNome.Text = "Inserisci Nome";
+            TxtNome.TextAlign = HorizontalAlignment.Center;
             TxtNome.MouseClick += TxtNome_MouseClick;
             TxtNome.Leave += TxtNome_Leave;
             // 
@@ -239,14 +247,36 @@
             // 
             // dgwStudenti
             // 
+            dgwStudenti.AllowUserToAddRows = false;
+            dgwStudenti.AllowUserToDeleteRows = false;
+            dgwStudenti.AllowUserToResizeColumns = false;
+            dgwStudenti.AllowUserToResizeRows = false;
             dgwStudenti.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgwStudenti.BackgroundColor = Color.FromArgb(32, 30, 45);
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.Control;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dgwStudenti.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgwStudenti.ColumnHeadersHeight = 29;
             dgwStudenti.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn3, dataGridViewTextBoxColumn1, dataGridViewTextBoxColumn2, dataGridViewTextBoxColumn4 });
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(38, 54, 80);
+            dataGridViewCellStyle2.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(38, 54, 80);
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dgwStudenti.DefaultCellStyle = dataGridViewCellStyle2;
             dgwStudenti.Dock = DockStyle.Fill;
             dgwStudenti.Location = new Point(0, 0);
             dgwStudenti.Margin = new Padding(3, 4, 3, 4);
             dgwStudenti.Name = "dgwStudenti";
+            dgwStudenti.ReadOnly = true;
+            dgwStudenti.RowHeadersVisible = false;
             dgwStudenti.RowHeadersWidth = 51;
             dgwStudenti.RowTemplate.Height = 24;
             dgwStudenti.Size = new Size(392, 468);
@@ -258,24 +288,28 @@
             dataGridViewTextBoxColumn3.HeaderText = "Matricola";
             dataGridViewTextBoxColumn3.MinimumWidth = 6;
             dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            dataGridViewTextBoxColumn3.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn1
             // 
             dataGridViewTextBoxColumn1.HeaderText = "Nome";
             dataGridViewTextBoxColumn1.MinimumWidth = 6;
             dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            dataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn2
             // 
             dataGridViewTextBoxColumn2.HeaderText = "Cognome";
             dataGridViewTextBoxColumn2.MinimumWidth = 6;
             dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn4
             // 
             dataGridViewTextBoxColumn4.HeaderText = "Classe";
             dataGridViewTextBoxColumn4.MinimumWidth = 6;
             dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            dataGridViewTextBoxColumn4.ReadOnly = true;
             // 
             // Gestione_Studenti
             // 

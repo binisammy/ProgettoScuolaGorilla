@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             TxtMatricola = new TextBox();
             LblMatricola = new Label();
             label1 = new Label();
@@ -164,6 +165,14 @@
             dgwVoti.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgwVoti.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgwVoti.Columns.AddRange(new DataGridViewColumn[] { Voti });
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(38, 54, 80);
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(38, 54, 80);
+            dataGridViewCellStyle2.SelectionForeColor = Color.White;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dgwVoti.DefaultCellStyle = dataGridViewCellStyle2;
             dgwVoti.Dock = DockStyle.Fill;
             dgwVoti.Location = new Point(0, 0);
             dgwVoti.Name = "dgwVoti";

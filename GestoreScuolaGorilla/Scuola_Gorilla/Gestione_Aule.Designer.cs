@@ -30,6 +30,8 @@
         {
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+
             panel1 = new Panel();
             btnModificaMaterieClasse = new Button();
             btnCercaClasse = new Button();
@@ -318,17 +320,23 @@
             dataGridView4.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataGridView4.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView4.Columns.AddRange(new DataGridViewColumn[] { Matricola, Nome, Cognome });
-            dataGridView4.Cursor = Cursors.Cross;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(38, 54, 80);
+            dataGridViewCellStyle2.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(38, 54, 80);
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dataGridView4.DefaultCellStyle = dataGridViewCellStyle2;
             dataGridView4.Dock = DockStyle.Fill;
-            dataGridView4.EditMode = DataGridViewEditMode.EditProgrammatically;
             dataGridView4.Location = new Point(0, 0);
             dataGridView4.Margin = new Padding(3, 4, 3, 4);
             dataGridView4.Name = "dataGridView4";
             dataGridView4.ReadOnly = true;
             dataGridView4.RowHeadersVisible = false;
             dataGridView4.RowHeadersWidth = 51;
-            dataGridViewCellStyle2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            dataGridView4.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            dataGridView4.RowsDefaultCellStyle = dataGridViewCellStyle3;
             dataGridView4.RowTemplate.Height = 24;
             dataGridView4.Size = new Size(392, 585);
             dataGridView4.TabIndex = 15;

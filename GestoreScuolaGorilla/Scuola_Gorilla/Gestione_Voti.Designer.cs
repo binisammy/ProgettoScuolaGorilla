@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             panel1 = new Panel();
             txtClasse = new TextBox();
             label1 = new Label();
@@ -82,6 +84,7 @@
             txtClasse.ReadOnly = true;
             txtClasse.Size = new Size(152, 29);
             txtClasse.TabIndex = 40;
+            txtClasse.TextAlign = HorizontalAlignment.Center;
             txtClasse.TextChanged += txtClasse_TextChanged;
             // 
             // label1
@@ -220,6 +223,10 @@
             // 
             // DgwVoti
             // 
+            DgwVoti.AllowUserToAddRows = false;
+            DgwVoti.AllowUserToDeleteRows = false;
+            DgwVoti.AllowUserToResizeColumns = false;
+            DgwVoti.AllowUserToResizeRows = false;
             DgwVoti.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             DgwVoti.BackgroundColor = Color.FromArgb(32, 30, 45);
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
@@ -232,11 +239,23 @@
             DgwVoti.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             DgwVoti.ColumnHeadersHeight = 29;
             DgwVoti.Columns.AddRange(new DataGridViewColumn[] { Materie, Voti });
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(38, 54, 80);
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(38, 54, 80);
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            DgwVoti.DefaultCellStyle = dataGridViewCellStyle2;
             DgwVoti.Dock = DockStyle.Fill;
             DgwVoti.Location = new Point(0, 0);
             DgwVoti.Margin = new Padding(3, 4, 3, 4);
             DgwVoti.Name = "DgwVoti";
+            DgwVoti.ReadOnly = true;
+            DgwVoti.RowHeadersVisible = false;
             DgwVoti.RowHeadersWidth = 51;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            DgwVoti.RowsDefaultCellStyle = dataGridViewCellStyle3;
             DgwVoti.RowTemplate.Height = 24;
             DgwVoti.Size = new Size(392, 463);
             DgwVoti.TabIndex = 36;
@@ -246,12 +265,14 @@
             Materie.HeaderText = "Materie";
             Materie.MinimumWidth = 6;
             Materie.Name = "Materie";
+            Materie.ReadOnly = true;
             // 
             // Voti
             // 
             Voti.HeaderText = "Voti";
             Voti.MinimumWidth = 6;
             Voti.Name = "Voti";
+            Voti.ReadOnly = true;
             // 
             // panel3
             // 
