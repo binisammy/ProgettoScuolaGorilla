@@ -51,7 +51,7 @@
             TxtMatricola.BorderStyle = BorderStyle.FixedSingle;
             TxtMatricola.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             TxtMatricola.ForeColor = Color.White;
-            TxtMatricola.Location = new Point(116, 10);
+            TxtMatricola.Location = new Point(118, 20);
             TxtMatricola.Margin = new Padding(3, 4, 3, 4);
             TxtMatricola.Name = "TxtMatricola";
             TxtMatricola.Size = new Size(133, 25);
@@ -67,9 +67,9 @@
             LblMatricola.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
             LblMatricola.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point);
             LblMatricola.ForeColor = Color.FromArgb(231, 61, 61);
-            LblMatricola.Location = new Point(16, 8);
+            LblMatricola.Location = new Point(17, 22);
             LblMatricola.Name = "LblMatricola";
-            LblMatricola.Size = new Size(95, 32);
+            LblMatricola.Size = new Size(95, 23);
             LblMatricola.TabIndex = 27;
             LblMatricola.Text = "Matricola";
             // 
@@ -78,9 +78,9 @@
             label1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
             label1.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.FromArgb(231, 61, 61);
-            label1.Location = new Point(312, 7);
+            label1.Location = new Point(312, 22);
             label1.Name = "label1";
-            label1.Size = new Size(84, 32);
+            label1.Size = new Size(74, 28);
             label1.TabIndex = 30;
             label1.Text = "Materia";
             // 
@@ -108,7 +108,7 @@
             cbxMateria.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             cbxMateria.ForeColor = SystemColors.Info;
             cbxMateria.FormattingEnabled = true;
-            cbxMateria.Location = new Point(397, 12);
+            cbxMateria.Location = new Point(402, 19);
             cbxMateria.Margin = new Padding(3, 2, 3, 2);
             cbxMateria.Name = "cbxMateria";
             cbxMateria.Size = new Size(133, 25);
@@ -152,6 +152,10 @@
             // 
             // dgwVoti
             // 
+            dgwVoti.AllowUserToAddRows = false;
+            dgwVoti.AllowUserToDeleteRows = false;
+            dgwVoti.AllowUserToResizeColumns = false;
+            dgwVoti.AllowUserToResizeRows = false;
             dgwVoti.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgwVoti.BackgroundColor = Color.FromArgb(32, 30, 45);
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
@@ -169,6 +173,7 @@
             dgwVoti.Margin = new Padding(3, 2, 3, 2);
             dgwVoti.Name = "dgwVoti";
             dgwVoti.ReadOnly = true;
+            dgwVoti.RowHeadersVisible = false;
             dgwVoti.RowHeadersWidth = 51;
             dgwVoti.RowTemplate.Height = 29;
             dgwVoti.Size = new Size(597, 236);

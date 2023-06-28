@@ -210,6 +210,10 @@ namespace Scuola_Gorilla
                 {
                     var result = await api.postClasse(TxtIDaula.Text.ToUpper());
                     MessageBox.Show(result, "Avviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    for (int i = 0; i < ClbListaMaterie.Items.Count; i++)
+                    {
+                        ClbListaMaterie.SetItemChecked(i, false);
+                    }
                 }
             }
             else

@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             panel1 = new Panel();
@@ -244,9 +242,9 @@
             label14.ForeColor = Color.FromArgb(231, 61, 61);
             label14.Location = new Point(8, 23);
             label14.Name = "label14";
-            label14.Size = new Size(101, 21);
+            label14.Size = new Size(78, 21);
             label14.TabIndex = 6;
-            label14.Text = "Inserisci ID aula:";
+            label14.Text = "Classe:";
             // 
             // TxtIDaula
             // 
@@ -254,7 +252,7 @@
             TxtIDaula.BorderStyle = BorderStyle.FixedSingle;
             TxtIDaula.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             TxtIDaula.ForeColor = Color.White;
-            TxtIDaula.Location = new Point(115, 24);
+            TxtIDaula.Location = new Point(92, 24);
             TxtIDaula.Name = "TxtIDaula";
             TxtIDaula.Size = new Size(148, 25);
             TxtIDaula.TabIndex = 5;
@@ -293,52 +291,31 @@
             // 
             // dataGridView4
             // 
-            dataGridView4.AccessibleRole = AccessibleRole.None;
             dataGridView4.AllowUserToAddRows = false;
             dataGridView4.AllowUserToDeleteRows = false;
             dataGridView4.AllowUserToResizeColumns = false;
             dataGridView4.AllowUserToResizeRows = false;
             dataGridView4.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView4.BackgroundColor = Color.FromArgb(32, 30, 45);
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = Color.FromArgb(124, 114, 160);
-            dataGridViewCellStyle1.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(124, 114, 160);
-            dataGridViewCellStyle1.SelectionForeColor = Color.Black;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dataGridView4.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = SystemColors.Control;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            dataGridView4.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             dataGridView4.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView4.Columns.AddRange(new DataGridViewColumn[] { Matricola, Nome, Cognome });
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(124, 114, 160);
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(124, 114, 160);
-            dataGridViewCellStyle2.SelectionForeColor = Color.Black;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            dataGridView4.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridView4.Cursor = Cursors.Cross;
             dataGridView4.Dock = DockStyle.Fill;
             dataGridView4.EditMode = DataGridViewEditMode.EditProgrammatically;
-            dataGridView4.GridColor = Color.FromArgb(23, 21, 32);
             dataGridView4.Location = new Point(0, 0);
             dataGridView4.Name = "dataGridView4";
             dataGridView4.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = Color.FromArgb(124, 114, 160);
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle3.ForeColor = SystemColors.InfoText;
-            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(124, 114, 160);
-            dataGridViewCellStyle3.SelectionForeColor = Color.Black;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
-            dataGridView4.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             dataGridView4.RowHeadersVisible = false;
             dataGridView4.RowHeadersWidth = 51;
-            dataGridViewCellStyle4.BackColor = Color.FromArgb(124, 114, 160);
             dataGridViewCellStyle4.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            dataGridViewCellStyle4.ForeColor = Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = Color.FromArgb(124, 114, 160);
-            dataGridViewCellStyle4.SelectionForeColor = Color.Black;
             dataGridView4.RowsDefaultCellStyle = dataGridViewCellStyle4;
             dataGridView4.RowTemplate.Height = 24;
             dataGridView4.Size = new Size(343, 436);
