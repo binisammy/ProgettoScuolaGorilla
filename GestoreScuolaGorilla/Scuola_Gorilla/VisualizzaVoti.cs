@@ -121,5 +121,10 @@ namespace Scuola_Gorilla
             dgwVoti.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
         }
+
+        private void cbxMateria_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

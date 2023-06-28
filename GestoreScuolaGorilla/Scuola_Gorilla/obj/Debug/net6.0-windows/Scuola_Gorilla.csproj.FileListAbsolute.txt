@@ -50,3 +50,5 @@ C:\Users\user4_12_1\Desktop\Gorilla\GestoreScuolaGorilla\Scuola_Gorilla\obj\Debu
 C:\Users\user9_12_1\Documents\ANNO1\Ingegneria del Software\Progettone\GestoreScuolaGorilla\Scuola_Gorilla\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
 C:\Users\user9_12_1\Documents\ANNO1\Ingegneria del Software\Progettone\GestoreScuolaGorilla\Scuola_Gorilla\bin\Debug\net6.0-windows\Npgsql.dll
 C:\Users\user9_12_1\Documents\ANNO1\Ingegneria del Software\Progettone\GestoreScuolaGorilla\Scuola_Gorilla\obj\Debug\net6.0-windows\Scuola_Gorilla.VisualizzaClassi.resources
+C:\Users\user4_12_1\Desktop\Gorilla\GestoreScuolaGorilla\Scuola_Gorilla\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\user4_12_1\Desktop\Gorilla\GestoreScuolaGorilla\Scuola_Gorilla\bin\Debug\net6.0-windows\Npgsql.dll
