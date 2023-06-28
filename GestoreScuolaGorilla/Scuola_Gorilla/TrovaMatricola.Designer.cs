@@ -46,7 +46,7 @@
             label1.ForeColor = Color.FromArgb(231, 61, 61);
             label1.Location = new Point(65, 99);
             label1.Name = "label1";
-            label1.Size = new Size(55, 20);
+            label1.Size = new Size(68, 25);
             label1.TabIndex = 0;
             label1.Text = "Nome";
             // 
@@ -58,7 +58,7 @@
             label2.ForeColor = Color.FromArgb(231, 61, 61);
             label2.Location = new Point(244, 99);
             label2.Name = "label2";
-            label2.Size = new Size(85, 20);
+            label2.Size = new Size(105, 25);
             label2.TabIndex = 1;
             label2.Text = "Cognome";
             // 
@@ -70,7 +70,7 @@
             label3.ForeColor = Color.FromArgb(231, 61, 61);
             label3.Location = new Point(453, 99);
             label3.Name = "label3";
-            label3.Size = new Size(63, 20);
+            label3.Size = new Size(79, 25);
             label3.TabIndex = 2;
             label3.Text = "Classe";
             // 
@@ -81,7 +81,7 @@
             txtNome.ForeColor = SystemColors.Info;
             txtNome.Location = new Point(46, 135);
             txtNome.Name = "txtNome";
-            txtNome.Size = new Size(100, 23);
+            txtNome.Size = new Size(100, 27);
             txtNome.TabIndex = 4;
             txtNome.TextChanged += txtNome_TextChanged;
             // 
@@ -93,9 +93,10 @@
             txtCognome.ForeColor = SystemColors.Info;
             txtCognome.Location = new Point(240, 135);
             txtCognome.Name = "txtCognome";
-            txtCognome.Size = new Size(100, 23);
+            txtCognome.Size = new Size(100, 27);
             txtCognome.TabIndex = 5;
             txtCognome.TextChanged += txtCognome_TextChanged;
+            // 
             // btnCerca
             // 
             btnCerca.Anchor = AnchorStyles.Bottom;
@@ -132,15 +133,18 @@
             label4.Size = new Size(100, 25);
             label4.TabIndex = 7;
             label4.Text = "Matricola";
+            // 
             // cbClasse
             // 
             cbClasse.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            cbClasse.BackColor = SystemColors.InfoText;
+            cbClasse.BackColor = Color.FromArgb(23, 32, 32);
+            cbClasse.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbClasse.FlatStyle = FlatStyle.Flat;
             cbClasse.ForeColor = SystemColors.Info;
             cbClasse.FormattingEnabled = true;
             cbClasse.Location = new Point(436, 135);
             cbClasse.Name = "cbClasse";
-            cbClasse.Size = new Size(100, 23);
+            cbClasse.Size = new Size(100, 28);
             cbClasse.TabIndex = 9;
             cbClasse.SelectedIndexChanged += cbClasse_SelectedIndexChanged;
             // 
@@ -149,7 +153,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(32, 30, 45);
-            ClientSize = new Size(596, 336);
+            ClientSize = new Size(679, 437);
             Controls.Add(cbClasse);
             Controls.Add(txtMatricola);
             Controls.Add(label4);
