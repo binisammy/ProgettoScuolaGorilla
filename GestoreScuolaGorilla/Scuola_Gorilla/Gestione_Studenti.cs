@@ -174,5 +174,11 @@ namespace Scuola_Gorilla
             MessageBox.Show("Studente non presente", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
             return;
         }
+
+        private void Gestione_Studenti_Load(object sender, EventArgs e)
+        {
+            dgwStudenti.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+        }
     }
 }
