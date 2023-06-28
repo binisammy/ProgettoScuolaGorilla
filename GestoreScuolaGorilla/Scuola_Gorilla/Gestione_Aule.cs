@@ -40,6 +40,8 @@ namespace Scuola_Gorilla
             BtnClearMateria.Visible = false;
             BtnDeleteMateria.Visible = false;
             TxtNuovaMateria.Visible = false;
+            dataGridView4.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
         }
 
         // TextBox IDaula

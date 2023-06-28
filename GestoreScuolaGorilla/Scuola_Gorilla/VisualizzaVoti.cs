@@ -115,5 +115,11 @@ namespace Scuola_Gorilla
         {
             btnClearRows.BackColor = Color.FromArgb(32, 30, 45);
         }
+
+        private void VisualizzaVoti_Load(object sender, EventArgs e)
+        {
+            dgwVoti.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+        }
     }
 }

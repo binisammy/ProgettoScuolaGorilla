@@ -122,6 +122,11 @@ namespace Menu
             openChildForm(new VisualizzaVoti());
         }
 
+        private void Buttn6_Click(object sender, EventArgs e)
+        {
+            openChildForm(new VisualizzaClassi());
+        }
+
 
 
 

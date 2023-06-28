@@ -67,8 +67,9 @@
             panel1.Controls.Add(TxtNome);
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
+            panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(269, 375);
+            panel1.Size = new Size(307, 500);
             panel1.TabIndex = 1;
             // 
             // btnAddStudente
@@ -77,23 +78,25 @@
             btnAddStudente.FlatAppearance.BorderSize = 0;
             btnAddStudente.FlatStyle = FlatStyle.Flat;
             btnAddStudente.ForeColor = Color.FromArgb(231, 61, 61);
-            btnAddStudente.Location = new Point(0, 307);
+            btnAddStudente.Location = new Point(0, 410);
+            btnAddStudente.Margin = new Padding(3, 4, 3, 4);
             btnAddStudente.Name = "btnAddStudente";
-            btnAddStudente.Size = new Size(269, 34);
+            btnAddStudente.Size = new Size(307, 45);
             btnAddStudente.TabIndex = 29;
             btnAddStudente.Text = "Add";
             btnAddStudente.UseVisualStyleBackColor = true;
             btnAddStudente.Click += btnAddStudente_Click;
             // 
             // btnDelete
-            //
+            // 
             btnDelete.Dock = DockStyle.Bottom;
             btnDelete.FlatAppearance.BorderSize = 0;
             btnDelete.FlatStyle = FlatStyle.Flat;
             btnDelete.ForeColor = Color.FromArgb(231, 61, 61);
-            btnDelete.Location = new Point(0, 341);
+            btnDelete.Location = new Point(0, 455);
+            btnDelete.Margin = new Padding(3, 4, 3, 4);
             btnDelete.Name = "btnDelete";
-            btnDelete.Size = new Size(269, 34);
+            btnDelete.Size = new Size(307, 45);
             btnDelete.TabIndex = 30;
             btnDelete.Text = "Delete";
             btnDelete.UseVisualStyleBackColor = true;
@@ -109,9 +112,10 @@
             cbClassi.ForeColor = Color.White;
             cbClassi.FormattingEnabled = true;
             cbClassi.Items.AddRange(new object[] { "" });
-            cbClassi.Location = new Point(147, 180);
+            cbClassi.Location = new Point(168, 240);
+            cbClassi.Margin = new Padding(3, 4, 3, 4);
             cbClassi.Name = "cbClassi";
-            cbClassi.Size = new Size(116, 23);
+            cbClassi.Size = new Size(132, 26);
             cbClassi.TabIndex = 28;
             // 
             // LblClasse
@@ -120,9 +124,9 @@
             LblClasse.AutoSize = true;
             LblClasse.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
             LblClasse.ForeColor = Color.FromArgb(231, 61, 61);
-            LblClasse.Location = new Point(10, 181);
+            LblClasse.Location = new Point(11, 241);
             LblClasse.Name = "LblClasse";
-            LblClasse.Size = new Size(63, 20);
+            LblClasse.Size = new Size(79, 25);
             LblClasse.TabIndex = 23;
             LblClasse.Text = "Classe";
             // 
@@ -131,9 +135,9 @@
             LblMatricola.AutoSize = true;
             LblMatricola.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
             LblMatricola.ForeColor = Color.FromArgb(231, 61, 61);
-            LblMatricola.Location = new Point(10, 128);
+            LblMatricola.Location = new Point(11, 171);
             LblMatricola.Name = "LblMatricola";
-            LblMatricola.Size = new Size(82, 20);
+            LblMatricola.Size = new Size(100, 25);
             LblMatricola.TabIndex = 19;
             LblMatricola.Text = "Matricola";
             // 
@@ -144,9 +148,10 @@
             TxtMatricola.BorderStyle = BorderStyle.FixedSingle;
             TxtMatricola.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
             TxtMatricola.ForeColor = Color.White;
-            TxtMatricola.Location = new Point(147, 129);
+            TxtMatricola.Location = new Point(168, 172);
+            TxtMatricola.Margin = new Padding(3, 4, 3, 4);
             TxtMatricola.Name = "TxtMatricola";
-            TxtMatricola.Size = new Size(116, 21);
+            TxtMatricola.Size = new Size(132, 24);
             TxtMatricola.TabIndex = 20;
             TxtMatricola.Text = "Inserisci Matricola";
             TxtMatricola.MouseClick += TxtMatricola_MouseClick;
@@ -157,9 +162,9 @@
             LblCognome.AutoSize = true;
             LblCognome.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
             LblCognome.ForeColor = Color.FromArgb(231, 61, 61);
-            LblCognome.Location = new Point(11, 71);
+            LblCognome.Location = new Point(13, 95);
             LblCognome.Name = "LblCognome";
-            LblCognome.Size = new Size(85, 20);
+            LblCognome.Size = new Size(105, 25);
             LblCognome.TabIndex = 17;
             LblCognome.Text = "Cognome";
             // 
@@ -170,9 +175,10 @@
             TxtCognome.BorderStyle = BorderStyle.FixedSingle;
             TxtCognome.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
             TxtCognome.ForeColor = Color.White;
-            TxtCognome.Location = new Point(147, 72);
+            TxtCognome.Location = new Point(168, 96);
+            TxtCognome.Margin = new Padding(3, 4, 3, 4);
             TxtCognome.Name = "TxtCognome";
-            TxtCognome.Size = new Size(116, 21);
+            TxtCognome.Size = new Size(132, 24);
             TxtCognome.TabIndex = 18;
             TxtCognome.Text = "Inserisci Cognome";
             TxtCognome.MouseClick += TxtCognome_MouseClick;
@@ -183,9 +189,9 @@
             LblNome.AutoSize = true;
             LblNome.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
             LblNome.ForeColor = Color.FromArgb(231, 61, 61);
-            LblNome.Location = new Point(10, 20);
+            LblNome.Location = new Point(11, 27);
             LblNome.Name = "LblNome";
-            LblNome.Size = new Size(55, 20);
+            LblNome.Size = new Size(68, 25);
             LblNome.TabIndex = 15;
             LblNome.Text = "Nome";
             // 
@@ -196,9 +202,10 @@
             TxtNome.BorderStyle = BorderStyle.FixedSingle;
             TxtNome.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
             TxtNome.ForeColor = Color.White;
-            TxtNome.Location = new Point(147, 24);
+            TxtNome.Location = new Point(168, 32);
+            TxtNome.Margin = new Padding(3, 4, 3, 4);
             TxtNome.Name = "TxtNome";
-            TxtNome.Size = new Size(116, 21);
+            TxtNome.Size = new Size(132, 24);
             TxtNome.TabIndex = 16;
             TxtNome.Text = "Inserisci Nome";
             TxtNome.MouseClick += TxtNome_MouseClick;
@@ -211,10 +218,11 @@
             textBox11.Dock = DockStyle.Top;
             textBox11.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             textBox11.ForeColor = Color.White;
-            textBox11.Location = new Point(269, 0);
+            textBox11.Location = new Point(307, 0);
+            textBox11.Margin = new Padding(3, 4, 3, 4);
             textBox11.Name = "textBox11";
             textBox11.ReadOnly = true;
-            textBox11.Size = new Size(343, 23);
+            textBox11.Size = new Size(392, 27);
             textBox11.TabIndex = 4;
             textBox11.Text = "Lista Studenti";
             textBox11.TextAlign = HorizontalAlignment.Center;
@@ -224,10 +232,9 @@
             // 
             panel2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             panel2.Controls.Add(dgwStudenti);
-            panel2.Location = new Point(269, 24);
-            panel2.Margin = new Padding(3, 2, 3, 2);
+            panel2.Location = new Point(307, 32);
             panel2.Name = "panel2";
-            panel2.Size = new Size(343, 351);
+            panel2.Size = new Size(392, 468);
             panel2.TabIndex = 5;
             // 
             // dgwStudenti
@@ -238,10 +245,11 @@
             dgwStudenti.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn3, dataGridViewTextBoxColumn1, dataGridViewTextBoxColumn2, dataGridViewTextBoxColumn4 });
             dgwStudenti.Dock = DockStyle.Fill;
             dgwStudenti.Location = new Point(0, 0);
+            dgwStudenti.Margin = new Padding(3, 4, 3, 4);
             dgwStudenti.Name = "dgwStudenti";
             dgwStudenti.RowHeadersWidth = 51;
             dgwStudenti.RowTemplate.Height = 24;
-            dgwStudenti.Size = new Size(343, 351);
+            dgwStudenti.Size = new Size(392, 468);
             dgwStudenti.TabIndex = 3;
             dgwStudenti.CellContentClick += dataGridView3_CellContentClick;
             // 
@@ -271,18 +279,19 @@
             // 
             // Gestione_Studenti
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
             BackColor = SystemColors.ControlDark;
-            ClientSize = new Size(612, 375);
+            ClientSize = new Size(699, 500);
             Controls.Add(panel2);
             Controls.Add(textBox11);
             Controls.Add(panel1);
-            FormBorderStyle = FormBorderStyle.None;
-            MinimumSize = new Size(612, 375);
+            Margin = new Padding(3, 4, 3, 4);
+            MinimumSize = new Size(699, 500);
             Name = "Gestione_Studenti";
             Text = "Gestione Studenti";
+            Load += Gestione_Studenti_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);

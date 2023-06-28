@@ -150,5 +150,11 @@ namespace Scuola_Gorilla
                 }
             }
         }
+
+        private void Gestione_Voti_Load(object sender, EventArgs e)
+        {
+            DgwVoti.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+        }
     }
 }

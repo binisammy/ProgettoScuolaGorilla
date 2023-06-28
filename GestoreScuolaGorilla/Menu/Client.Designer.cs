@@ -142,6 +142,7 @@
             Buttn6.TextAlign = ContentAlignment.MiddleLeft;
             Buttn6.TextImageRelation = TextImageRelation.ImageBeforeText;
             Buttn6.UseVisualStyleBackColor = true;
+            Buttn6.Click += Buttn6_Click;
             // 
             // btnVisualizza
             // 
