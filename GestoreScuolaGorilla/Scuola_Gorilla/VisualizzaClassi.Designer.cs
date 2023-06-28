@@ -186,7 +186,6 @@
             dgwMateria.RowTemplate.Height = 29;
             dgwMateria.Size = new Size(298, 242);
             dgwMateria.TabIndex = 37;
-            dgwMateria.CellContentClick += dataGridView1_CellContentClick;
             // 
             // Materia
             // 

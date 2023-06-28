@@ -23,15 +23,6 @@ namespace ClassLibrary1
             idClasse = "";
         }
 
-        public Studente(string nome, string cognome)
-        {
-            this.nome = nome;
-            this.cognome = cognome;
-            matricola = "";
-            votiMaterie = new Dictionary<string, Voti>();
-            idClasse = "";
-        }
-
         public Studente(string nome, string cognome, string matricola, string idClasse)
         {
             this.nome = nome;
@@ -100,32 +91,17 @@ namespace ClassLibrary1
                 votiMaterie = value;
             }
         }
-
-        public Voti getVotiMateria(string materia)
-        {
-            materia = materia.ToLower();
-            if (votiMaterie.ContainsKey(materia))
-            {
-                return votiMaterie[materia];
-            }
-            else
-                return null;                                //avvisare che si sta cercando una materia che non esiste?
-        }
-        
-        public bool addVotiMateria(double voto, string materia) 
+        public void addVotiMateria(double voto, string materia) 
         {
             materia = materia.ToLower();
             if(votiMaterie.ContainsKey(materia))
             {
                 votiMaterie[materia].add(voto);
-                return true;
             }
             else
             {
                 votiMaterie.Add(materia, new Voti(materia, voto));
-                return true;
             }
-            return false;
         }
     }
 }

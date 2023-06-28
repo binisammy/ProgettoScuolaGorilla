@@ -324,7 +324,6 @@ namespace ModuloServer.Controllers
         public ActionResult<string> DeleteMateriaClasse(string id_classe, string id_materia)
         {
             var cs = $"Host={datasource};Port={port};Username={username};Password={passwd};Database={database}";
-            int before = 0, after = 0;
             using (var con = new NpgsqlConnection(cs))
             {
                 con.Open();

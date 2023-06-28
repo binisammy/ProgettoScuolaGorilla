@@ -38,11 +38,6 @@ namespace Scuola_Gorilla
             dgwStudenti.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private async void cbxMateria_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cbxClasse.SelectedItem.ToString() != "")
