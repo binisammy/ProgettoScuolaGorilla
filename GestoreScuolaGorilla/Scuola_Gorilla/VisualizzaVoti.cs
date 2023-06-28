@@ -67,7 +67,7 @@ namespace Scuola_Gorilla
             }
         }
 
-        private async void TxtMatricola_TextChanged(object sender, EventArgs e)
+        private void TxtMatricola_TextChanged(object sender, EventArgs e)
         {
             if (TxtMatricola.Text == "" || TxtMatricola.Text == "Inserisci Matricola")
             {

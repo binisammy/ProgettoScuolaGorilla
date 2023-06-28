@@ -251,11 +251,11 @@
             // 
             TxtIDaula.BackColor = Color.FromArgb(32, 30, 45);
             TxtIDaula.BorderStyle = BorderStyle.FixedSingle;
-            TxtIDaula.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            TxtIDaula.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             TxtIDaula.ForeColor = Color.White;
             TxtIDaula.Location = new Point(92, 24);
             TxtIDaula.Name = "TxtIDaula";
-            TxtIDaula.Size = new Size(148, 22);
+            TxtIDaula.Size = new Size(148, 25);
             TxtIDaula.TabIndex = 5;
             TxtIDaula.Text = "Inserisci ID classe";
             TxtIDaula.TextAlign = HorizontalAlignment.Center;
