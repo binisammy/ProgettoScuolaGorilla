@@ -197,6 +197,26 @@ namespace ModuloServer.Controllers
             return Ok(studenti);
         }
 
+        [HttpGet ("AllMatricole")]
+        public ActionResult<List<string>> GetAllMatricole()
+        {
+            var cs = $"Host={datasource};Port={port};Username={username};Password={passwd};Database={database}";
+            List<string> matricole = new List<string>();
+            using (var con = new NpgsqlConnection(cs))
+            {
+                con.Open();
+                var cmd = new NpgsqlCommand();
+                cmd.Connection = con;
+                cmd.CommandText = $"SELECT * FROM STUDENTI";
+                var rdr = cmd.ExecuteReader();
+                while (rdr.Read())
+                {
+                    matricole.Add(rdr.GetString(0));
+                }
+            }
+            return Ok(matricole);
+        }
+
         [HttpGet("studente")]
         public ActionResult<Studente> GetStudente(string id_studente)
         {
@@ -257,6 +277,26 @@ namespace ModuloServer.Controllers
                     matricola = "Non trovato!";
             }
             return Ok(matricola);
+        }
+
+        [HttpGet("materieByMatricola")]
+        public ActionResult<List<string>> GetMaterieByMatricola(string matricola) 
+        {
+            var cs = $"Host={datasource};Port={port};Username={username};Password={passwd};Database={database}";
+            List<string> materie = new List<string>();
+            using (var con = new NpgsqlConnection(cs))
+            {
+                con.Open();
+                var cmd = new NpgsqlCommand();
+                cmd.Connection = con;
+                cmd.CommandText = $"select id_materie from studenti s join materie m on s.id_classe = m.id_classe where s.id_matricola = '{matricola}'";
+                var rdr = cmd.ExecuteReader();
+                while (rdr.Read())
+                {
+                     materie.Add(rdr.GetValue(0).ToString());
+                }
+            }
+            return Ok(materie);
         }
 
         [HttpDelete("classe")]

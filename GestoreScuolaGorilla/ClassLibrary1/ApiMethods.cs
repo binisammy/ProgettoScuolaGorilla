@@ -54,11 +54,25 @@ namespace ClassLibrary1
             return response;
         }
 
+        public async Task<List<string>> getAllMatricole()
+        {
+            string getAllmatricoleUrl = BaseUrl + $"/AllMatricole";
+            var response = await client.GetFromJsonAsync<List<string>>(getAllmatricoleUrl);
+            return response;
+        }
+
         public async Task<List<Studente>> getStudenti(string id_classe)
         {
             string getstudentiUrl = BaseUrl + $"/studenti?id_classe={id_classe}";
             var responseStudente = await client.GetFromJsonAsync<List<Studente>>(getstudentiUrl);
             return responseStudente;
+        }
+
+        public async Task<List<string>> getMaterieByMatricola(string matricola)
+        {
+            string getMaterieUrl = BaseUrl + $"/materieByMatricola?matricola={matricola}";
+            var response = await client.GetFromJsonAsync<List<string>>(getMaterieUrl);
+            return response;
         }
 
         public async Task<string> postStudente(List<string> studente)

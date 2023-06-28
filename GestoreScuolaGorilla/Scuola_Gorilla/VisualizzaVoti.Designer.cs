@@ -28,18 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             TxtMatricola = new TextBox();
             LblMatricola = new Label();
             label1 = new Label();
             panel1 = new Panel();
-            comboBox1 = new ComboBox();
-            button3 = new Button();
-            button1 = new Button();
-            dataGridView1 = new DataGridView();
+            cbxMateria = new ComboBox();
+            btnClearRows = new Button();
+            btnVisualizza = new Button();
+            dgwVoti = new DataGridView();
             Voti = new DataGridViewTextBoxColumn();
             panel2 = new Panel();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgwVoti).BeginInit();
             panel2.SuspendLayout();
             SuspendLayout();
             // 
@@ -50,22 +51,25 @@
             TxtMatricola.BorderStyle = BorderStyle.FixedSingle;
             TxtMatricola.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             TxtMatricola.ForeColor = Color.White;
-            TxtMatricola.Location = new Point(133, 13);
-            TxtMatricola.Margin = new Padding(3, 5, 3, 5);
+            TxtMatricola.Location = new Point(116, 10);
+            TxtMatricola.Margin = new Padding(3, 4, 3, 4);
             TxtMatricola.Name = "TxtMatricola";
-            TxtMatricola.Size = new Size(152, 29);
+            TxtMatricola.Size = new Size(133, 25);
             TxtMatricola.TabIndex = 28;
             TxtMatricola.Text = "Inserisci Matricola";
             TxtMatricola.TextAlign = HorizontalAlignment.Center;
+            TxtMatricola.MouseClick += TxtMatricola_MouseClick;
+            TxtMatricola.TextChanged += TxtMatricola_TextChanged;
+            TxtMatricola.Leave += TxtMatricola_Leave;
             // 
             // LblMatricola
             // 
             LblMatricola.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
             LblMatricola.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point);
             LblMatricola.ForeColor = Color.FromArgb(231, 61, 61);
-            LblMatricola.Location = new Point(18, 10);
+            LblMatricola.Location = new Point(16, 8);
             LblMatricola.Name = "LblMatricola";
-            LblMatricola.Size = new Size(109, 42);
+            LblMatricola.Size = new Size(95, 32);
             LblMatricola.TabIndex = 27;
             LblMatricola.Text = "Matricola";
             // 
@@ -74,108 +78,133 @@
             label1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
             label1.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.FromArgb(231, 61, 61);
-            label1.Location = new Point(357, 9);
+            label1.Location = new Point(312, 7);
             label1.Name = "label1";
-            label1.Size = new Size(96, 42);
+            label1.Size = new Size(84, 32);
             label1.TabIndex = 30;
             label1.Text = "Materia";
             // 
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(32, 30, 45);
-            panel1.Controls.Add(comboBox1);
-            panel1.Controls.Add(button3);
+            panel1.Controls.Add(cbxMateria);
+            panel1.Controls.Add(btnClearRows);
             panel1.Controls.Add(label1);
-            panel1.Controls.Add(button1);
+            panel1.Controls.Add(btnVisualizza);
             panel1.Controls.Add(LblMatricola);
             panel1.Controls.Add(TxtMatricola);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
+            panel1.Margin = new Padding(3, 2, 3, 2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(682, 138);
+            panel1.Size = new Size(597, 104);
             panel1.TabIndex = 0;
             // 
-            // comboBox1
+            // cbxMateria
             // 
-            comboBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
-            comboBox1.BackColor = Color.FromArgb(32, 30, 45);
-            comboBox1.FlatStyle = FlatStyle.Flat;
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(454, 16);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(151, 28);
-            comboBox1.TabIndex = 34;
+            cbxMateria.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            cbxMateria.BackColor = Color.FromArgb(32, 30, 45);
+            cbxMateria.FlatStyle = FlatStyle.Flat;
+            cbxMateria.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            cbxMateria.ForeColor = SystemColors.Info;
+            cbxMateria.FormattingEnabled = true;
+            cbxMateria.Location = new Point(397, 12);
+            cbxMateria.Margin = new Padding(3, 2, 3, 2);
+            cbxMateria.Name = "cbxMateria";
+            cbxMateria.Size = new Size(133, 25);
+            cbxMateria.TabIndex = 34;
             // 
-            // button3
+            // btnClearRows
             // 
-            button3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
-            button3.FlatAppearance.BorderSize = 0;
-            button3.FlatStyle = FlatStyle.Flat;
-            button3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            button3.ForeColor = Color.FromArgb(231, 61, 61);
-            button3.Location = new Point(357, 82);
-            button3.Name = "button3";
-            button3.Size = new Size(172, 50);
-            button3.TabIndex = 33;
-            button3.Text = "Svuota";
-            button3.UseVisualStyleBackColor = true;
+            btnClearRows.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            btnClearRows.FlatAppearance.BorderSize = 0;
+            btnClearRows.FlatStyle = FlatStyle.Flat;
+            btnClearRows.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            btnClearRows.ForeColor = Color.FromArgb(231, 61, 61);
+            btnClearRows.Location = new Point(312, 62);
+            btnClearRows.Margin = new Padding(3, 2, 3, 2);
+            btnClearRows.Name = "btnClearRows";
+            btnClearRows.Size = new Size(150, 38);
+            btnClearRows.TabIndex = 33;
+            btnClearRows.Text = "Svuota";
+            btnClearRows.UseVisualStyleBackColor = true;
+            btnClearRows.Click += btnClearRows_Click;
+            btnClearRows.MouseEnter += btnClearRows_MouseEnter;
+            btnClearRows.MouseLeave += btnClearRows_MouseLeave;
             // 
-            // button1
+            // btnVisualizza
             // 
-            button1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            button1.ForeColor = Color.FromArgb(231, 61, 61);
-            button1.Location = new Point(163, 82);
-            button1.Name = "button1";
-            button1.Size = new Size(172, 50);
-            button1.TabIndex = 29;
-            button1.Text = "Visualizza";
-            button1.UseVisualStyleBackColor = true;
+            btnVisualizza.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            btnVisualizza.FlatAppearance.BorderSize = 0;
+            btnVisualizza.FlatStyle = FlatStyle.Flat;
+            btnVisualizza.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            btnVisualizza.ForeColor = Color.FromArgb(231, 61, 61);
+            btnVisualizza.Location = new Point(143, 62);
+            btnVisualizza.Margin = new Padding(3, 2, 3, 2);
+            btnVisualizza.Name = "btnVisualizza";
+            btnVisualizza.Size = new Size(150, 38);
+            btnVisualizza.TabIndex = 29;
+            btnVisualizza.Text = "Visualizza";
+            btnVisualizza.UseVisualStyleBackColor = true;
+            btnVisualizza.Click += btnVisualizza_Click;
+            btnVisualizza.MouseEnter += btnVisualizza_MouseEnter;
+            btnVisualizza.MouseLeave += btnVisualizza_MouseLeave;
             // 
-            // dataGridView1
+            // dgwVoti
             // 
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridView1.BackgroundColor = Color.FromArgb(32, 30, 45);
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Voti });
-            dataGridView1.Dock = DockStyle.Fill;
-            dataGridView1.Location = new Point(0, 0);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(682, 315);
-            dataGridView1.TabIndex = 1;
+            dgwVoti.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgwVoti.BackgroundColor = Color.FromArgb(32, 30, 45);
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.Control;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dgwVoti.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dgwVoti.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgwVoti.Columns.AddRange(new DataGridViewColumn[] { Voti });
+            dgwVoti.Dock = DockStyle.Fill;
+            dgwVoti.Location = new Point(0, 0);
+            dgwVoti.Margin = new Padding(3, 2, 3, 2);
+            dgwVoti.Name = "dgwVoti";
+            dgwVoti.ReadOnly = true;
+            dgwVoti.RowHeadersWidth = 51;
+            dgwVoti.RowTemplate.Height = 29;
+            dgwVoti.Size = new Size(597, 236);
+            dgwVoti.TabIndex = 1;
             // 
             // Voti
             // 
             Voti.HeaderText = "Voti";
             Voti.MinimumWidth = 6;
             Voti.Name = "Voti";
+            Voti.ReadOnly = true;
             // 
             // panel2
             // 
-            panel2.Controls.Add(dataGridView1);
+            panel2.Controls.Add(dgwVoti);
             panel2.Dock = DockStyle.Fill;
-            panel2.Location = new Point(0, 138);
+            panel2.Location = new Point(0, 104);
+            panel2.Margin = new Padding(3, 2, 3, 2);
             panel2.Name = "panel2";
-            panel2.Size = new Size(682, 315);
+            panel2.Size = new Size(597, 236);
             panel2.TabIndex = 2;
             // 
             // VisualizzaVoti
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(682, 453);
+            ClientSize = new Size(597, 340);
             Controls.Add(panel2);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 2, 3, 2);
             Name = "VisualizzaVoti";
             Text = "VisualizzaVoti";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgwVoti).EndInit();
             panel2.ResumeLayout(false);
             ResumeLayout(false);
         }
@@ -186,11 +215,11 @@
         private Label LblMatricola;
         private Label label1;
         private Panel panel1;
-        private Button button3;
-        private Button button1;
-        private DataGridView dataGridView1;
-        private DataGridViewTextBoxColumn Voti;
+        private Button btnClearRows;
+        private Button btnVisualizza;
+        private DataGridView dgwVoti;
         private Panel panel2;
-        private ComboBox comboBox1;
+        private ComboBox cbxMateria;
+        private DataGridViewTextBoxColumn Voti;
     }
 }
