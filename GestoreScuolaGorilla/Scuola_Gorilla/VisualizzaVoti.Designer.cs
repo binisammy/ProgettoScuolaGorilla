@@ -115,7 +115,6 @@
             cbxMateria.Name = "cbxMateria";
             cbxMateria.Size = new Size(133, 25);
             cbxMateria.TabIndex = 34;
-            cbxMateria.SelectedIndexChanged += cbxMateria_SelectedIndexChanged;
             // 
             // btnClearRows
             // 
