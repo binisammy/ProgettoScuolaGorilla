@@ -85,7 +85,7 @@
             btnAddStudente.Name = "btnAddStudente";
             btnAddStudente.Size = new Size(269, 34);
             btnAddStudente.TabIndex = 29;
-            btnAddStudente.Text = "Add";
+            btnAddStudente.Text = "Aggiungi";
             btnAddStudente.UseVisualStyleBackColor = true;
             btnAddStudente.Click += btnAddStudente_Click;
             // 
@@ -100,7 +100,7 @@
             btnDelete.Name = "btnDelete";
             btnDelete.Size = new Size(269, 34);
             btnDelete.TabIndex = 30;
-            btnDelete.Text = "Delete";
+            btnDelete.Text = "Rimuovi";
             btnDelete.UseVisualStyleBackColor = true;
             btnDelete.Click += btnDelete_Click;
             // 
