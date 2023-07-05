@@ -20,7 +20,7 @@ namespace ClassLibrary1
         }
 
         public async Task<List<string>> getClassi()
-        {
+        { 
             string getclassiUrl = BaseUrl + "/classi";
             var responseClasse = await client.GetFromJsonAsync<List<string>>(getclassiUrl);
             return responseClasse;
