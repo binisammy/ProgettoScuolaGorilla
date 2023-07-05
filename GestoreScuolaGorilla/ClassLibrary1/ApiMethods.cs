@@ -16,11 +16,11 @@ namespace ClassLibrary1
         public ApiMethods()
         {
             this.client = new HttpClient();
-            this.BaseUrl = "http://localhost:10212/values";
+            this.BaseUrl = "http://192.168.11.66:10212/values";
         }
 
         public async Task<List<string>> getClassi()
-        {
+        { 
             string getclassiUrl = BaseUrl + "/classi";
             var responseClasse = await client.GetFromJsonAsync<List<string>>(getclassiUrl);
             return responseClasse;
