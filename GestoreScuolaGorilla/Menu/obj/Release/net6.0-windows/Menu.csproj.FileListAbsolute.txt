@@ -25,3 +25,5 @@ C:\Users\user9_12_1\Documents\ANNO1\Ingegneria del Software\Progettone\GestoreSc
 C:\Users\user9_12_1\Documents\ANNO1\Ingegneria del Software\Progettone\GestoreScuolaGorilla\Menu\obj\Release\net6.0-windows\Menu.pdb
 C:\Users\user9_12_1\Documents\ANNO1\Ingegneria del Software\Progettone\GestoreScuolaGorilla\Menu\obj\Release\net6.0-windows\Menu.genruntimeconfig.cache
 C:\Users\user9_12_1\Documents\ANNO1\Ingegneria del Software\Progettone\GestoreScuolaGorilla\Menu\obj\Release\net6.0-windows\ref\Menu.dll
+C:\Users\user9_12_1\Documents\ANNO1\Ingegneria del Software\Progettone\GestoreScuolaGorilla\Menu\bin\Release\net6.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\user9_12_1\Documents\ANNO1\Ingegneria del Software\Progettone\GestoreScuolaGorilla\Menu\bin\Release\net6.0-windows\Npgsql.dll
