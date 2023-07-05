@@ -14,7 +14,7 @@ namespace ModuloServer.Controllers
     public class ValuesController : ControllerBase
     {
         //DATABASE ACCESS VARIABLES
-        private const string datasource = "localhost";
+        private const string datasource = "192.168.11.66";
         private const string port = "7777";
         private const string database = "mydatabase";
         private const string username = "postgres";
