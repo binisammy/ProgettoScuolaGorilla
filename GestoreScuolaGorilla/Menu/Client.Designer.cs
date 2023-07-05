@@ -72,7 +72,7 @@
             panelSidemenu.ForeColor = Color.White;
             panelSidemenu.Location = new Point(0, 0);
             panelSidemenu.Name = "panelSidemenu";
-            panelSidemenu.Size = new Size(250, 608);
+            panelSidemenu.Size = new Size(250, 600);
             panelSidemenu.TabIndex = 0;
             // 
             // btnCerca
@@ -170,7 +170,7 @@
             button1.ForeColor = Color.White;
             button1.Image = (Image)resources.GetObject("button1.Image");
             button1.ImageAlign = ContentAlignment.MiddleLeft;
-            button1.Location = new Point(0, 556);
+            button1.Location = new Point(0, 548);
             button1.Name = "button1";
             button1.Padding = new Padding(10, 0, 0, 0);
             button1.Size = new Size(250, 52);
@@ -308,7 +308,7 @@
             label2.ForeColor = Color.White;
             label2.Location = new Point(12, 79);
             label2.Name = "label2";
-            label2.Size = new Size(163, 30);
+            label2.Size = new Size(209, 38);
             label2.TabIndex = 2;
             label2.Text = "Scuola Gorilla";
             label2.TextAlign = ContentAlignment.MiddleCenter;
@@ -334,7 +334,7 @@
             panelChildForm.Font = new Font("MS PGothic", 10F, FontStyle.Regular, GraphicsUnit.Point);
             panelChildForm.Location = new Point(250, 0);
             panelChildForm.Name = "panelChildForm";
-            panelChildForm.Size = new Size(702, 608);
+            panelChildForm.Size = new Size(700, 600);
             panelChildForm.TabIndex = 0;
             // 
             // pictureBox1
@@ -342,7 +342,7 @@
             pictureBox1.Anchor = AnchorStyles.None;
             pictureBox1.BackgroundImageLayout = ImageLayout.Center;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(212, 203);
+            pictureBox1.Location = new Point(211, 199);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(297, 235);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
@@ -351,9 +351,9 @@
             // 
             // Client
             // 
-            AutoScaleDimensions = new SizeF(8F, 16F);
+            AutoScaleDimensions = new SizeF(10F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(952, 608);
+            ClientSize = new Size(950, 600);
             Controls.Add(panelChildForm);
             Controls.Add(panelSidemenu);
             Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Regular, GraphicsUnit.Point);
