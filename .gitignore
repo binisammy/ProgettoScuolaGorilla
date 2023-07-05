@@ -29,6 +29,10 @@ x86/
 bld/
 [Bb]in/
 [Oo]bj/
+<<<<<<< HEAD
+=======
+[Oo]bj/*
+>>>>>>> 03a661c208624bf883a9d41f3d22428aedbaa0e1
 [Oo]ut/
 [Ll]og/
 [Ll]ogs/
@@ -360,4 +364,9 @@ MigrationBackup/
 .ionide/
 
 # Fody - auto-generated XML schema
+<<<<<<< HEAD
 FodyWeavers.xsd
+=======
+FodyWeavers.xsd
+/GestoreScuolaGorilla/.vs/GestoreScuolaGorilla/v17/.suo
+>>>>>>> 03a661c208624bf883a9d41f3d22428aedbaa0e1
